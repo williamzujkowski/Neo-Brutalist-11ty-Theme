@@ -1,5 +1,10 @@
 {# Footer Component - extracted from demo.html lines 522-525 #}
 <footer>
+    {# Social Icons Integration #}
+    {%- if site.social.enabled -%}
+        {% include "components/social-icons.njk" %}
+    {%- endif -%}
+
     <p class="footer-text">
         {{ site.footer.copyright | default('© 2025 NEO-BRUTALIST THEME') }} → {{ site.footer.tagline | default('BREAK THE RULES') }}
     </p>

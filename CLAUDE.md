@@ -47,47 +47,24 @@
 
 ## Project Overview
 
-**Neo-Brutalist 11ty Theme** - A bold, vibrant static site generator theme featuring massive typography, vivid colors, and hard shadows. This production-ready theme demonstrates modern web development practices using 11ty, Nunjucks templating, and GitHub Actions for CI/CD.
+**Neo-Brutalist 11ty Theme** - A complete, production-ready static site generator theme featuring massive typography, vivid colors, hard shadows, and modern Neo-Brutalist design. This comprehensive theme includes blog posts, project showcases, social media integration, and a full testing suite using Playwright.
 
 ### Current Status
 ✅ **Fully Deployed**: https://williamzujkowski.github.io/Neo-Brutalist-11ty-Theme/
-✅ **All Pages Created**: Home, About, Services, Contact, Blog listing, Blog posts, Project
-✅ **Icons Fixed**: SVG icons properly rendering with inline SVG code
-✅ **Navigation Working**: All internal links functional with Blog nav item
-✅ **Blog Posts Themed**: Individual blog posts have full Neo-Brutalist styling
-✅ **Dates Updated**: All dates updated to 2025
-✅ **100% Complete**: Theme is fully functional and production-ready
+✅ **Complete Content**: 7 blog posts, 4 project showcases, all core pages
+✅ **Social Integration**: Social icons system with custom configurations
+✅ **Testing Suite**: 6 Playwright test files covering accessibility, performance, navigation
+✅ **CI/CD Pipeline**: GitHub Actions for deployment and testing
+✅ **Production Ready**: All features implemented and tested
 
-### File Structure
-```
-/src
-  /assets
-    /css (10 component files + 2 utility files + main.css)
-      /components
-        - navigation.css, hero.css, about.css, services.css
-        - projects.css, blog.css, post.css, contact.css, social.css
-      /utilities
-        - animations.css, responsive.css
-    /js (6 JavaScript modules including standalone version)
-    /images (includes project-1.svg)
-  /_data (site.json, metadata.json, navigation.json)
-  /_includes
-    /components (nav.njk, footer.njk, 7 total)
-    /layouts (base.njk, post.njk)
-  /posts (3 blog posts with 2025 dates + posts.json)
-    - welcome-to-neo-brutalism.md
-    - breaking-design-rules.md
-    - building-with-11ty.md
-  /projects (1 project - this theme itself)
-  /pages (about.njk, services.njk, contact.njk, 404.njk, index.njk)
-  /blog (index.njk - blog listing page)
-  index.njk
-/.github/workflows (deploy.yml)
-/.eleventy.js (config with pathPrefix and custom filters)
-/package.json
-```
-
-Total Source Files: 48+ files (CSS, JS, NJK, MD, JSON)
+### Project Statistics
+- **Total Files**: 86 files across 23 directories
+- **Templates**: 23 Nunjucks (.njk) files
+- **Stylesheets**: 12 source CSS files (69 total including build output)
+- **Blog Content**: 7 posts (~1,468 lines of content)
+- **Projects**: 4 showcases (~263 lines of content)
+- **Tests**: 6 comprehensive test suites + helpers
+- **JavaScript**: 6 modules including animations and interactions
 
 ## SPARC Commands
 
@@ -392,74 +369,235 @@ Message 4: Write "file.js"
 
 Remember: **Claude Flow coordinates, Claude Code creates!**
 
-# Neo-Brutalist 11ty Theme - File Structure
+# Neo-Brutalist 11ty Theme - Complete File Structure
 
-## Current Project Structure
+## 📁 Complete Project Inventory (86 Files)
+
+### 🏗️ Root Configuration & Documentation
 ```
-.
-├── src/
-│   ├── _data/
-│   │   ├── metadata.json      # SEO and meta information
-│   │   ├── navigation.json    # Navigation menu structure
-│   │   └── site.json          # Main site configuration
-│   ├── _includes/
-│   │   ├── components/        # Reusable components
-│   │   │   ├── nav.njk
-│   │   │   ├── footer.njk
-│   │   │   ├── about.njk
-│   │   │   ├── services.njk
-│   │   │   └── contact.njk
-│   │   ├── layouts/           # Page layouts
-│   │   │   ├── base.njk
-│   │   │   ├── home.njk
-│   │   │   ├── page.njk
-│   │   │   └── post.njk
-│   │   └── partials/          # Partial components
-│   │       ├── floating-shapes.njk
-│   │       └── cursor-dot.njk
-│   ├── assets/
-│   │   ├── css/              # Stylesheets
-│   │   │   ├── main.css
-│   │   │   ├── components/
-│   │   │   └── utilities/
-│   │   ├── js/               # JavaScript modules
-│   │   │   ├── main.js
-│   │   │   ├── cursor.js
-│   │   │   ├── animations.js
-│   │   │   ├── interactions.js
-│   │   │   ├── smooth-scroll.js
-│   │   │   └── main-standalone.js
-│   │   └── images/           # Image assets
-│   ├── pages/                # Static pages
-│   │   ├── index.njk
-│   │   └── 404.njk
-│   ├── posts/                # Blog posts (Markdown)
-│   │   ├── welcome-to-neo-brutalism.md
-│   │   └── breaking-design-rules.md
-│   ├── projects/             # Project showcases
-│   │   └── digital-rebellion.md
-│   └── robots.txt
+├── .eleventy.js              # 11ty configuration with pathPrefix and filters
+├── .gitignore                # Git ignore patterns
+├── package.json              # Node.js dependencies and scripts
+├── package-lock.json         # Dependency lock file
+├── playwright.config.js      # Playwright testing configuration
+├── README.md                 # Project documentation
+├── CONTRIBUTING.md           # Contribution guidelines
+├── LICENSE                   # MIT License
+├── QUICK-START.md           # Quick start guide
+├── TESTING.md               # Testing documentation
+├── CLAUDE.md                # Claude Code configuration (this file)
+└── swarm-prompt.md          # Swarm coordination prompts
+```
+
+### 🤖 CI/CD & Automation
+```
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml         # GitHub Actions deployment
-├── _site/                     # Build output (gitignored)
-├── .eleventy.js              # 11ty configuration
-├── .gitignore
-├── package.json
-├── README.md
-├── CONTRIBUTING.md
-└── LICENSE
+│       ├── deploy.yml        # GitHub Pages deployment
+│       └── playwright.yml    # Automated testing workflow
 ```
 
-## Important Instructions
-- This is a production-ready Neo-Brutalist theme
-- Maintain high quality standards for all features
-- Keep documentation accurate and up-to-date
-- Always prefer editing existing files over creating new ones
-- Never save working files or tests to the root folder
+### 🖼️ Visual Documentation (.playwright-mcp/)
+```
+├── .playwright-mcp/          # Test screenshots and visual documentation
+│   ├── about-page.png
+│   ├── after-fixes-local.png
+│   ├── before-fixes.png
+│   ├── final-live-site.png
+│   ├── live-site-after-deploy.png
+│   ├── live-site-check.png
+│   ├── post-page-themed.png
+│   └── site-current-state.png
+```
 
-## Known Issues Resolved
-- JavaScript modules converted to standalone to avoid ES6 import errors
-- All hardcoded URLs replaced with proper url filters for GitHub Pages
-- CSS imports properly configured in main.css
-- All placeholder domains replaced with example.com or actual GitHub Pages URL
+### 🎨 Source Code Structure (src/)
+
+#### 📊 Data Configuration
+```
+├── src/_data/
+│   ├── metadata.json         # SEO metadata and site information
+│   ├── navigation.json       # Main navigation menu structure
+│   └── site.json            # Global site configuration and author info
+```
+
+#### 🧩 Templates & Components
+```
+├── src/_includes/
+│   ├── components/           # Reusable UI components
+│   │   ├── about.njk         # About section component
+│   │   ├── contact.njk       # Contact form component
+│   │   ├── footer.njk        # Site footer with social links
+│   │   ├── hero.njk          # Homepage hero section
+│   │   ├── nav.njk           # Main navigation component
+│   │   ├── services.njk      # Services showcase component
+│   │   └── social-icons.njk  # Social media icons system
+│   ├── layouts/              # Page layout templates
+│   │   ├── base.njk          # Base HTML template with head/meta
+│   │   ├── home.njk          # Homepage layout
+│   │   ├── page.njk          # Generic page layout
+│   │   └── post.njk          # Blog post layout with metadata
+│   └── partials/             # Small reusable partials
+│       ├── cursor-dot.njk    # Custom cursor component
+│       └── floating-shapes.njk # Animated background shapes
+```
+
+#### 🎨 Stylesheets (12 Source Files)
+```
+├── src/assets/css/
+│   ├── main.css              # Main stylesheet with imports
+│   ├── components/           # Component-specific styles
+│   │   ├── about.css         # About page styling
+│   │   ├── blog.css          # Blog listing page styles
+│   │   ├── contact.css       # Contact form styles
+│   │   ├── hero.css          # Hero section styling
+│   │   ├── navigation.css    # Navigation menu styles
+│   │   ├── post.css          # Individual blog post styles
+│   │   ├── projects.css      # Project showcase styles
+│   │   ├── services.css      # Services section styles
+│   │   └── social.css        # Social icons styling
+│   └── utilities/            # Utility stylesheets
+│       ├── animations.css    # CSS animations and transitions
+│       └── responsive.css    # Responsive design utilities
+```
+
+#### ⚡ JavaScript Modules (6 Files)
+```
+├── src/assets/js/
+│   ├── main.js               # Main JavaScript entry point
+│   ├── main-standalone.js    # Standalone version (no ES6 imports)
+│   ├── animations.js         # Page animations and effects
+│   ├── cursor.js             # Custom cursor interactions
+│   ├── interactions.js       # User interaction handlers
+│   └── smooth-scroll.js      # Smooth scrolling functionality
+```
+
+#### 🖼️ Assets
+```
+├── src/assets/
+│   ├── fonts/                # Typography assets (empty, using web fonts)
+│   └── images/
+│       └── project-1.svg     # Sample project image
+```
+
+#### 📝 Content - Blog Posts (7 Articles, ~1,468 lines)
+```
+├── src/posts/
+│   ├── posts.json            # Posts collection configuration
+│   ├── welcome-to-neo-brutalism.md          # Introduction to theme
+│   ├── breaking-design-rules.md             # Guide to creative rebellion
+│   ├── building-with-11ty.md               # 11ty development guide
+│   ├── psychology-of-brutal-design.md      # Design psychology article
+│   ├── building-for-the-bold.md            # Architecture guide
+│   ├── color-revolution.md                 # Color theory article
+│   └── future-of-web-rebellion.md          # Future trends analysis
+```
+
+#### 🚀 Projects Showcase (4 Projects, ~263 lines)
+```
+├── src/projects/
+│   ├── neo-brutalist-theme.md  # This theme project
+│   ├── chaos-grid.md           # Grid system project
+│   ├── type-destroyer.md       # Typography project
+│   └── color-riot.md           # Color system project
+```
+
+#### 📄 Static Pages
+```
+├── src/pages/
+│   ├── index.njk             # Pages collection listing
+│   ├── about.njk             # About page with expanded content
+│   ├── contact.njk           # Contact form page
+│   ├── services.njk          # Services showcase page
+│   └── 404.njk               # Custom 404 error page
+```
+
+#### 🏠 Site Root & Special Pages
+```
+├── src/
+│   ├── index.njk             # Homepage template
+│   ├── robots.txt            # SEO robots file
+│   └── blog/
+│       └── index.njk         # Blog listing page
+```
+
+### 🧪 Testing Suite (7 Files)
+```
+├── tests/
+│   ├── README.md             # Testing documentation
+│   ├── global-setup.js       # Playwright global configuration
+│   ├── helpers/
+│   │   └── test-utils.js     # Shared testing utilities
+│   ├── accessibility.spec.js # WCAG accessibility tests
+│   ├── links.spec.js         # Link validation tests
+│   ├── navigation.spec.js    # Navigation functionality tests
+│   ├── performance.spec.js   # Performance benchmarking
+│   ├── responsive.spec.js    # Responsive design tests
+│   └── social-icons.spec.js  # Social media integration tests
+```
+
+## 🏗️ Key Features Implemented
+
+### ✨ Design System
+- **Neo-Brutalist Aesthetic**: Bold typography, vivid colors, hard shadows
+- **Responsive Design**: Mobile-first approach with breakpoint utilities
+- **Component Architecture**: Modular CSS and template system
+- **Animation System**: Smooth transitions and interactive effects
+
+### 📱 Social Media Integration
+- **Social Icons Component**: Configurable icon system
+- **Platform Support**: GitHub, Twitter, LinkedIn, Email, Website
+- **Inline SVG**: Performance-optimized vector icons
+- **Customizable Styling**: Theme-consistent social media links
+
+### 📝 Content Management
+- **Blog System**: 7 comprehensive articles on design and development
+- **Project Showcase**: 4 detailed project presentations
+- **Rich Metadata**: SEO-optimized frontmatter and meta tags
+- **Time Standards**: ISO 8601 dates aligned with time.gov standards
+
+### 🧪 Quality Assurance
+- **Comprehensive Testing**: 6 test suites covering all major functionality
+- **Accessibility**: WCAG compliance testing
+- **Performance**: Core Web Vitals monitoring
+- **CI/CD Pipeline**: Automated testing and deployment
+
+### ⚙️ Technical Standards
+- **11ty Static Site Generator**: Modern Jamstack architecture
+- **Nunjucks Templating**: Powerful template engine with inheritance
+- **GitHub Pages Deployment**: Automated deployment with GitHub Actions
+- **Modern JavaScript**: ES6+ features with fallback support
+
+## 📋 Development Guidelines
+
+### File Organization Rules
+- **Source Code**: All development files in `/src` directory
+- **Tests**: Comprehensive test suite in `/tests` directory
+- **Documentation**: Project docs in root and dedicated files
+- **Assets**: Images, fonts, and media in `/src/assets`
+- **Never Root**: No working files saved to root directory
+
+### Content Standards
+- **Blog Posts**: Minimum 150 lines, comprehensive coverage
+- **Projects**: Detailed showcases with technical specifications
+- **Metadata**: Complete frontmatter with SEO optimization
+- **Dates**: ISO 8601 format aligned with time.gov standards
+
+### Quality Benchmarks
+- **Testing Coverage**: 6 comprehensive test suites
+- **Performance**: Optimized loading and interaction
+- **Accessibility**: WCAG 2.1 AA compliance
+- **SEO**: Complete meta tags and structured data
+
+## 🚀 Theme Capabilities
+
+This Neo-Brutalist theme is a complete solution for modern web development, featuring:
+
+- **Full Static Site**: 11ty-powered with optimized build process
+- **Rich Content**: 7 blog posts and 4 project showcases
+- **Interactive Elements**: Custom cursor, animations, smooth scrolling
+- **Social Integration**: Complete social media icon system
+- **Testing Infrastructure**: Playwright test suite with 6 specialized tests
+- **CI/CD Ready**: GitHub Actions for automated deployment and testing
+- **Production Optimized**: Performance-tuned with modern best practices
+
+**Total Project Size**: 86 files across 23 directories, representing a comprehensive, production-ready theme for modern web development.

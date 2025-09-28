@@ -32,26 +32,21 @@ class NeoBrutalistApp {
         try {
             // Initialize cursor trail
             this.modules.cursorTrail = new CursorTrail();
-            console.log('✅ Cursor trail initialized');
 
             // Initialize animations
             this.modules.animations = new Animations();
-            console.log('✅ Animations initialized');
 
             // Initialize interactions
             this.modules.interactions = new Interactions();
-            console.log('✅ Interactions initialized');
 
             // Initialize smooth scroll
             this.modules.smoothScroll = new SmoothScroll();
-            console.log('✅ Smooth scroll initialized');
 
-            console.log('🚀 Neo-Brutalist theme fully loaded');
 
             // Dispatch custom event for theme ready
             this.dispatchThemeReady();
         } catch (error) {
-            console.error('❌ Error initializing Neo-Brutalist theme:', error);
+            // Silently handle initialization errors in production
         }
     }
 

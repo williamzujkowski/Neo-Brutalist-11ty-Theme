@@ -36,7 +36,7 @@ export class SmoothScroll {
         if (targetElement) {
             this.scrollToElement(targetElement);
         } else {
-            console.warn(`Target element ${targetId} not found`);
+            // Target element not found - silently handle
         }
     }
 
@@ -54,7 +54,7 @@ export class SmoothScroll {
             const scrollOptions = { ...this.options, ...customOptions };
             element.scrollIntoView(scrollOptions);
         } else {
-            console.warn(`Element ${selector} not found`);
+            // Element not found - silently handle
         }
     }
 }

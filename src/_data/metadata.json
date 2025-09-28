@@ -1,18 +1,18 @@
 {
   "title": "Neo-Brutalist Theme",
   "description": "A bold, vibrant, and unapologetically loud website theme",
-  "url": "https://example.com",
+  "url": "https://williamzujkowski.github.io/Neo-Brutalist-11ty-Theme",
   "language": "en",
   "locale": "en_US",
   "author": {
     "name": "Digital Maverick",
-    "email": "hello@example.com",
-    "url": "https://example.com/about/"
+    "email": "hello@williamzujkowski.com",
+    "url": "https://williamzujkowski.github.io/Neo-Brutalist-11ty-Theme/about/"
   },
   "social": {
-    "twitter": "@example",
-    "github": "example",
-    "linkedin": "example"
+    "twitter": "@williamzuj",
+    "github": "williamzujkowski",
+    "linkedin": "williamzujkowski"
   },
   "og": {
     "type": "website",

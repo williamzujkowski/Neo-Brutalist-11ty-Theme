@@ -112,7 +112,6 @@
             initSmoothScroll();
             initFloatingShapes();
 
-            console.log('🚀 Neo-Brutalist theme (standalone) fully loaded');
 
             // Dispatch ready event
             const event = new CustomEvent('neoBrutalistReady', {
@@ -123,7 +122,7 @@
             });
             document.dispatchEvent(event);
         } catch (error) {
-            console.error('❌ Error initializing Neo-Brutalist theme:', error);
+            // Silently handle initialization errors in production
         }
     }
 

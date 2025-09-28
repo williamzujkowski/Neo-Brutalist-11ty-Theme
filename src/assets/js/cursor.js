@@ -18,7 +18,7 @@ export class CursorTrail {
         // Check if cursor dot already exists
         this.cursorDot = document.getElementById('cursorDot');
         if (!this.cursorDot) {
-            console.warn('Cursor dot element not found. Please add an element with id="cursorDot" to your HTML.');
+            // Cursor dot element not found - silently handle
         }
     }
 
