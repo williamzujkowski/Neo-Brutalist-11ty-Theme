@@ -1,11 +1,13 @@
 ---
+layout: layouts/project.njk
 title: "COLOR RIOT"
 description: "An interactive color palette generator that celebrates bold, clashing combinations and rejects safe color theory"
 image: "/images/projects/color-riot.jpg"
 tags: ["Color", "Generator", "Interactive", "Design Tool", "Rebellious", "Creative"]
+date: 2025-01-26
 order: 5
 github: "https://github.com/yourusername/color-riot"
-live_url: "https://color-riot.design"
+demo: "https://color-riot.design"
 ---
 
 # COLOR RIOT: Unleashing Chromatic Chaos

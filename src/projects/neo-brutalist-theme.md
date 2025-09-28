@@ -1,4 +1,5 @@
 ---
+layout: layouts/project.njk
 title: "Neo-Brutalist 11ty Theme"
 description: "A bold static site generator theme that refuses to blend in"
 date: 2025-01-27

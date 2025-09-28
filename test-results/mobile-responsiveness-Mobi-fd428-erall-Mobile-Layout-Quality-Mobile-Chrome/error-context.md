@@ -1,0 +1,187 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - navigation [ref=e3]:
+    - link "REBEL" [ref=e4] [cursor=pointer]:
+      - /url: /
+  - main [ref=e5]:
+    - generic [ref=e7]:
+      - heading "BREAK THE MOLD" [level=1] [ref=e8]:
+        - text: BREAK
+        - text: THE MOLD
+      - generic [ref=e9]: INNOVATE → CREATE → DOMINATE
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - heading "DISRUPT. DESIGN. DELIVER." [level=2] [ref=e13]:
+          - text: DISRUPT.
+          - text: DESIGN.
+          - text: DELIVER.
+        - paragraph [ref=e16]: → Welcome to the DIGITAL REBELLION. Where conformity comes to die.
+        - paragraph [ref=e17]: → We build experiences that refuse to be ignored. Code that breaks barriers. Design that demands attention.
+        - paragraph [ref=e18]: → This is where innovation meets execution. Where wild ideas become reality.
+        - paragraph [ref=e19]: → Ready to stand out in a world full of templates? Let's make something UNFORGETTABLE.
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]: "127"
+          - generic [ref=e23]: Projects Launched
+        - generic [ref=e24]:
+          - generic [ref=e25]: ∞
+          - generic [ref=e26]: Ideas Generated
+        - generic [ref=e27]:
+          - generic [ref=e28]: 100%
+          - generic [ref=e29]: Pixel Perfect
+        - generic [ref=e30]:
+          - generic [ref=e31]: "0"
+          - generic [ref=e32]: Boring Days
+    - generic [ref=e34]:
+      - heading "WHAT I DO" [level=2] [ref=e35]
+      - generic [ref=e36]:
+        - generic [ref=e37] [cursor=pointer]:
+          - generic [ref=e38] [cursor=pointer]: ⚡
+          - heading "Lightning Fast" [level=3] [ref=e39] [cursor=pointer]
+          - paragraph [ref=e40] [cursor=pointer]: Code that runs at the speed of thought. Performance isn't a feature, it's a requirement. Zero compromises.
+        - generic [ref=e41] [cursor=pointer]:
+          - generic [ref=e42] [cursor=pointer]: 🎨
+          - heading "Design Magic" [level=3] [ref=e43] [cursor=pointer]
+          - paragraph [ref=e44] [cursor=pointer]: Where pixels meet perfection. Creating visual experiences that stick in your mind and refuse to leave.
+        - generic [ref=e45] [cursor=pointer]:
+          - generic [ref=e46] [cursor=pointer]: 🚀
+          - heading "Launch Ready" [level=3] [ref=e47] [cursor=pointer]
+          - paragraph [ref=e48] [cursor=pointer]: From concept to production in record time. Building products that ship, not prototypes that sit.
+        - generic [ref=e49] [cursor=pointer]:
+          - generic [ref=e50] [cursor=pointer]: 💥
+          - heading "Problem Crusher" [level=3] [ref=e51] [cursor=pointer]
+          - paragraph [ref=e52] [cursor=pointer]: Complex challenges are just puzzles in disguise. The harder they come, the harder they fall.
+        - generic [ref=e53] [cursor=pointer]:
+          - generic [ref=e54] [cursor=pointer]: 🔥
+          - heading "Innovation Engine" [level=3] [ref=e55] [cursor=pointer]
+          - paragraph [ref=e56] [cursor=pointer]: Always exploring what's next. If it's cutting edge, we're already building with it.
+        - generic [ref=e57] [cursor=pointer]:
+          - generic [ref=e58] [cursor=pointer]: ⭐
+          - heading "Quality Obsessed" [level=3] [ref=e59] [cursor=pointer]
+          - paragraph [ref=e60] [cursor=pointer]: Good enough isn't in our vocabulary. Every detail matters, every pixel has purpose.
+    - generic [ref=e62]:
+      - heading "RECENT WORK" [level=2] [ref=e63]:
+        - text: RECENT
+        - text: WORK
+      - generic [ref=e64]:
+        - article [ref=e65]:
+          - img "COLOR RIOT" [ref=e67]
+          - generic [ref=e68]:
+            - heading "COLOR RIOT" [level=3] [ref=e69]
+            - paragraph [ref=e70]: An interactive color palette generator that celebrates bold, clashing combinations and rejects safe color theory
+            - generic [ref=e71]:
+              - generic [ref=e72]: Color
+              - generic [ref=e73]: Generator
+              - generic [ref=e74]: Interactive
+              - generic [ref=e75]: Design Tool
+              - generic [ref=e76]: Rebellious
+              - generic [ref=e77]: Creative
+            - link "VIEW PROJECT →" [ref=e78] [cursor=pointer]:
+              - /url: https://github.com/yourusername/color-riot
+        - article [ref=e79]:
+          - img "TYPE DESTROYER" [ref=e81]
+          - generic [ref=e82]:
+            - heading "TYPE DESTROYER" [level=3] [ref=e83]
+            - paragraph [ref=e84]: An experimental typography tool that shatters conventional type rules and creates rebellious, expressive letterforms
+            - generic [ref=e85]:
+              - generic [ref=e86]: Typography
+              - generic [ref=e87]: WebGL
+              - generic [ref=e88]: Interactive
+              - generic [ref=e89]: Tool
+              - generic [ref=e90]: Experimental
+              - generic [ref=e91]: Creative
+            - link "VIEW PROJECT →" [ref=e92] [cursor=pointer]:
+              - /url: https://github.com/yourusername/type-destroyer
+        - article [ref=e93]:
+          - img "CHAOS GRID" [ref=e95]
+          - generic [ref=e96]:
+            - heading "CHAOS GRID" [level=3] [ref=e97]
+            - paragraph [ref=e98]: A revolutionary CSS Grid-based layout system that embraces disorder and breaks traditional design constraints
+            - generic [ref=e99]:
+              - generic [ref=e100]: CSS
+              - generic [ref=e101]: Grid
+              - generic [ref=e102]: Layout
+              - generic [ref=e103]: Framework
+              - generic [ref=e104]: Experimental
+            - link "VIEW PROJECT →" [ref=e105] [cursor=pointer]:
+              - /url: https://github.com/yourusername/chaos-grid
+        - article [ref=e106]:
+          - img "Neo-Brutalist 11ty Theme" [ref=e108]
+          - generic [ref=e109]:
+            - heading "Neo-Brutalist 11ty Theme" [level=3] [ref=e110]
+            - paragraph [ref=e111]: A bold static site generator theme that refuses to blend in
+            - generic [ref=e112]:
+              - generic [ref=e113]: 11ty
+              - generic [ref=e114]: CSS3
+              - generic [ref=e115]: JavaScript
+              - generic [ref=e116]: GitHub Actions
+            - link "VIEW PROJECT →" [ref=e117] [cursor=pointer]:
+              - /url: https://github.com/williamzujkowski/Neo-Brutalist-11ty-Theme
+    - generic [ref=e119]:
+      - heading "LATEST THOUGHTS" [level=2] [ref=e120]:
+        - text: LATEST
+        - text: THOUGHTS
+      - generic [ref=e121]:
+        - article [ref=e122]:
+          - time [ref=e123]: March 11, 2025
+          - 'heading "The Future of Web Rebellion: Trends That Refuse to Follow Rules" [level=3] [ref=e124]':
+            - 'link "The Future of Web Rebellion: Trends That Refuse to Follow Rules" [ref=e125] [cursor=pointer]':
+              - /url: /posts/the-future-of-web-rebellion-trends-that-refuse-to-follow-rules/
+          - paragraph [ref=e126]: Exploring emerging design trends that challenge conventional wisdom and predict how digital interfaces will evolve beyond safe, predictable patterns.
+          - link "READ MORE →" [ref=e127] [cursor=pointer]:
+            - /url: /posts/the-future-of-web-rebellion-trends-that-refuse-to-follow-rules/
+        - article [ref=e128]:
+          - time [ref=e129]: February 21, 2025
+          - 'heading "Color Revolution: Breaking Free from Minimalist Palettes" [level=3] [ref=e130]':
+            - 'link "Color Revolution: Breaking Free from Minimalist Palettes" [ref=e131] [cursor=pointer]':
+              - /url: /posts/color-revolution-breaking-free-from-minimalist-palettes/
+          - paragraph [ref=e132]: Challenging the tyranny of safe color choices and exploring how bold, unconventional palettes can transform digital experiences and user emotions.
+          - link "READ MORE →" [ref=e133] [cursor=pointer]:
+            - /url: /posts/color-revolution-breaking-free-from-minimalist-palettes/
+        - article [ref=e134]:
+          - time [ref=e135]: February 7, 2025
+          - 'heading "Building for the Bold: A Developer''s Guide to Neo-Brutalist Web Architecture" [level=3] [ref=e136]':
+            - 'link "Building for the Bold: A Developer''s Guide to Neo-Brutalist Web Architecture" [ref=e137] [cursor=pointer]':
+              - /url: /posts/building-for-the-bold-a-developer-s-guide-to-neo-brutalist-web-architecture/
+          - paragraph [ref=e138]: A technical deep-dive into implementing Neo-Brutalist design systems, from CSS Grid chaos to performant animations that break conventional web patterns.
+          - link "READ MORE →" [ref=e139] [cursor=pointer]:
+            - /url: /posts/building-for-the-bold-a-developer-s-guide-to-neo-brutalist-web-architecture/
+      - link "ALL POSTS →" [ref=e141] [cursor=pointer]:
+        - /url: /blog/
+    - generic [ref=e143]:
+      - heading "START SOMETHING" [level=2] [ref=e144]:
+        - text: START
+        - text: SOMETHING
+      - link "GET IN TOUCH →" [ref=e145] [cursor=pointer]:
+        - /url: mailto:hello@williamzujkowski.com
+  - contentinfo [ref=e146]:
+    - generic [ref=e147]:
+      - link "GitHub - Opens in new tab" [ref=e148] [cursor=pointer]:
+        - /url: https://github.com/williamzujkowski
+        - img [ref=e151] [cursor=pointer]
+      - link "LinkedIn - Opens in new tab" [ref=e154] [cursor=pointer]:
+        - /url: https://linkedin.com/in/williamzujkowski
+      - link "Twitter - Opens in new tab" [ref=e158] [cursor=pointer]:
+        - /url: https://twitter.com/williamzuj
+        - img [ref=e161] [cursor=pointer]
+      - link "Instagram - Opens in new tab" [ref=e164] [cursor=pointer]:
+        - /url: https://instagram.com/williamzuj
+        - img [ref=e167] [cursor=pointer]
+      - link "YouTube - Opens in new tab" [ref=e170] [cursor=pointer]:
+        - /url: https://youtube.com/@williamzuj
+        - img [ref=e173] [cursor=pointer]
+      - link "Facebook - Opens in new tab" [ref=e176] [cursor=pointer]:
+        - /url: https://facebook.com/williamzuj
+        - img [ref=e179] [cursor=pointer]
+      - link "Discord - Opens in new tab" [ref=e182] [cursor=pointer]:
+        - /url: https://discord.gg/williamzuj
+        - img [ref=e185] [cursor=pointer]
+      - link "Medium - Opens in new tab" [ref=e188] [cursor=pointer]:
+        - /url: https://medium.com/@williamzuj
+        - img [ref=e191] [cursor=pointer]
+    - paragraph [ref=e194]: © 2025 Neo-Brutalist Theme → BREAK THE RULES
+```

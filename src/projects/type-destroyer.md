@@ -1,11 +1,13 @@
 ---
+layout: layouts/project.njk
 title: "TYPE DESTROYER"
 description: "An experimental typography tool that shatters conventional type rules and creates rebellious, expressive letterforms"
 image: "/images/projects/type-destroyer.jpg"
 tags: ["Typography", "WebGL", "Interactive", "Tool", "Experimental", "Creative"]
+date: 2025-01-24
 order: 4
 github: "https://github.com/yourusername/type-destroyer"
-live_url: "https://type-destroyer.vercel.app"
+demo: "https://type-destroyer.vercel.app"
 ---
 
 # TYPE DESTROYER: Liberating Letters from Conformity

@@ -1,0 +1,140 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - navigation [ref=e3]:
+    - link "REBEL" [ref=e4] [cursor=pointer]:
+      - /url: /
+  - main [ref=e5]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - heading "LATEST THOUGHTS" [level=1] [ref=e9]:
+          - text: LATEST
+          - generic [ref=e10]: THOUGHTS
+        - paragraph [ref=e11]: Where code meets chaos, design meets disruption, and conventions go to die.
+      - generic [ref=e12]:
+        - article [ref=e13]:
+          - generic [ref=e14]: January 14, 2025
+          - heading "Welcome to Neo-Brutalism" [level=2] [ref=e15]:
+            - link "Welcome to Neo-Brutalism" [ref=e16] [cursor=pointer]:
+              - /url: /posts/welcome-to-neo-brutalism/
+          - paragraph [ref=e17]: Exploring the bold aesthetics of neo-brutalism in web design
+          - generic [ref=e18]:
+            - generic [ref=e19]: design
+            - generic [ref=e20]: web
+            - generic [ref=e21]: brutalism
+            - generic [ref=e22]: featured
+          - link "READ MORE →" [ref=e23] [cursor=pointer]:
+            - /url: /posts/welcome-to-neo-brutalism/
+        - article [ref=e24]:
+          - generic [ref=e25]: January 14, 2025
+          - 'heading "The Psychology of Brutal Design: Why Our Brains Crave Visual Chaos" [level=2] [ref=e26]':
+            - 'link "The Psychology of Brutal Design: Why Our Brains Crave Visual Chaos" [ref=e27] [cursor=pointer]':
+              - /url: /posts/the-psychology-of-brutal-design-why-our-brains-crave-visual-chaos/
+          - paragraph [ref=e28]: Exploring the cognitive science behind why bold, chaotic design elements trigger powerful psychological responses and create more memorable digital experiences.
+          - generic [ref=e29]:
+            - generic [ref=e30]: psychology
+            - generic [ref=e31]: design-theory
+            - generic [ref=e32]: cognitive-science
+            - generic [ref=e33]: user-experience
+            - generic [ref=e34]: visual-design
+          - link "READ MORE →" [ref=e35] [cursor=pointer]:
+            - /url: /posts/the-psychology-of-brutal-design-why-our-brains-crave-visual-chaos/
+        - article [ref=e36]:
+          - generic [ref=e37]: January 19, 2025
+          - 'heading "Breaking Design Rules: A Guide to Creative Rebellion" [level=2] [ref=e38]':
+            - 'link "Breaking Design Rules: A Guide to Creative Rebellion" [ref=e39] [cursor=pointer]':
+              - /url: /posts/breaking-design-rules-a-guide-to-creative-rebellion/
+          - paragraph [ref=e40]: Why following design conventions is overrated and how to break them effectively
+          - generic [ref=e41]:
+            - generic [ref=e42]: design
+            - generic [ref=e43]: creativity
+            - generic [ref=e44]: tutorial
+          - link "READ MORE →" [ref=e45] [cursor=pointer]:
+            - /url: /posts/breaking-design-rules-a-guide-to-creative-rebellion/
+        - article [ref=e46]:
+          - generic [ref=e47]: January 24, 2025
+          - heading "Building a Neo-Brutalist Theme with 11ty" [level=2] [ref=e48]:
+            - link "Building a Neo-Brutalist Theme with 11ty" [ref=e49] [cursor=pointer]:
+              - /url: /posts/building-a-neo-brutalist-theme-with-11ty/
+          - paragraph [ref=e50]: How we built this theme using Eleventy, pure CSS, and a complete disregard for subtlety
+          - generic [ref=e51]:
+            - generic [ref=e52]: 11ty
+            - generic [ref=e53]: development
+            - generic [ref=e54]: tutorial
+            - generic [ref=e55]: featured
+          - link "READ MORE →" [ref=e56] [cursor=pointer]:
+            - /url: /posts/building-a-neo-brutalist-theme-with-11ty/
+        - article [ref=e57]:
+          - generic [ref=e58]: February 7, 2025
+          - 'heading "Building for the Bold: A Developer''s Guide to Neo-Brutalist Web Architecture" [level=2] [ref=e59]':
+            - 'link "Building for the Bold: A Developer''s Guide to Neo-Brutalist Web Architecture" [ref=e60] [cursor=pointer]':
+              - /url: /posts/building-for-the-bold-a-developer-s-guide-to-neo-brutalist-web-architecture/
+          - paragraph [ref=e61]: A technical deep-dive into implementing Neo-Brutalist design systems, from CSS Grid chaos to performant animations that break conventional web patterns.
+          - generic [ref=e62]:
+            - generic [ref=e63]: web-development
+            - generic [ref=e64]: css
+            - generic [ref=e65]: architecture
+            - generic [ref=e66]: performance
+            - generic [ref=e67]: frontend
+            - generic [ref=e68]: technical
+          - link "READ MORE →" [ref=e69] [cursor=pointer]:
+            - /url: /posts/building-for-the-bold-a-developer-s-guide-to-neo-brutalist-web-architecture/
+        - article [ref=e70]:
+          - generic [ref=e71]: February 21, 2025
+          - 'heading "Color Revolution: Breaking Free from Minimalist Palettes" [level=2] [ref=e72]':
+            - 'link "Color Revolution: Breaking Free from Minimalist Palettes" [ref=e73] [cursor=pointer]':
+              - /url: /posts/color-revolution-breaking-free-from-minimalist-palettes/
+          - paragraph [ref=e74]: Challenging the tyranny of safe color choices and exploring how bold, unconventional palettes can transform digital experiences and user emotions.
+          - generic [ref=e75]:
+            - generic [ref=e76]: color-theory
+            - generic [ref=e77]: design
+            - generic [ref=e78]: visual-identity
+            - generic [ref=e79]: brand-design
+            - generic [ref=e80]: user-psychology
+          - link "READ MORE →" [ref=e81] [cursor=pointer]:
+            - /url: /posts/color-revolution-breaking-free-from-minimalist-palettes/
+        - article [ref=e82]:
+          - generic [ref=e83]: March 11, 2025
+          - 'heading "The Future of Web Rebellion: Trends That Refuse to Follow Rules" [level=2] [ref=e84]':
+            - 'link "The Future of Web Rebellion: Trends That Refuse to Follow Rules" [ref=e85] [cursor=pointer]':
+              - /url: /posts/the-future-of-web-rebellion-trends-that-refuse-to-follow-rules/
+          - paragraph [ref=e86]: Exploring emerging design trends that challenge conventional wisdom and predict how digital interfaces will evolve beyond safe, predictable patterns.
+          - generic [ref=e87]:
+            - generic [ref=e88]: design-trends
+            - generic [ref=e89]: future-design
+            - generic [ref=e90]: innovation
+            - generic [ref=e91]: web-standards
+            - generic [ref=e92]: digital-culture
+            - generic [ref=e93]: rebellion
+          - link "READ MORE →" [ref=e94] [cursor=pointer]:
+            - /url: /posts/the-future-of-web-rebellion-trends-that-refuse-to-follow-rules/
+  - contentinfo [ref=e95]:
+    - generic [ref=e96]:
+      - link "GitHub - Opens in new tab" [ref=e97] [cursor=pointer]:
+        - /url: https://github.com/williamzujkowski
+        - img [ref=e100] [cursor=pointer]
+      - link "LinkedIn - Opens in new tab" [ref=e103] [cursor=pointer]:
+        - /url: https://linkedin.com/in/williamzujkowski
+        - img [ref=e106] [cursor=pointer]
+      - link "Twitter - Opens in new tab" [ref=e109] [cursor=pointer]:
+        - /url: https://twitter.com/williamzuj
+        - img [ref=e112] [cursor=pointer]
+      - link "Instagram - Opens in new tab" [ref=e115] [cursor=pointer]:
+        - /url: https://instagram.com/williamzuj
+        - img [ref=e118] [cursor=pointer]
+      - link "YouTube - Opens in new tab" [ref=e121] [cursor=pointer]:
+        - /url: https://youtube.com/@williamzuj
+      - link "Facebook - Opens in new tab" [ref=e125] [cursor=pointer]:
+        - /url: https://facebook.com/williamzuj
+        - img [ref=e128] [cursor=pointer]
+      - link "Discord - Opens in new tab" [ref=e131] [cursor=pointer]:
+        - /url: https://discord.gg/williamzuj
+        - img [ref=e134] [cursor=pointer]
+      - link "Medium - Opens in new tab" [ref=e137] [cursor=pointer]:
+        - /url: https://medium.com/@williamzuj
+        - img [ref=e140] [cursor=pointer]
+    - paragraph [ref=e143]: © 2025 Neo-Brutalist Theme → BREAK THE RULES
+```

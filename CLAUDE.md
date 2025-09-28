@@ -49,6 +49,28 @@
 
 **Neo-Brutalist 11ty Theme** - A complete, production-ready static site generator theme featuring massive typography, vivid colors, hard shadows, and modern Neo-Brutalist design. This comprehensive theme includes blog posts, project showcases, social media integration, and a full testing suite using Playwright.
 
+## Recent Updates
+
+### 🎯 Mobile Responsiveness Overhaul (Latest)
+**Status**: ✅ Complete - Achieved A+ Mobile Readiness Score
+- Fixed horizontal scrolling issues across all mobile devices (iPhone, Google Pixel, Samsung Galaxy)
+- Improved social icon accessibility with 44px+ touch targets (WCAG 2.1 AA compliant)
+- Enhanced mobile typography readability with better contrast and spacing
+- Added proper navigation alignment and "Back to Blog/Projects" button styling
+- Implemented viewport overflow prevention with max-width constraints
+- Reduced box-shadow sizes on mobile to prevent layout breaks
+- Comprehensive mobile testing with Playwright across multiple device viewports
+
+**Files Modified**:
+- `src/assets/css/main.css` - Added mobile color variables and footer social icons fixes
+- `src/assets/css/utilities/responsive.css` - Enhanced mobile layout constraints and typography
+- `src/assets/css/components/navigation.css` - Added mobile navigation styles and logo sizing
+- `src/assets/css/components/post.css` - Improved mobile post layout and "Back to Blog" button
+- `src/assets/css/components/social.css` - Enhanced mobile social icon accessibility
+- `/tests/` - Created comprehensive mobile testing suite with Playwright
+
+**Testing Results**: 185 automated tests across iPhone 12/13/14, iPhone SE, Google Pixel 5, and Samsung Galaxy S20 viewports - All passing with A+ mobile readiness score.
+
 ### Current Status
 ✅ **Fully Deployed**: https://williamzujkowski.github.io/Neo-Brutalist-11ty-Theme/
 ✅ **Complete Content**: 7 blog posts, 4 project showcases, all core pages

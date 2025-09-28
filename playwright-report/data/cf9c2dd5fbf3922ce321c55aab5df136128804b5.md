@@ -1,0 +1,89 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - navigation [ref=e3]:
+    - link "REBEL" [ref=e4] [cursor=pointer]:
+      - /url: /
+  - main [ref=e5]:
+    - generic [ref=e7]:
+      - heading "LET'S CONNECT" [level=1] [ref=e8]:
+        - text: LET'S
+        - text: CONNECT
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - heading "REACH OUT" [level=2] [ref=e11]
+          - paragraph [ref=e12]: Ready to build something that breaks the internet? Let's create digital chaos together.
+          - generic [ref=e13]:
+            - link "✉ Email hello@williamzujkowski.com" [ref=e14] [cursor=pointer]:
+              - /url: mailto:hello@williamzujkowski.com
+              - generic [ref=e15] [cursor=pointer]: ✉
+              - generic [ref=e16] [cursor=pointer]:
+                - heading "Email" [level=3] [ref=e17] [cursor=pointer]
+                - paragraph [ref=e18] [cursor=pointer]: hello@williamzujkowski.com
+            - link "⚡ GitHub @williamzujkowski" [ref=e19] [cursor=pointer]:
+              - /url: https://github.com/williamzujkowski
+              - generic [ref=e20] [cursor=pointer]: ⚡
+              - generic [ref=e21] [cursor=pointer]:
+                - heading "GitHub" [level=3] [ref=e22] [cursor=pointer]
+                - paragraph [ref=e23] [cursor=pointer]: "@williamzujkowski"
+            - link "💬 Twitter @williamzuj" [ref=e24] [cursor=pointer]:
+              - /url: https://twitter.com/williamzuj
+              - generic [ref=e25] [cursor=pointer]: 💬
+              - generic [ref=e26] [cursor=pointer]:
+                - heading "Twitter" [level=3] [ref=e27] [cursor=pointer]
+                - paragraph [ref=e28] [cursor=pointer]: "@williamzuj"
+            - link "🔗 LinkedIn /in/williamzujkowski" [ref=e29] [cursor=pointer]:
+              - /url: https://linkedin.com/in/williamzujkowski
+              - generic [ref=e30] [cursor=pointer]: 🔗
+              - generic [ref=e31] [cursor=pointer]:
+                - heading "LinkedIn" [level=3] [ref=e32] [cursor=pointer]
+                - paragraph [ref=e33] [cursor=pointer]: /in/williamzujkowski
+        - generic [ref=e34]:
+          - heading "DROP A MESSAGE" [level=2] [ref=e35]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: NAME
+              - textbox "NAME" [ref=e39]
+            - generic [ref=e40]:
+              - generic [ref=e41]: EMAIL
+              - textbox "EMAIL" [ref=e42]
+            - generic [ref=e43]:
+              - generic [ref=e44]: MESSAGE
+              - textbox "MESSAGE" [ref=e45]
+            - button "SEND MESSAGE →" [ref=e46] [cursor=pointer]
+          - paragraph [ref=e47]: "* This is a demo form. For a real implementation, connect to your preferred form handler."
+      - generic [ref=e48]:
+        - heading "BREAK THE RULES" [level=2] [ref=e49]:
+          - text: BREAK
+          - text: THE RULES
+        - paragraph [ref=e51]: No boring websites. No subtle gradients. No apologetic typography. Just pure digital rebellion.
+  - contentinfo [ref=e52]:
+    - generic [ref=e53]:
+      - link "GitHub - Opens in new tab" [ref=e54] [cursor=pointer]:
+        - /url: https://github.com/williamzujkowski
+      - link "LinkedIn - Opens in new tab" [ref=e58] [cursor=pointer]:
+        - /url: https://linkedin.com/in/williamzujkowski
+        - img [ref=e61] [cursor=pointer]
+      - link "Twitter - Opens in new tab" [ref=e64] [cursor=pointer]:
+        - /url: https://twitter.com/williamzuj
+        - img [ref=e67] [cursor=pointer]
+      - link "Instagram - Opens in new tab" [ref=e70] [cursor=pointer]:
+        - /url: https://instagram.com/williamzuj
+        - img [ref=e73] [cursor=pointer]
+      - link "YouTube - Opens in new tab" [ref=e76] [cursor=pointer]:
+        - /url: https://youtube.com/@williamzuj
+        - img [ref=e79] [cursor=pointer]
+      - link "Facebook - Opens in new tab" [ref=e82] [cursor=pointer]:
+        - /url: https://facebook.com/williamzuj
+        - img [ref=e85] [cursor=pointer]
+      - link "Discord - Opens in new tab" [ref=e88] [cursor=pointer]:
+        - /url: https://discord.gg/williamzuj
+        - img [ref=e91] [cursor=pointer]
+      - link "Medium - Opens in new tab" [ref=e94] [cursor=pointer]:
+        - /url: https://medium.com/@williamzuj
+        - img [ref=e97] [cursor=pointer]
+    - paragraph [ref=e100]: © 2025 Neo-Brutalist Theme → BREAK THE RULES
+```

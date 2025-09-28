@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="project">
+  <header class="project-header">
+    <h1 class="project-title">{{ title }}</h1>
+    <div class="project-meta">
+      <time class="project-date" datetime="{{ date | dateReadable }}">{{ date | dateReadable }}</time>
+      {% if tags %}
+      <div class="project-tags">
+        {% for tag in tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% if description %}
+    <p class="project-description">{{ description }}</p>
+    {% endif %}
+  </header>
+
+  <div class="project-content">
+    {{ content | safe }}
+  </div>
+
+  {% if github or demo %}
+  <div class="project-links">
+    {% if github %}
+    <a href="{{ github }}" class="btn btn-primary" target="_blank" rel="noopener">
+      View on GitHub →
+    </a>
+    {% endif %}
+    {% if demo %}
+    <a href="{{ demo }}" class="btn btn-secondary" target="_blank" rel="noopener">
+      See it Live →
+    </a>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <footer class="project-footer">
+    <nav class="project-nav">
+      <a href="{{ '/projects/' | url }}" class="btn">← Back to Projects</a>
+    </nav>
+  </footer>
+</article>

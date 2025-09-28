@@ -16,6 +16,7 @@
 
     .mega-title {
         letter-spacing: -4px;
+        color: var(--stark-black);
     }
 
     .contact-cta {
@@ -27,14 +28,31 @@
     .hero {
         margin: 100px 10px 20px 10px;
         padding: 40px 20px;
+        /* Prevent horizontal overflow */
+        max-width: calc(100vw - 20px);
+        box-sizing: border-box;
     }
 
     .about, .services, .contact {
         padding: 60px 20px;
+        /* Prevent horizontal overflow */
+        max-width: calc(100vw - 20px);
+        box-sizing: border-box;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .floating-shape {
         display: none; /* Hide floating shapes on mobile */
+    }
+
+    /* Fix box-shadow overflow issues */
+    .hero-content,
+    .about-text,
+    .service-card,
+    .blog-card,
+    .project-card {
+        box-shadow: 4px 4px 0px var(--stark-black) !important;
     }
 
     nav {
@@ -43,6 +61,43 @@
 
     .logo {
         font-size: 2rem;
+        color: var(--stark-black);
+    }
+
+    /* Improved mobile typography */
+    body {
+        color: var(--mobile-text-dark);
+    }
+
+    p {
+        color: var(--mobile-text-medium);
+        line-height: 1.6;
+    }
+
+    .service-card p,
+    .about-text p {
+        color: var(--mobile-text-dark);
+    }
+
+    /* Better mobile spacing */
+    .section-title {
+        margin-bottom: 40px;
+        color: var(--stark-black);
+    }
+
+    .about-text,
+    .service-card {
+        margin-bottom: 30px;
+    }
+
+    /* Ensure no content exceeds viewport width */
+    * {
+        max-width: 100vw;
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
     }
 }
 

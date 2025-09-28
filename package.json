@@ -38,7 +38,7 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@playwright/test": "^1.40.0",
+    "@playwright/test": "^1.55.1",
     "cross-env": "^7.0.3",
     "markdown-it": "^13.0.1",
     "markdown-it-attrs": "^4.1.6"

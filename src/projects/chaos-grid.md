@@ -1,11 +1,13 @@
 ---
+layout: layouts/project.njk
 title: "CHAOS GRID"
 description: "A revolutionary CSS Grid-based layout system that embraces disorder and breaks traditional design constraints"
 image: "/images/projects/chaos-grid.jpg"
 tags: ["CSS", "Grid", "Layout", "Framework", "Experimental"]
+date: 2025-01-25
 order: 3
 github: "https://github.com/yourusername/chaos-grid"
-live_url: "https://chaos-grid-demo.netlify.app"
+demo: "https://chaos-grid-demo.netlify.app"
 ---
 
 # CHAOS GRID: Embracing Disorder in Web Layouts
