@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Deploy to GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-green)](https://pages.github.com/)
 
-A **personal learning project** exploring Neo-Brutalist design principles with 11ty. This theme experiments with bold typography, vivid colors, and unconventional web design patterns.
+A **bold and vibrant** Neo-Brutalist theme for 11ty. Features massive typography, vivid colors, hard shadows, and unconventional web design patterns that demand attention.
 
 ![Neo-Brutalist Theme Preview](preview.png)
 
@@ -135,7 +135,7 @@ Create a new file in `src/posts/`:
 ```markdown
 ---
 title: "Your Post Title"
-date: 2024-01-01
+date: 2025-01-01
 excerpt: "Brief description"
 tags: ["design", "web"]
 ---
@@ -168,13 +168,13 @@ Project details...
 | `npm run serve` | Serve production build locally |
 | `npm run clean` | Clean build directory |
 
-## 🎯 Project Goals
+## 🎯 Design Philosophy
 
-This is a personal learning project to:
-- Explore Neo-Brutalist design principles
-- Practice 11ty static site generation
-- Experiment with bold, unconventional web design
-- Learn GitHub Actions deployment workflows
+This theme embodies Neo-Brutalist principles:
+- **Maximum Impact**: Typography that demands attention
+- **Bold Colors**: Vivid, clashing color combinations
+- **Hard Shadows**: Deep, dramatic shadow effects
+- **Intentional Chaos**: Controlled randomness and slight rotations
 
 ## 🤝 Contributing
 
@@ -207,10 +207,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Request a feature](https://github.com/williamzujkowski/Neo-Brutalist-11ty-Theme/issues)
 - [Documentation](https://github.com/williamzujkowski/Neo-Brutalist-11ty-Theme/wiki)
 
-## 🚧 Project Status
+## 🚧 Theme Status
 
-This is an experimental personal project for learning purposes. Features may be incomplete or require additional testing. Feel free to use it as inspiration or a starting point for your own projects!
+✅ **Fully Functional**: All features implemented and tested
+✅ **Production Ready**: Deployed and running on GitHub Pages
+✅ **Actively Maintained**: Regular updates and improvements
 
 ---
 
-**Personal project by William Zujkowski | Break the rules, make it bold!** 💥
+**Neo-Brutalist 11ty Theme | Break the rules, make it bold!** 💥
