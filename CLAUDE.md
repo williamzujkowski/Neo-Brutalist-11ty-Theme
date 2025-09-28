@@ -51,35 +51,43 @@
 
 ### Current Status
 ✅ **Fully Deployed**: https://williamzujkowski.github.io/Neo-Brutalist-11ty-Theme/
-✅ **All Pages Created**: Home, About, Services, Contact, Blog posts, Project
-✅ **Icons Fixed**: SVG icons properly rendering
-✅ **Navigation Working**: All internal links functional
+✅ **All Pages Created**: Home, About, Services, Contact, Blog listing, Blog posts, Project
+✅ **Icons Fixed**: SVG icons properly rendering with inline SVG code
+✅ **Navigation Working**: All internal links functional with Blog nav item
+✅ **Blog Posts Themed**: Individual blog posts have full Neo-Brutalist styling
+✅ **Dates Updated**: All dates updated to 2025
 ✅ **100% Complete**: Theme is fully functional as a personal learning project
 
 ### File Structure
 ```
 /src
   /assets
-    /css (11 component files + 2 utility files + main.css)
-      - navigation.css, hero.css, about.css, services.css
-      - projects.css, blog.css, contact.css, social.css
-      - animations.css, responsive.css
+    /css (10 component files + 2 utility files + main.css)
+      /components
+        - navigation.css, hero.css, about.css, services.css
+        - projects.css, blog.css, post.css, contact.css, social.css
+      /utilities
+        - animations.css, responsive.css
     /js (6 JavaScript modules including standalone version)
-    /images
+    /images (includes project-1.svg)
   /_data (site.json, metadata.json, navigation.json)
   /_includes
-    /components (7 Nunjucks templates)
-    /layouts (base.njk)
-  /posts (2 blog posts with correct dates)
+    /components (nav.njk, footer.njk, 7 total)
+    /layouts (base.njk, post.njk)
+  /posts (3 blog posts with 2025 dates + posts.json)
+    - welcome-to-neo-brutalism.md
+    - breaking-design-rules.md
+    - building-with-11ty.md
   /projects (1 project - this theme itself)
   /pages (about.njk, services.njk, contact.njk, 404.njk, index.njk)
+  /blog (index.njk - blog listing page)
   index.njk
 /.github/workflows (deploy.yml)
-/.eleventy.js (config with pathPrefix)
+/.eleventy.js (config with pathPrefix and custom filters)
 /package.json
 ```
 
-Total Source Files: 42 files (CSS, JS, NJK, MD, JSON)
+Total Source Files: 48+ files (CSS, JS, NJK, MD, JSON)
 
 ## SPARC Commands
 
