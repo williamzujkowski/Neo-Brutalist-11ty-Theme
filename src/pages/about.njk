@@ -1,0 +1,239 @@
+---
+title: About
+layout: layouts/base.njk
+tags:
+  - nav
+navtitle: About
+eleventyNavigation:
+  key: About
+  order: 1
+---
+
+<section class="about-page">
+    <div class="about-container">
+        <h1 class="page-title">WHO<br>AM I?</h1>
+
+        <div class="about-content">
+            <div class="about-intro">
+                <p class="lead">
+                    → A DIGITAL ARCHITECT breaking the mold of conventional web design.
+                </p>
+                <p>
+                    → This Neo-Brutalist theme represents my approach to web development: BOLD, UNAPOLOGETIC, and IMPOSSIBLE TO IGNORE.
+                </p>
+                <p>
+                    → Built with 11ty, styled with pure CSS, and deployed through GitHub Actions. No unnecessary complexity, just raw digital expression.
+                </p>
+            </div>
+
+            <div class="philosophy">
+                <h2>DESIGN<br>PHILOSOPHY</h2>
+                <ul class="philosophy-list">
+                    <li>→ Massive typography that demands attention</li>
+                    <li>→ Colors that burn into your retina</li>
+                    <li>→ Borders thick enough to break screens</li>
+                    <li>→ Shadows that could crush pixels</li>
+                    <li>→ Animation that defies physics</li>
+                </ul>
+            </div>
+
+            <div class="tech-stack">
+                <h2>TECH<br>ARSENAL</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <span class="tech-icon">⚡</span>
+                        <h3>11ty</h3>
+                        <p>Static site generation at light speed</p>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-icon">🎨</span>
+                        <h3>Pure CSS</h3>
+                        <p>No frameworks, just raw style power</p>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-icon">🚀</span>
+                        <h3>GitHub Actions</h3>
+                        <p>Automated deployment that never sleeps</p>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-icon">💥</span>
+                        <h3>Nunjucks</h3>
+                        <p>Templating that makes sense</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="manifesto">
+                <h2>THE<br>MANIFESTO</h2>
+                <blockquote>
+                    "In a world of minimalist design and subtle gradients, we choose CHAOS.
+                    We choose colors that scream. Typography that roars. Layouts that refuse to conform.
+                    This is not just a theme. It's a REBELLION."
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.about-page {
+    padding: 120px 20px 80px;
+    background: var(--pure-white);
+}
+
+.about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: clamp(4rem, 12vw, 10rem);
+    line-height: 0.85;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: -8px;
+    color: var(--stark-black);
+    text-shadow: 6px 6px 0px var(--hot-pink);
+}
+
+.about-content {
+    display: grid;
+    gap: 60px;
+}
+
+.about-intro {
+    background: var(--cyber-yellow);
+    border: 6px solid var(--stark-black);
+    padding: 40px;
+    transform: rotate(-1deg);
+    box-shadow: 12px 12px 0px var(--stark-black);
+}
+
+.about-intro p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Courier New', monospace;
+}
+
+.lead {
+    font-size: 1.8rem !important;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.philosophy {
+    background: var(--electric-blue);
+    color: var(--pure-white);
+    border: 6px solid var(--stark-black);
+    padding: 40px;
+    transform: rotate(1deg);
+    box-shadow: 12px 12px 0px var(--stark-black);
+}
+
+.philosophy h2 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: 30px;
+    line-height: 0.9;
+    letter-spacing: -3px;
+}
+
+.philosophy-list {
+    list-style: none;
+    font-size: 1.2rem;
+    line-height: 2;
+    font-weight: 700;
+}
+
+.tech-stack {
+    background: var(--pure-white);
+    border: 6px solid var(--stark-black);
+    padding: 40px;
+}
+
+.tech-stack h2 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: 40px;
+    line-height: 0.9;
+    letter-spacing: -3px;
+    color: var(--stark-black);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tech-item {
+    background: var(--acid-green);
+    border: 4px solid var(--stark-black);
+    padding: 30px;
+    text-align: center;
+    transform: rotate(-2deg);
+    transition: all 0.3s;
+}
+
+.tech-item:nth-child(even) {
+    transform: rotate(2deg);
+    background: var(--hot-pink);
+    color: var(--pure-white);
+}
+
+.tech-item:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 8px 8px 0px var(--stark-black);
+}
+
+.tech-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.tech-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.manifesto {
+    background: var(--stark-black);
+    color: var(--pure-white);
+    border: 6px solid var(--hot-pink);
+    padding: 60px 40px;
+    transform: rotate(-0.5deg);
+    box-shadow: 15px 15px 0px var(--hot-pink);
+}
+
+.manifesto h2 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: 30px;
+    line-height: 0.9;
+    letter-spacing: -3px;
+    color: var(--cyber-yellow);
+}
+
+.manifesto blockquote {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    font-style: italic;
+    border-left: 6px solid var(--cyber-yellow);
+    padding-left: 30px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        letter-spacing: -4px;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-item {
+        transform: rotate(0deg);
+    }
+}
+</style>

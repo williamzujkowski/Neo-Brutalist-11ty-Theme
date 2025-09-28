@@ -1,0 +1,302 @@
+---
+title: Contact
+layout: layouts/base.njk
+tags:
+  - nav
+navtitle: Contact
+eleventyNavigation:
+  key: Contact
+  order: 3
+---
+
+<section class="contact-page">
+    <div class="contact-container">
+        <h1 class="page-title">LET'S<br>CONNECT</h1>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>REACH OUT</h2>
+                <p class="contact-lead">
+                    Ready to build something that breaks the internet?
+                    Let's create digital chaos together.
+                </p>
+
+                <div class="contact-methods">
+                    <a href="mailto:hello@example.com" class="contact-method">
+                        <span class="method-icon">✉</span>
+                        <div>
+                            <h3>Email</h3>
+                            <p>hello@example.com</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/williamzujkowski" class="contact-method">
+                        <span class="method-icon">⚡</span>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p>@williamzujkowski</p>
+                        </div>
+                    </a>
+
+                    <a href="https://twitter.com/example" class="contact-method">
+                        <span class="method-icon">💬</span>
+                        <div>
+                            <h3>Twitter</h3>
+                            <p>@example</p>
+                        </div>
+                    </a>
+
+                    <a href="https://linkedin.com/in/example" class="contact-method">
+                        <span class="method-icon">🔗</span>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p>/in/example</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>DROP A MESSAGE</h2>
+                <form action="#" method="POST" class="form">
+                    <div class="form-group">
+                        <label for="name">NAME</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">MESSAGE</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">SEND MESSAGE →</button>
+                </form>
+                <p class="form-note">
+                    * This is a demo form. For a real implementation, connect to your preferred form handler.
+                </p>
+            </div>
+        </div>
+
+        <div class="contact-footer">
+            <h2 class="footer-title">BREAK<br>THE RULES</h2>
+            <p class="footer-text">
+                No boring websites. No subtle gradients. No apologetic typography.
+                Just pure digital rebellion.
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+.contact-page {
+    padding: 120px 20px 80px;
+    background: var(--pure-white);
+}
+
+.contact-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: clamp(4rem, 12vw, 10rem);
+    line-height: 0.85;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    letter-spacing: -8px;
+    color: var(--stark-black);
+    text-shadow: 6px 6px 0px var(--electric-blue);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.contact-info h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    letter-spacing: -2px;
+    color: var(--stark-black);
+}
+
+.contact-lead {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-family: 'Courier New', monospace;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: var(--cyber-yellow);
+    border: 4px solid var(--stark-black);
+    text-decoration: none;
+    color: var(--stark-black);
+    transform: rotate(-1deg);
+    transition: all 0.3s;
+    box-shadow: 8px 8px 0px var(--stark-black);
+}
+
+.contact-method:nth-child(even) {
+    transform: rotate(1deg);
+    background: var(--hot-pink);
+    color: var(--pure-white);
+}
+
+.contact-method:nth-child(3) {
+    background: var(--acid-green);
+    color: var(--stark-black);
+}
+
+.contact-method:nth-child(4) {
+    background: var(--electric-blue);
+    color: var(--pure-white);
+}
+
+.contact-method:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 12px 12px 0px var(--stark-black);
+}
+
+.method-icon {
+    font-size: 2.5rem;
+}
+
+.contact-method h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.contact-method p {
+    font-family: 'Courier New', monospace;
+}
+
+.contact-form {
+    background: var(--pure-white);
+    border: 6px solid var(--stark-black);
+    padding: 40px;
+    transform: rotate(1deg);
+    box-shadow: 12px 12px 0px var(--stark-black);
+}
+
+.contact-form h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    letter-spacing: -2px;
+    color: var(--stark-black);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-family: 'Courier New', monospace;
+    border: 4px solid var(--stark-black);
+    background: var(--pure-white);
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    background: var(--cyber-yellow);
+    transform: scale(1.02);
+}
+
+.form-submit {
+    background: var(--hot-pink);
+    color: var(--pure-white);
+    padding: 20px 40px;
+    font-size: 1.3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 4px solid var(--stark-black);
+    cursor: pointer;
+    transform: rotate(-2deg);
+    transition: all 0.3s;
+    box-shadow: 8px 8px 0px var(--stark-black);
+}
+
+.form-submit:hover {
+    background: var(--electric-blue);
+    transform: rotate(2deg) scale(1.05);
+    box-shadow: 12px 12px 0px var(--stark-black);
+}
+
+.form-note {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.contact-footer {
+    background: var(--stark-black);
+    color: var(--pure-white);
+    padding: 60px 40px;
+    text-align: center;
+    border: 6px solid var(--acid-green);
+    transform: rotate(-0.5deg);
+    box-shadow: 15px 15px 0px var(--acid-green);
+}
+
+.footer-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.9;
+    margin-bottom: 30px;
+    letter-spacing: -4px;
+    color: var(--acid-green);
+}
+
+.footer-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 968px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        transform: rotate(0deg);
+    }
+
+    .page-title {
+        letter-spacing: -4px;
+    }
+}
+</style>

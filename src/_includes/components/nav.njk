@@ -2,8 +2,8 @@
 <nav>
     <a href="{{ '/' | url }}" class="logo">{{ site.name | default('REBEL') }}</a>
     <ul class="nav-links">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICES</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="{{ '/pages/about/' | url }}">ABOUT</a></li>
+        <li><a href="{{ '/pages/services/' | url }}">SERVICES</a></li>
+        <li><a href="{{ '/pages/contact/' | url }}">CONTACT</a></li>
     </ul>
 </nav>
