@@ -46,7 +46,7 @@ Edit `src/_data/site.json`:
 {
   "name": "YOUR NAME",
   "title": "Your Title",
-  "url": "https://your-domain.com",
+  "url": "https://example.com",
   "author": {
     "name": "Your Name",
     "email": "your-email@domain.com"
@@ -94,7 +94,7 @@ Project details...
 
 1. Create `src/CNAME`:
    ```
-   your-domain.com
+   example.com
    ```
 
 2. Configure DNS with GitHub Pages IPs:

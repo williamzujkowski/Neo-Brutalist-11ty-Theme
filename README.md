@@ -63,7 +63,7 @@ Edit `src/_data/site.json` to customize:
   "name": "YOUR NAME",
   "title": "Your Title",
   "description": "Your description",
-  "url": "https://your-domain.com",
+  "url": "https://example.com",
   
   "theme": {
     "colors": {
