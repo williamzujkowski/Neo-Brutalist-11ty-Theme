@@ -47,7 +47,35 @@
 
 ## Project Overview
 
-This project uses SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) methodology with Claude-Flow orchestration for systematic Test-Driven Development.
+**Neo-Brutalist 11ty Theme** - A bold, vibrant static site generator theme featuring massive typography, vivid colors, and hard shadows. This personal learning project demonstrates modern web development practices using 11ty, Nunjucks templating, and GitHub Actions for CI/CD.
+
+### Current Status
+✅ **Deployed**: https://williamzujkowski.github.io/Neo-Brutalist-11ty-Theme/
+✅ **CSS Fixed**: All sections properly styled (including projects and blog)
+✅ **URLs Updated**: All placeholder URLs replaced
+✅ **GitHub Actions**: Deployment pipeline working
+
+### File Structure
+```
+/src
+  /assets
+    /css (9 component files + 2 utility files + main.css)
+    /js (6 JavaScript modules including standalone version)
+    /images
+  /_data (site.json, metadata.json, navigation.json)
+  /_includes
+    /components (7 Nunjucks templates)
+    /layouts (base.njk)
+  /posts (2 blog posts)
+  /projects (1 project)
+  /pages (404.njk, index.njk)
+  index.njk
+/.github/workflows (deploy.yml)
+/.eleventy.js (config)
+/package.json
+```
+
+Total Source Files: 37 files (CSS, JS, NJK, MD, JSON)
 
 ## SPARC Commands
 
