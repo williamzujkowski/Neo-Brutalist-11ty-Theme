@@ -1,0 +1,159 @@
+{
+  "name": "REBEL",
+  "title": "Digital Maverick",
+  "description": "A bold Neo-Brutalist 11ty theme featuring vivid colors, massive typography, and controlled chaos. Perfect for portfolios, creative agencies, and anyone who refuses to blend in.",
+  "url": "https://your-domain.com",
+  "language": "en",
+  "locale": "en_US",
+  
+  "author": {
+    "name": "Your Name",
+    "email": "hello@your-domain.com",
+    "bio": "Digital creator who refuses to follow the rules. Building tomorrow's experiences with today's technology. Forever curious, always creating.",
+    "social": {
+      "github": "https://github.com/yourusername",
+      "twitter": "https://twitter.com/yourusername",
+      "linkedin": "https://linkedin.com/in/yourusername",
+      "codepen": "https://codepen.io/yourusername"
+    }
+  },
+  
+  "keywords": [
+    "developer",
+    "designer",
+    "creative technologist",
+    "full-stack",
+    "neo-brutalist",
+    "portfolio",
+    "digital creator"
+  ],
+  
+  "analytics": {
+    "ga": ""
+  },
+  
+  "theme": {
+    "mode": "neo-brutalist",
+    "colors": {
+      "primary": "#0066FF",
+      "secondary": "#FF0099",
+      "accent": "#00FF88",
+      "warning": "#FFEE00",
+      "danger": "#FF3333",
+      "dark": "#000000",
+      "light": "#FFFFFF",
+      "electricBlue": "#0066FF",
+      "hotPink": "#FF0099",
+      "acidGreen": "#00FF88",
+      "cyberYellow": "#FFEE00",
+      "deepPurple": "#6600FF"
+    },
+    "typography": {
+      "headingFont": "'Arial Black', 'Helvetica Neue', sans-serif",
+      "bodyFont": "'Courier New', monospace",
+      "megaSize": "clamp(4rem, 12vw, 10rem)",
+      "heroSize": "clamp(3rem, 8vw, 7rem)",
+      "titleSize": "clamp(2rem, 6vw, 5rem)",
+      "subtitleSize": "clamp(1.5rem, 4vw, 2.5rem)",
+      "bodySize": "1.2rem",
+      "smallSize": "1rem"
+    },
+    "spacing": {
+      "borderWidth": "6px",
+      "shadowOffset": "12px",
+      "containerPadding": "40px",
+      "sectionPadding": "80px"
+    },
+    "animations": {
+      "enabled": true,
+      "glitchEnabled": true,
+      "floatingShapes": true,
+      "cursorTrail": true,
+      "randomColors": true,
+      "duration": {
+        "fast": "0.2s",
+        "normal": "0.3s",
+        "slow": "0.6s",
+        "glitch": "3s",
+        "float": "6s"
+      }
+    },
+    "layout": {
+      "maxWidth": "1400px",
+      "gridGap": "30px",
+      "rotation": {
+        "min": "-2deg",
+        "max": "2deg"
+      }
+    }
+  },
+  
+  "hero": {
+    "title": "BREAK<br>THE MOLD",
+    "subtitle": "INNOVATE → CREATE → DOMINATE",
+    "background": "linear-gradient(45deg, var(--electric-blue) 0%, var(--acid-green) 100%)"
+  },
+  
+  "stats": [
+    {
+      "number": "127",
+      "label": "Projects Launched"
+    },
+    {
+      "number": "∞",
+      "label": "Ideas Generated"
+    },
+    {
+      "number": "100%",
+      "label": "Pixel Perfect"
+    },
+    {
+      "number": "0",
+      "label": "Boring Days"
+    }
+  ],
+  
+  "skills": [
+    {
+      "icon": "⚡",
+      "name": "Lightning Fast",
+      "description": "Code that runs at the speed of thought. Performance isn't a feature, it's a requirement. Zero compromises."
+    },
+    {
+      "icon": "🎨",
+      "name": "Design Magic",
+      "description": "Where pixels meet perfection. Creating visual experiences that stick in your mind and refuse to leave."
+    },
+    {
+      "icon": "🚀",
+      "name": "Launch Ready",
+      "description": "From concept to production in record time. Building products that ship, not prototypes that sit."
+    },
+    {
+      "icon": "💥",
+      "name": "Problem Crusher",
+      "description": "Complex challenges are just puzzles in disguise. The harder they come, the harder they fall."
+    },
+    {
+      "icon": "🔥",
+      "name": "Innovation Engine",
+      "description": "Always exploring what's next. If it's cutting edge, we're already building with it."
+    },
+    {
+      "icon": "⭐",
+      "name": "Quality Obsessed",
+      "description": "Good enough isn't in our vocabulary. Every detail matters, every pixel has purpose."
+    }
+  ],
+  
+  "contact": {
+    "title": "START<br>SOMETHING",
+    "buttonText": "GET IN TOUCH →",
+    "email": "hello@your-domain.com"
+  },
+  
+  "footer": {
+    "copyright": "© 2024 Neo-Brutalist Theme",
+    "tagline": "BREAK THE RULES"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Neo-Brutalist Theme",
+  "description": "A bold, vibrant, and unapologetically loud website theme",
+  "url": "https://your-domain.com",
+  "language": "en",
+  "locale": "en_US",
+  "author": {
+    "name": "Your Name",
+    "email": "your-email@domain.com",
+    "url": "https://your-domain.com/about/"
+  },
+  "social": {
+    "twitter": "@yourusername",
+    "github": "yourusername",
+    "linkedin": "yourusername"
+  },
+  "og": {
+    "type": "website",
+    "image": "/assets/images/og-image.jpg",
+    "imageAlt": "Neo-Brutalist theme preview"
+  }
+}

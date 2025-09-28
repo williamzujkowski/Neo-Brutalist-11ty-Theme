@@ -1,0 +1,81 @@
+/* Neo-Brutalist Responsive Utilities */
+
+/* Mobile & Tablet Breakpoints */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mega-title {
+        letter-spacing: -4px;
+    }
+
+    .contact-cta {
+        font-size: 1.5rem;
+        padding: 20px 40px;
+    }
+
+    /* Mobile-specific adjustments */
+    .hero {
+        margin: 100px 10px 20px 10px;
+        padding: 40px 20px;
+    }
+
+    .about, .services, .contact {
+        padding: 60px 20px;
+    }
+
+    .floating-shape {
+        display: none; /* Hide floating shapes on mobile */
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+    .hero-subtitle {
+        font-size: 1.2rem;
+        padding: 15px 25px;
+    }
+
+    .section-title {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+
+    .service-card {
+        padding: 30px 20px;
+    }
+
+    .about-text {
+        padding: 30px 20px;
+    }
+
+    .about-stats {
+        padding: 20px;
+    }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1400px) {
+    .hero-content,
+    .about-grid,
+    .services-container,
+    .contact-container {
+        max-width: 1600px;
+    }
+}

@@ -1,0 +1,103 @@
+---
+# base.njk
+---
+<!DOCTYPE html>
+<html lang="{{ site.language | default('en') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Eleventy">
+    
+    {# SEO Meta Tags #}
+    <title>{{ title or site.title }} | {{ site.name }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="keywords" content="{{ keywords or site.keywords | join(', ') }}">
+    
+    {# Open Graph #}
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ title or site.title }}">
+    <meta property="og:description" content="{{ description or site.description }}">
+    <meta property="og:image" content="{{ site.url }}/assets/images/og-image.png">
+    
+    {# Twitter Card #}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta name="twitter:title" content="{{ title or site.title }}">
+    <meta name="twitter:description" content="{{ description or site.description }}">
+    <meta name="twitter:image" content="{{ site.url }}/assets/images/og-image.png">
+    
+    {# Favicon #}
+    <link rel="icon" href="/assets/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+    
+    {# CSS #}
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
+    {% block styles %}{% endblock %}
+    
+    {# Preload fonts #}
+    <link rel="preload" href="/assets/fonts/arial-black.woff2" as="font" type="font/woff2" crossorigin>
+    
+    {# Theme Color for mobile browsers #}
+    <meta name="theme-color" content="{{ theme.colors.primary }}">
+    
+    {# No JS fallback #}
+    <noscript>
+        <style>
+            .cursor-dot { display: none; }
+            .floating-shape { animation: none; }
+        </style>
+    </noscript>
+</head>
+<body class="{{ bodyClass }}" data-theme="{{ theme.mode | default('neo-brutalist') }}">
+    
+    {# Skip to content for accessibility #}
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    {# Custom cursor #}
+    {% if theme.animations.cursorTrail %}
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    {% endif %}
+    
+    {# Floating shapes #}
+    {% if theme.animations.floatingShapes %}
+    <div class="floating-shape shape-1" aria-hidden="true"></div>
+    <div class="floating-shape shape-2" aria-hidden="true"></div>
+    {% endif %}
+    
+    {# Navigation #}
+    {% include "components/nav.njk" %}
+    
+    {# Main content #}
+    <main id="main" class="main-content">
+        {% block content %}
+            {{ content | safe }}
+        {% endblock %}
+    </main>
+    
+    {# Footer #}
+    {% include "components/footer.njk" %}
+    
+    {# JavaScript #}
+    <script src="{{ '/assets/js/main.js' | url }}" defer></script>
+    {% if theme.animations.enabled %}
+    <script src="{{ '/assets/js/animations.js' | url }}" defer></script>
+    {% endif %}
+    <script src="{{ '/assets/js/interactions.js' | url }}" defer></script>
+    
+    {% block scripts %}{% endblock %}
+    
+    {# Analytics (if configured) #}
+    {% if site.analytics.ga %}
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.ga }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.analytics.ga }}');
+    </script>
+    {% endif %}
+</body>
+</html>

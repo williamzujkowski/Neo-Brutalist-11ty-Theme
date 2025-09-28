@@ -1,0 +1,90 @@
+/* Neo-Brutalist Main CSS - Base Styles */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Custom Properties */
+:root {
+    --electric-blue: #0066FF;
+    --hot-pink: #FF0099;
+    --acid-green: #00FF88;
+    --cyber-yellow: #FFEE00;
+    --deep-purple: #6600FF;
+    --stark-black: #000000;
+    --pure-white: #FFFFFF;
+    --warning-red: #FF3333;
+}
+
+/* Base Typography & Body */
+body {
+    font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
+    background: var(--pure-white);
+    overflow-x: hidden;
+    cursor: crosshair;
+}
+
+/* Selection Styling */
+::selection {
+    background: var(--hot-pink);
+    color: var(--pure-white);
+}
+
+/* Footer */
+footer {
+    background: var(--stark-black);
+    color: var(--pure-white);
+    padding: 40px;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* Floating Elements */
+.floating-shape {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.shape-1 {
+    top: 20%;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+    background: var(--hot-pink);
+    border: 6px solid var(--stark-black);
+    transform: rotate(45deg);
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-2 {
+    bottom: 20%;
+    left: 5%;
+    width: 150px;
+    height: 150px;
+    background: var(--acid-green);
+    border: 6px solid var(--stark-black);
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+/* Cursor Trail Effect */
+.cursor-dot {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: var(--hot-pink);
+    border: 3px solid var(--stark-black);
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s;
+    transform: translate(-50%, -50%);
+}

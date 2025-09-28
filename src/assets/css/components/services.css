@@ -1,0 +1,77 @@
+/* Neo-Brutalist Services Section Component */
+
+/* Services Section */
+.services {
+    padding: 80px 40px;
+    background: var(--deep-purple);
+    position: relative;
+    border-top: 12px solid var(--stark-black);
+    border-bottom: 12px solid var(--stark-black);
+}
+
+.services-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.services-title {
+    font-size: clamp(4rem, 10vw, 7rem);
+    color: var(--cyber-yellow);
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: -5px;
+    text-shadow: 6px 6px 0px var(--stark-black);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--pure-white);
+    border: 6px solid var(--stark-black);
+    padding: 40px;
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.service-card:nth-child(odd) {
+    transform: rotate(-1deg);
+    box-shadow: 10px 10px 0px var(--stark-black);
+}
+
+.service-card:nth-child(even) {
+    transform: rotate(1deg);
+    box-shadow: -10px 10px 0px var(--stark-black);
+}
+
+.service-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    background: var(--cyber-yellow);
+    z-index: 10;
+}
+
+.service-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.service-name {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--stark-black);
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.service-desc {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: var(--stark-black);
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+}

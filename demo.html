@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REBEL → DIGITAL MAVERICK</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --electric-blue: #0066FF;
+            --hot-pink: #FF0099;
+            --acid-green: #00FF88;
+            --cyber-yellow: #FFEE00;
+            --deep-purple: #6600FF;
+            --stark-black: #000000;
+            --pure-white: #FFFFFF;
+            --warning-red: #FF3333;
+        }
+
+        body {
+            font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
+            background: var(--pure-white);
+            overflow-x: hidden;
+            cursor: crosshair;
+        }
+
+        ::selection {
+            background: var(--hot-pink);
+            color: var(--pure-white);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--cyber-yellow);
+            border-bottom: 8px solid var(--stark-black);
+            z-index: 1000;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 8px 8px 0px var(--stark-black);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--stark-black);
+            text-decoration: none;
+            letter-spacing: -3px;
+            transform: skew(-5deg);
+            display: inline-block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--stark-black);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 800;
+            padding: 10px 20px;
+            border: 4px solid var(--stark-black);
+            background: var(--pure-white);
+            transition: all 0.2s;
+            display: block;
+            transform: rotate(-2deg);
+        }
+
+        .nav-links a:hover {
+            background: var(--hot-pink);
+            color: var(--pure-white);
+            transform: rotate(2deg) scale(1.1);
+            box-shadow: 5px 5px 0px var(--stark-black);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 120px;
+            padding: 60px 40px;
+            position: relative;
+            background: linear-gradient(45deg, var(--electric-blue) 0%, var(--acid-green) 100%);
+            border: 8px solid var(--stark-black);
+            margin: 120px 20px 40px 20px;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .mega-title {
+            font-size: clamp(4rem, 12vw, 10rem);
+            line-height: 0.85;
+            color: var(--pure-white);
+            text-transform: uppercase;
+            letter-spacing: -8px;
+            margin-bottom: 30px;
+            text-shadow: 8px 8px 0px var(--stark-black);
+            animation: glitch 3s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-4px, 4px); }
+            40% { transform: translate(-4px, -4px); }
+            60% { transform: translate(4px, 4px); }
+            80% { transform: translate(4px, -4px); }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            background: var(--cyber-yellow);
+            color: var(--stark-black);
+            display: inline-block;
+            padding: 20px 40px;
+            border: 6px solid var(--stark-black);
+            transform: rotate(-1deg);
+            margin: 20px 0;
+            box-shadow: 10px 10px 0px var(--stark-black);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 40px;
+            background: var(--pure-white);
+            position: relative;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .about-text {
+            background: var(--hot-pink);
+            color: var(--pure-white);
+            padding: 40px;
+            border: 8px solid var(--stark-black);
+            transform: rotate(-0.5deg);
+            box-shadow: 12px 12px 0px var(--stark-black);
+        }
+
+        .section-title {
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin-bottom: 20px;
+            letter-spacing: -4px;
+            line-height: 0.9;
+        }
+
+        .about-text p {
+            font-size: 1.4rem;
+            line-height: 1.4;
+            font-family: 'Courier New', monospace;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .about-stats {
+            background: var(--acid-green);
+            border: 8px solid var(--stark-black);
+            padding: 30px;
+            transform: rotate(1deg);
+            box-shadow: -10px 10px 0px var(--stark-black);
+        }
+
+        .stat {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 4px solid var(--stark-black);
+        }
+
+        .stat:last-child {
+            border-bottom: none;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--stark-black);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: var(--stark-black);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 40px;
+            background: var(--deep-purple);
+            position: relative;
+            border-top: 12px solid var(--stark-black);
+            border-bottom: 12px solid var(--stark-black);
+        }
+
+        .services-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .services-title {
+            font-size: clamp(4rem, 10vw, 7rem);
+            color: var(--cyber-yellow);
+            text-align: center;
+            margin-bottom: 60px;
+            letter-spacing: -5px;
+            text-shadow: 6px 6px 0px var(--stark-black);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--pure-white);
+            border: 6px solid var(--stark-black);
+            padding: 40px;
+            position: relative;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .service-card:nth-child(odd) {
+            transform: rotate(-1deg);
+            box-shadow: 10px 10px 0px var(--stark-black);
+        }
+
+        .service-card:nth-child(even) {
+            transform: rotate(1deg);
+            box-shadow: -10px 10px 0px var(--stark-black);
+        }
+
+        .service-card:hover {
+            transform: rotate(0deg) scale(1.05);
+            background: var(--cyber-yellow);
+            z-index: 10;
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .service-name {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--stark-black);
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .service-desc {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            color: var(--stark-black);
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 40px;
+            background: var(--warning-red);
+            position: relative;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: clamp(5rem, 12vw, 9rem);
+            color: var(--pure-white);
+            letter-spacing: -6px;
+            margin-bottom: 40px;
+            text-shadow: 8px 8px 0px var(--stark-black);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .contact-cta {
+            display: inline-block;
+            font-size: 2rem;
+            padding: 30px 60px;
+            background: var(--cyber-yellow);
+            color: var(--stark-black);
+            text-decoration: none;
+            border: 8px solid var(--stark-black);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transform: rotate(-2deg);
+            transition: all 0.3s;
+            box-shadow: 12px 12px 0px var(--stark-black);
+        }
+
+        .contact-cta:hover {
+            transform: rotate(2deg) scale(1.1);
+            background: var(--acid-green);
+            box-shadow: 15px 15px 0px var(--stark-black);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--stark-black);
+            color: var(--pure-white);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        /* Floating Elements */
+        .floating-shape {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .shape-1 {
+            top: 20%;
+            right: 5%;
+            width: 100px;
+            height: 100px;
+            background: var(--hot-pink);
+            border: 6px solid var(--stark-black);
+            transform: rotate(45deg);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape-2 {
+            bottom: 20%;
+            left: 5%;
+            width: 150px;
+            height: 150px;
+            background: var(--acid-green);
+            border: 6px solid var(--stark-black);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(45deg); }
+            50% { transform: translateY(-30px) rotate(45deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mega-title {
+                letter-spacing: -4px;
+            }
+
+            .contact-cta {
+                font-size: 1.5rem;
+                padding: 20px 40px;
+            }
+        }
+
+        /* Cursor Trail Effect */
+        .cursor-dot {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: var(--hot-pink);
+            border: 3px solid var(--stark-black);
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Cursor Dot -->
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- Floating Shapes -->
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">REBEL</a>
+        <ul class="nav-links">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="mega-title">BREAK<br>THE MOLD</h1>
+            <div class="hero-subtitle">INNOVATE → CREATE → DOMINATE</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2 class="section-title">DISRUPT.<br>DESIGN.<br>DELIVER.</h2>
+                <p>→ Welcome to the DIGITAL REBELLION. Where conformity comes to die.</p>
+                <p>→ We build experiences that refuse to be ignored. Code that breaks barriers. Design that demands attention.</p>
+                <p>→ This is where innovation meets execution. Where wild ideas become reality.</p>
+                <p>→ Ready to stand out in a world full of templates? Let's make something UNFORGETTABLE.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat">
+                    <div class="stat-number">127</div>
+                    <div class="stat-label">Projects Launched</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Ideas Generated</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Pixel Perfect</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Boring Days</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <h2 class="services-title">WHAT I DO</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">⚡</span>
+                    <h3 class="service-name">Lightning Fast</h3>
+                    <p class="service-desc">Code that runs at the speed of thought. Performance isn't a feature, it's a requirement. Zero compromises.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🎨</span>
+                    <h3 class="service-name">Design Magic</h3>
+                    <p class="service-desc">Where pixels meet perfection. Creating visual experiences that stick in your mind and refuse to leave.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🚀</span>
+                    <h3 class="service-name">Launch Ready</h3>
+                    <p class="service-desc">From concept to production in record time. Building products that ship, not prototypes that sit.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">💥</span>
+                    <h3 class="service-name">Problem Crusher</h3>
+                    <p class="service-desc">Complex challenges are just puzzles in disguise. The harder they come, the harder they fall.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🔥</span>
+                    <h3 class="service-name">Innovation Engine</h3>
+                    <p class="service-desc">Always exploring what's next. If it's cutting edge, we're already building with it.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">⭐</span>
+                    <h3 class="service-name">Quality Obsessed</h3>
+                    <p class="service-desc">Good enough isn't in our vocabulary. Every detail matters, every pixel has purpose.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 class="contact-title">START<br>SOMETHING</h2>
+            <a href="mailto:hello@your-domain.com" class="contact-cta">GET IN TOUCH →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-text">© 2024 NEO-BRUTALIST THEME → BREAK THE RULES</p>
+    </footer>
+
+    <script>
+        // Cursor trail effect
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.getElementById('cursorDot');
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Random color changes on scroll
+        let colors = ['var(--electric-blue)', 'var(--hot-pink)', 'var(--acid-green)', 'var(--cyber-yellow)', 'var(--deep-purple)'];
+        
+        window.addEventListener('scroll', () => {
+            if (Math.random() > 0.95) {
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                document.querySelectorAll('.service-card').forEach((card, index) => {
+                    if (Math.random() > 0.7) {
+                        setTimeout(() => {
+                            card.style.borderColor = randomColor;
+                        }, index * 50);
+                    }
+                });
+            }
+        });
+
+        // Glitch effect on hover for mega title
+        document.querySelector('.mega-title').addEventListener('mouseenter', function() {
+            this.style.animation = 'glitch 0.3s infinite';
+        });
+
+        document.querySelector('.mega-title').addEventListener('mouseleave', function() {
+            this.style.animation = 'glitch 3s infinite';
+        });
+
+        // Random rotation on service cards click
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const randomRotation = Math.floor(Math.random() * 10) - 5;
+                this.style.transform = `rotate(${randomRotation}deg) scale(1.05)`;
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 500);
+            });
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add random "glitch" movements to floating shapes
+        setInterval(() => {
+            document.querySelectorAll('.floating-shape').forEach(shape => {
+                if (Math.random() > 0.8) {
+                    const x = Math.random() * 20 - 10;
+                    const y = Math.random() * 20 - 10;
+                    shape.style.transform += ` translate(${x}px, ${y}px)`;
+                    setTimeout(() => {
+                        shape.style.transform = shape.classList.contains('shape-1') ? 'rotate(45deg)' : '';
+                    }, 200);
+                }
+            });
+        }, 2000);
+    </script>
+</body>
+</html>

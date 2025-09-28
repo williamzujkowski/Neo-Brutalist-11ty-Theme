@@ -1,0 +1,74 @@
+/* Neo-Brutalist About Section Component */
+
+/* About Section */
+.about {
+    padding: 80px 40px;
+    background: var(--pure-white);
+    position: relative;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.about-text {
+    background: var(--hot-pink);
+    color: var(--pure-white);
+    padding: 40px;
+    border: 8px solid var(--stark-black);
+    transform: rotate(-0.5deg);
+    box-shadow: 12px 12px 0px var(--stark-black);
+}
+
+.section-title {
+    font-size: clamp(3rem, 8vw, 5rem);
+    margin-bottom: 20px;
+    letter-spacing: -4px;
+    line-height: 0.9;
+}
+
+.about-text p {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-stats {
+    background: var(--acid-green);
+    border: 8px solid var(--stark-black);
+    padding: 30px;
+    transform: rotate(1deg);
+    box-shadow: -10px 10px 0px var(--stark-black);
+}
+
+.stat {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 4px solid var(--stark-black);
+}
+
+.stat:last-child {
+    border-bottom: none;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--stark-black);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    color: var(--stark-black);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}

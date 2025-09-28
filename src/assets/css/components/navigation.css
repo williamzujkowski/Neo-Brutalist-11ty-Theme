@@ -1,0 +1,52 @@
+/* Neo-Brutalist Navigation Component */
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--cyber-yellow);
+    border-bottom: 8px solid var(--stark-black);
+    z-index: 1000;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 8px 8px 0px var(--stark-black);
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--stark-black);
+    text-decoration: none;
+    letter-spacing: -3px;
+    transform: skew(-5deg);
+    display: inline-block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--stark-black);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 10px 20px;
+    border: 4px solid var(--stark-black);
+    background: var(--pure-white);
+    transition: all 0.2s;
+    display: block;
+    transform: rotate(-2deg);
+}
+
+.nav-links a:hover {
+    background: var(--hot-pink);
+    color: var(--pure-white);
+    transform: rotate(2deg) scale(1.1);
+    box-shadow: 5px 5px 0px var(--stark-black);
+}

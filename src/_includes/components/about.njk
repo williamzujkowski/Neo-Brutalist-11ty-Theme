@@ -1,0 +1,20 @@
+{# About Section Component - extracted from demo.html lines 444-472 #}
+<section class="about" id="about">
+    <div class="about-grid">
+        <div class="about-text">
+            <h2 class="section-title">DISRUPT.<br>DESIGN.<br>DELIVER.</h2>
+            <p>→ Welcome to the DIGITAL REBELLION. Where conformity comes to die.</p>
+            <p>→ We build experiences that refuse to be ignored. Code that breaks barriers. Design that demands attention.</p>
+            <p>→ This is where innovation meets execution. Where wild ideas become reality.</p>
+            <p>→ Ready to stand out in a world full of templates? Let's make something UNFORGETTABLE.</p>
+        </div>
+        <div class="about-stats">
+            {% for stat in site.stats %}
+            <div class="stat">
+                <div class="stat-number">{{ stat.number }}</div>
+                <div class="stat-label">{{ stat.label }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,45 @@
+/* Neo-Brutalist Contact Section Component */
+
+/* Contact Section */
+.contact {
+    padding: 100px 40px;
+    background: var(--warning-red);
+    position: relative;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: clamp(5rem, 12vw, 9rem);
+    color: var(--pure-white);
+    letter-spacing: -6px;
+    margin-bottom: 40px;
+    text-shadow: 8px 8px 0px var(--stark-black);
+    animation: pulse 2s infinite;
+}
+
+.contact-cta {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 30px 60px;
+    background: var(--cyber-yellow);
+    color: var(--stark-black);
+    text-decoration: none;
+    border: 8px solid var(--stark-black);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transform: rotate(-2deg);
+    transition: all 0.3s;
+    box-shadow: 12px 12px 0px var(--stark-black);
+}
+
+.contact-cta:hover {
+    transform: rotate(2deg) scale(1.1);
+    background: var(--acid-green);
+    box-shadow: 15px 15px 0px var(--stark-black);
+}

@@ -1,0 +1,149 @@
+---
+# src/pages/index.njk
+layout: layouts/base.njk
+title: Digital Maverick
+description: A bold Neo-Brutalist 11ty theme with vivid colors and massive typography
+bodyClass: home
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+
+{# Include hero component #}
+{% include "components/hero.njk" %}
+
+{# About Section #}
+<section class="about" id="about">
+    <div class="about-grid">
+        <div class="about-text">
+            <h2 class="section-title">DISRUPT.<br>DESIGN.<br>DELIVER.</h2>
+            <p>→ Welcome to the DIGITAL REBELLION. Where conformity comes to die.</p>
+            <p>→ We build experiences that refuse to be ignored. Code that breaks barriers. Design that demands attention.</p>
+            <p>→ This is where innovation meets execution. Where wild ideas become reality.</p>
+            <p>→ Ready to stand out in a world full of templates? Let's make something UNFORGETTABLE.</p>
+        </div>
+        <div class="about-stats">
+            {% for stat in site.stats %}
+            <div class="stat">
+                <div class="stat-number">{{ stat.number }}</div>
+                <div class="stat-label">{{ stat.label }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{# Skills/Services Section #}
+<section class="services" id="services">
+    <div class="services-container">
+        <h2 class="services-title">WHAT I DO</h2>
+        <div class="services-grid">
+            {% for skill in site.skills %}
+            <div class="service-card" style="--index: {{ loop.index }};">
+                <span class="service-icon">{{ skill.icon }}</span>
+                <h3 class="service-name">{{ skill.name }}</h3>
+                <p class="service-desc">{{ skill.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{# Recent Projects (if collection exists) #}
+{% if collections.projects %}
+<section class="projects" id="projects">
+    <div class="projects-container">
+        <h2 class="projects-title">RECENT<br>WORK</h2>
+        <div class="projects-grid">
+            {% for project in collections.projects | limit(6) %}
+            <article class="project-card">
+                {% if project.data.image %}
+                <div class="project-image">
+                    <img src="{{ project.data.image }}" alt="{{ project.data.title }}" loading="lazy">
+                </div>
+                {% endif %}
+                <div class="project-content">
+                    <h3 class="project-name">{{ project.data.title }}</h3>
+                    <p class="project-desc">{{ project.data.description }}</p>
+                    <div class="project-tags">
+                        {% for tag in project.data.tags %}
+                        <span class="tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    <a href="{{ project.url }}" class="project-link">VIEW PROJECT →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        {% if collections.projects.length > 6 %}
+        <div class="projects-more">
+            <a href="/projects/" class="btn-more">SEE ALL PROJECTS →</a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
+
+{# Recent Blog Posts (if collection exists) #}
+{% if collections.posts %}
+<section class="blog" id="blog">
+    <div class="blog-container">
+        <h2 class="blog-title">LATEST<br>THOUGHTS</h2>
+        <div class="blog-grid">
+            {% for post in collections.posts | limit(3) %}
+            <article class="blog-card">
+                <time class="blog-date" datetime="{{ post.date | dateReadable }}">
+                    {{ post.date | dateReadable }}
+                </time>
+                <h3 class="blog-post-title">
+                    <a href="{{ post.url }}">{{ post.data.title }}</a>
+                </h3>
+                <p class="blog-excerpt">{{ post.data.excerpt }}</p>
+                <a href="{{ post.url }}" class="blog-link">READ MORE →</a>
+            </article>
+            {% endfor %}
+        </div>
+        {% if collections.posts.length > 3 %}
+        <div class="blog-more">
+            <a href="/blog/" class="btn-more">ALL POSTS →</a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
+
+{# Contact Section #}
+<section class="contact" id="contact">
+    <div class="contact-container">
+        <h2 class="contact-title">{{ site.contact.title | safe }}</h2>
+        <a href="mailto:{{ site.contact.email }}" class="contact-cta">
+            {{ site.contact.buttonText }}
+        </a>
+        
+        {# Social Links #}
+        {% if site.author.social %}
+        <div class="social-links">
+            {% if site.author.social.github %}
+            <a href="{{ site.author.social.github }}" class="social-link" aria-label="GitHub">
+                <span class="social-icon">{% raw %}{{ github icon }}{% endraw %}</span>
+            </a>
+            {% endif %}
+            {% if site.author.social.twitter %}
+            <a href="{{ site.author.social.twitter }}" class="social-link" aria-label="Twitter">
+                <span class="social-icon">{% raw %}{{ twitter icon }}{% endraw %}</span>
+            </a>
+            {% endif %}
+            {% if site.author.social.linkedin %}
+            <a href="{{ site.author.social.linkedin }}" class="social-link" aria-label="LinkedIn">
+                <span class="social-icon">{% raw %}{{ linkedin icon }}{% endraw %}</span>
+            </a>
+            {% endif %}
+            {% if site.author.social.codepen %}
+            <a href="{{ site.author.social.codepen }}" class="social-link" aria-label="CodePen">
+                <span class="social-icon">{% raw %}{{ codepen icon }}{% endraw %}</span>
+            </a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</section>

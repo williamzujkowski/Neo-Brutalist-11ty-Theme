@@ -1,0 +1,26 @@
+[
+  {
+    "text": "HOME",
+    "url": "/"
+  },
+  {
+    "text": "ABOUT",
+    "url": "/#about"
+  },
+  {
+    "text": "SERVICES",
+    "url": "/#services"
+  },
+  {
+    "text": "PROJECTS",
+    "url": "/projects/"
+  },
+  {
+    "text": "BLOG",
+    "url": "/blog/"
+  },
+  {
+    "text": "CONTACT",
+    "url": "/#contact"
+  }
+]

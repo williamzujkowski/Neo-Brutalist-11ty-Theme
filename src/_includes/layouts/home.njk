@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+---
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="mega-title">{{ site.hero.title | default("BREAK<br>THE MOLD") | safe }}</h1>
+    <div class="hero-subtitle">{{ site.hero.subtitle | default("INNOVATE → CREATE → DOMINATE") }}</div>
+  </div>
+</section>
+
+<!-- About Section -->
+{% include "components/about.njk" %}
+
+<!-- Services Section -->
+{% include "components/services.njk" %}
+
+<!-- Contact Section -->
+{% include "components/contact.njk" %}

@@ -1,0 +1,15 @@
+{# Services Section Component - extracted from demo.html lines 475-512 #}
+<section class="services" id="services">
+    <div class="services-container">
+        <h2 class="services-title">WHAT I DO</h2>
+        <div class="services-grid">
+            {% for skill in site.skills %}
+            <div class="service-card">
+                <span class="service-icon">{{ skill.icon }}</span>
+                <h3 class="service-name">{{ skill.name }}</h3>
+                <p class="service-desc">{{ skill.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
