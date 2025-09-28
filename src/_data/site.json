@@ -8,7 +8,7 @@
   
   "author": {
     "name": "Your Name",
-    "email": "hello@your-domain.com",
+    "email": "hello@example.com",
     "bio": "Digital creator who refuses to follow the rules. Building tomorrow's experiences with today's technology. Forever curious, always creating.",
     "social": {
       "github": "https://github.com/yourusername",
@@ -149,7 +149,7 @@
   "contact": {
     "title": "START<br>SOMETHING",
     "buttonText": "GET IN TOUCH →",
-    "email": "hello@your-domain.com"
+    "email": "hello@example.com"
   },
   
   "footer": {

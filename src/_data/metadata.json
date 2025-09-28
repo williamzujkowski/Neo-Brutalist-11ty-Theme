@@ -1,13 +1,13 @@
 {
   "title": "Neo-Brutalist Theme",
   "description": "A bold, vibrant, and unapologetically loud website theme",
-  "url": "https://your-domain.com",
+  "url": "https://example.com",
   "language": "en",
   "locale": "en_US",
   "author": {
     "name": "Your Name",
     "email": "your-email@domain.com",
-    "url": "https://your-domain.com/about/"
+    "url": "https://example.com/about/"
   },
   "social": {
     "twitter": "@yourusername",

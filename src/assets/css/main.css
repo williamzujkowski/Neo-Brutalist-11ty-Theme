@@ -1,5 +1,14 @@
 /* Neo-Brutalist Main CSS - Base Styles */
 
+/* Import component styles */
+@import url('./components/navigation.css');
+@import url('./components/hero.css');
+@import url('./components/about.css');
+@import url('./components/services.css');
+@import url('./components/contact.css');
+@import url('./utilities/animations.css');
+@import url('./utilities/responsive.css');
+
 /* Reset */
 * {
     margin: 0;

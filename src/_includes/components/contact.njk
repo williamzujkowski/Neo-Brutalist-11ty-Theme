@@ -2,7 +2,7 @@
 <section class="contact" id="contact">
     <div class="contact-container">
         <h2 class="contact-title">{{ site.contact.title | safe | default('START<br>SOMETHING') }}</h2>
-        <a href="mailto:{{ site.contact.email | default(site.author.email) | default('hello@your-domain.com') }}" class="contact-cta">
+        <a href="mailto:{{ site.contact.email | default(site.author.email) | default('hello@example.com') }}" class="contact-cta">
             {{ site.contact.buttonText | default('GET IN TOUCH →') }}
         </a>
     </div>
