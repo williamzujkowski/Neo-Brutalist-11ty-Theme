@@ -2,7 +2,7 @@
   "name": "REBEL",
   "title": "Digital Maverick",
   "description": "A bold Neo-Brutalist 11ty theme featuring vivid colors, massive typography, and controlled chaos. Perfect for portfolios, creative agencies, and anyone who refuses to blend in.",
-  "url": "https://your-domain.com",
+  "url": "https://williamzujkowski.github.io/Neo-Brutalist-11ty-Theme",
   "language": "en",
   "locale": "en_US",
   
@@ -11,10 +11,10 @@
     "email": "hello@example.com",
     "bio": "Digital creator who refuses to follow the rules. Building tomorrow's experiences with today's technology. Forever curious, always creating.",
     "social": {
-      "github": "https://github.com/yourusername",
-      "twitter": "https://twitter.com/yourusername",
-      "linkedin": "https://linkedin.com/in/yourusername",
-      "codepen": "https://codepen.io/yourusername"
+      "github": "https://github.com/williamzujkowski",
+      "twitter": "https://twitter.com/example",
+      "linkedin": "https://linkedin.com/in/example",
+      "codepen": "https://codepen.io/example"
     }
   },
   

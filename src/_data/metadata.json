@@ -5,14 +5,14 @@
   "language": "en",
   "locale": "en_US",
   "author": {
-    "name": "Your Name",
-    "email": "your-email@domain.com",
+    "name": "Digital Maverick",
+    "email": "hello@example.com",
     "url": "https://example.com/about/"
   },
   "social": {
-    "twitter": "@yourusername",
-    "github": "yourusername",
-    "linkedin": "yourusername"
+    "twitter": "@example",
+    "github": "example",
+    "linkedin": "example"
   },
   "og": {
     "type": "website",

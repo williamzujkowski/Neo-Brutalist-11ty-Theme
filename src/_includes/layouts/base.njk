@@ -79,12 +79,8 @@
     {# Footer #}
     {% include "components/footer.njk" %}
     
-    {# JavaScript #}
-    <script src="{{ '/assets/js/main.js' | url }}" defer></script>
-    {% if theme.animations.enabled %}
-    <script src="{{ '/assets/js/animations.js' | url }}" defer></script>
-    {% endif %}
-    <script src="{{ '/assets/js/interactions.js' | url }}" defer></script>
+    {# JavaScript - Using standalone version to avoid module issues #}
+    <script src="{{ '/assets/js/main-standalone.js' | url }}" defer></script>
     
     {% block scripts %}{% endblock %}
     

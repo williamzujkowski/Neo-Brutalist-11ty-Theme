@@ -409,4 +409,9 @@ Remember: **Claude Flow coordinates, Claude Code creates!**
 - Keep documentation accurate and honest about the project's state
 - Always prefer editing existing files over creating new ones
 - Never save working files or tests to the root folder
-Never save working files, text/mds and tests to the root folder.
+
+## Known Issues Resolved
+- JavaScript modules converted to standalone to avoid ES6 import errors
+- All hardcoded URLs replaced with proper url filters for GitHub Pages
+- CSS imports properly configured in main.css
+- All placeholder domains replaced with example.com or actual GitHub Pages URL
