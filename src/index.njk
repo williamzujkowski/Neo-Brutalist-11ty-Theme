@@ -59,7 +59,7 @@ eleventyNavigation:
             <article class="project-card">
                 {% if project.data.image %}
                 <div class="project-image">
-                    <img src="{{ project.data.image }}" alt="{{ project.data.title }}" loading="lazy">
+                    <img src="{{ project.data.image | url }}" alt="{{ project.data.title }}" loading="lazy">
                 </div>
                 {% endif %}
                 <div class="project-content">
@@ -70,7 +70,7 @@ eleventyNavigation:
                         <span class="tag">{{ tag }}</span>
                         {% endfor %}
                     </div>
-                    <a href="{{ project.url }}" class="project-link">VIEW PROJECT →</a>
+                    <a href="{{ project.data.github | default(project.url) }}" class="project-link" {% if project.data.github %}target="_blank" rel="noopener"{% endif %}>VIEW PROJECT →</a>
                 </div>
             </article>
             {% endfor %}
