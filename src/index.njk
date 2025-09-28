@@ -96,16 +96,16 @@ eleventyNavigation:
                     {{ post.date | dateReadable }}
                 </time>
                 <h3 class="blog-post-title">
-                    <a href="{{ post.url }}">{{ post.data.title }}</a>
+                    <a href="{{ post.url | url }}">{{ post.data.title }}</a>
                 </h3>
                 <p class="blog-excerpt">{{ post.data.excerpt }}</p>
-                <a href="{{ post.url }}" class="blog-link">READ MORE →</a>
+                <a href="{{ post.url | url }}" class="blog-link">READ MORE →</a>
             </article>
             {% endfor %}
         </div>
         {% if collections.posts.length > 3 %}
         <div class="blog-more">
-            <a href="/blog/" class="btn-more">ALL POSTS →</a>
+            <a href="{{ '/blog/' | url }}" class="btn-more">ALL POSTS →</a>
         </div>
         {% endif %}
     </div>
