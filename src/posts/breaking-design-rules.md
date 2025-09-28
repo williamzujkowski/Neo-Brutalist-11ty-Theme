@@ -1,6 +1,6 @@
 ---
 title: "Breaking Design Rules: A Guide to Creative Rebellion"
-date: 2024-01-20
+date: 2025-01-20
 excerpt: "Why following design conventions is overrated and how to break them effectively"
 tags: ["design", "creativity", "tutorial"]
 ---

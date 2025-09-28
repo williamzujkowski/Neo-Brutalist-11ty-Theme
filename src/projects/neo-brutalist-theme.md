@@ -1,9 +1,9 @@
 ---
 title: "Neo-Brutalist 11ty Theme"
 description: "A bold static site generator theme that refuses to blend in"
-date: 2024-01-27
+date: 2025-01-27
 tags: ["11ty", "CSS3", "JavaScript", "GitHub Actions"]
-image: "/assets/images/project-1.jpg"
+image: "/assets/images/project-1.svg"
 order: 1
 featured: true
 github: "https://github.com/williamzujkowski/Neo-Brutalist-11ty-Theme"

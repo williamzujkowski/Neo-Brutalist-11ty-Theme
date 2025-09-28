@@ -116,6 +116,14 @@ Total Source Files: 42 files (CSS, JS, NJK, MD, JSON)
 - **Clean Architecture**: Separate concerns
 - **Documentation**: Keep updated
 
+## DateTime Standards
+
+- **Official Time Source**: Use time.gov as the authoritative datetime reference
+- **Format**: ISO 8601 format (YYYY-MM-DD) for all dates
+- **Consistency**: All dates must align with time.gov standards
+- **Blog Posts**: Use frontmatter date field in YYYY-MM-DD format
+- **Display Format**: Can be formatted for display but store in ISO format
+
 ## 🚀 Available Agents (54 Total)
 
 ### Core Development

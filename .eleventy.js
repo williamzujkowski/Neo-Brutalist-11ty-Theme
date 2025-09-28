@@ -50,6 +50,10 @@ module.exports = function(eleventyConfig) {
     return array.slice(0, limit);
   });
 
+  eleventyConfig.addFilter("randomRotation", () => {
+    return Math.floor(Math.random() * 5) - 2; // Returns -2 to 2
+  });
+
   // Shortcodes
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
   

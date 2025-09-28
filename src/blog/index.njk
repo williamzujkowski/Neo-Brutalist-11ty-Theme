@@ -1,0 +1,232 @@
+---
+layout: layouts/base.njk
+title: "Latest Thoughts"
+description: "Bold opinions on design, code, and breaking the rules"
+permalink: /blog/
+---
+
+<section class="blog-listing">
+    <div class="container">
+        <header class="blog-header">
+            <h1 class="mega-title">LATEST<br><span class="accent">THOUGHTS</span></h1>
+            <p class="blog-subtitle">
+                Where code meets chaos, design meets disruption, and conventions go to die.
+            </p>
+        </header>
+
+        <div class="blog-grid">
+            {% set posts = collections.posts | reverse %}
+            {% for post in posts %}
+            <article class="blog-card" style="transform: rotate({{ '' | randomRotation }}deg)">
+                <div class="blog-card-date">
+                    {{ post.date | dateReadable }}
+                </div>
+                <h2 class="blog-card-title">
+                    <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+                </h2>
+                <p class="blog-card-excerpt">
+                    {{ post.data.excerpt }}
+                </p>
+                <div class="blog-card-tags">
+                    {% for tag in post.data.tags %}
+                        {% if tag != "posts" %}
+                        <span class="tag">{{ tag }}</span>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <a href="{{ post.url | url }}" class="blog-card-link">
+                    READ MORE →
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+
+        {# Empty state if no posts #}
+        {% if posts.length == 0 %}
+        <div class="empty-state">
+            <p class="empty-message">No posts yet. The revolution is coming...</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<style>
+.blog-listing {
+    padding: var(--section-padding) 0;
+    background: linear-gradient(135deg, var(--electric-blue) 0%, var(--acid-green) 100%);
+    min-height: 100vh;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: calc(var(--section-padding) / 2);
+}
+
+.mega-title {
+    font-size: var(--mega-size);
+    line-height: 0.9;
+    color: var(--light);
+    text-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--dark);
+    margin-bottom: 1rem;
+}
+
+.mega-title .accent {
+    color: var(--hot-pink);
+    -webkit-text-stroke: 3px var(--dark);
+}
+
+.blog-subtitle {
+    font-size: var(--subtitle-size);
+    font-family: var(--body-font);
+    color: var(--dark);
+    background: var(--cyber-yellow);
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border: var(--border-width) solid var(--dark);
+    margin-top: 1rem;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: calc(var(--grid-gap) * 1.5);
+    margin-top: calc(var(--section-padding) / 2);
+}
+
+.blog-card {
+    background: var(--light);
+    border: var(--border-width) solid var(--dark);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--dark);
+    padding: 2rem;
+    transition: all var(--animation-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg,
+        var(--hot-pink) 0%,
+        var(--electric-blue) 50%,
+        var(--acid-green) 100%);
+}
+
+.blog-card:hover {
+    transform: rotate(0deg) !important;
+    box-shadow: calc(var(--shadow-offset) * 1.5) calc(var(--shadow-offset) * 1.5) 0 var(--dark);
+}
+
+.blog-card-date {
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    color: var(--hot-pink);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.blog-card-title {
+    font-size: var(--title-size);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.blog-card-title a {
+    color: var(--dark);
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+.blog-card-title a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 6px;
+    background: var(--hot-pink);
+    transition: width var(--animation-normal);
+}
+
+.blog-card-title a:hover::after {
+    width: 100%;
+}
+
+.blog-card-excerpt {
+    font-family: var(--body-font);
+    font-size: var(--body-size);
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.blog-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    background: var(--acid-green);
+    color: var(--dark);
+    padding: 0.25rem 0.75rem;
+    border: 2px solid var(--dark);
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.blog-card-link {
+    display: inline-block;
+    background: var(--electric-blue);
+    color: var(--light);
+    padding: 0.75rem 1.5rem;
+    border: var(--border-width) solid var(--dark);
+    font-family: var(--heading-font);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all var(--animation-normal);
+}
+
+.blog-card-link:hover {
+    background: var(--dark);
+    transform: translateX(4px);
+}
+
+.empty-state {
+    text-align: center;
+    padding: calc(var(--section-padding) * 2) 0;
+}
+
+.empty-message {
+    font-size: var(--title-size);
+    font-family: var(--heading-font);
+    color: var(--dark);
+    background: var(--cyber-yellow);
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: var(--border-width) solid var(--dark);
+    transform: rotate(-2deg);
+}
+
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mega-title {
+        font-size: clamp(3rem, 10vw, 6rem);
+    }
+
+    .blog-subtitle {
+        font-size: clamp(1rem, 3vw, 1.5rem);
+    }
+}
+</style>

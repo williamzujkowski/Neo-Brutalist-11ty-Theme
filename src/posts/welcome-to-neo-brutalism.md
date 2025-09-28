@@ -1,6 +1,6 @@
 ---
 title: "Welcome to Neo-Brutalism"
-date: 2024-01-15
+date: 2025-01-15
 excerpt: "Exploring the bold aesthetics of neo-brutalism in web design"
 tags: ["design", "web", "brutalism", "featured"]
 ---
