@@ -102,6 +102,23 @@
   body {
     overflow-x: hidden;
   }
+
+  /* Reduce box-shadows on mobile to prevent horizontal overflow */
+  .about-stats {
+    box-shadow: 4px 4px 0px var(--stark-black) !important;
+  }
+
+  .hero-subtitle,
+  .about-text,
+  .skill-card,
+  .blog-post-card,
+  .contact-form {
+    box-shadow: 4px 4px 0px var(--stark-black) !important;
+  }
+
+  .service-card {
+    box-shadow: 4px 4px 0px var(--stark-black) !important;
+  }
 }
 
 /* Small mobile adjustments */
