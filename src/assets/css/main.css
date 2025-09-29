@@ -57,8 +57,54 @@ body {
 footer {
     background: var(--stark-black);
     color: var(--pure-white);
-    padding: 40px;
+    padding: 60px 40px 40px 40px;
     text-align: center;
+}
+
+footer .social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+footer .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: var(--pure-white);
+    border: 4px solid var(--stark-black);
+    transform: rotate(-3deg);
+    transition: all 0.3s;
+    box-shadow: 6px 6px 0px var(--hot-pink);
+}
+
+footer .social-link:nth-child(even) {
+    transform: rotate(3deg);
+    box-shadow: 6px 6px 0px var(--acid-green);
+}
+
+footer .social-link:nth-child(3n) {
+    box-shadow: 6px 6px 0px var(--cyber-yellow);
+}
+
+footer .social-link:hover {
+    transform: rotate(0deg) scale(1.1);
+    background: var(--hot-pink);
+    box-shadow: 8px 8px 0px var(--pure-white);
+}
+
+footer .social-link svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--stark-black);
+}
+
+footer .social-link:hover svg {
+    fill: var(--pure-white);
 }
 
 .footer-text {

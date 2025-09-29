@@ -1,8 +1,20 @@
-{# Footer Component - extracted from demo.html lines 522-525 #}
+{# Footer Component with Social Icons #}
 <footer>
-    {# Social Icons Integration #}
+    {# Social Icons #}
     {%- if site.social.enabled -%}
-        {% include "components/social-icons.njk" %}
+    <div class="social-links">
+        {%- for platformKey, platform in site.social.platforms -%}
+            {%- if platform.enabled -%}
+            <a href="{{ platform.url }}"
+               class="social-link"
+               aria-label="{{ platform.label }}"
+               target="_blank"
+               rel="noopener noreferrer">
+                {{ platform.icon | safe }}
+            </a>
+            {%- endif -%}
+        {%- endfor -%}
+    </div>
     {%- endif -%}
 
     <p class="footer-text">
