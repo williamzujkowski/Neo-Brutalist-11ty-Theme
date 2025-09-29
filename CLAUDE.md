@@ -47,7 +47,7 @@
 
 ## Project Overview
 
-**Neo-Brutalist 11ty Theme** - A complete, production-ready static site generator theme featuring massive typography, vivid colors, hard shadows, and modern Neo-Brutalist design. This comprehensive theme includes blog posts, project showcases, social media integration, and a full testing suite using Playwright.
+**Neo-Brutalist 11ty Theme** - A bold static site generator theme featuring massive typography, vivid colors, hard shadows, and modern Neo-Brutalist design. This theme includes blog posts, project showcases, social media integration, and comprehensive testing with Playwright.
 
 ## Recent Updates
 
