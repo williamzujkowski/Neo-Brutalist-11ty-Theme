@@ -20,7 +20,10 @@
     text-align: center;
     margin-bottom: 60px;
     letter-spacing: -5px;
-    text-shadow: 6px 6px 0px var(--stark-black);
+    text-shadow: 4px 4px 0px var(--stark-black),
+                 6px 6px 0px rgba(0, 0, 0, 0.5),
+                 -1px -1px 0px var(--stark-black);
+    font-weight: 900;
 }
 
 .services-grid {

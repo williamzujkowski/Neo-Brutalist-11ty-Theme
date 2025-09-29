@@ -136,6 +136,17 @@
 
 .philosophy-section h2 {
     color: var(--pure-white);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.philosophy-section h3 {
+    color: var(--cyber-yellow);
+    font-weight: 900;
+}
+
+.philosophy-section p {
+    color: var(--pure-white);
+    font-weight: 600;
 }
 
 .skills-section {
@@ -143,9 +154,19 @@
     transform: rotate(0.3deg);
 }
 
-.skills-section h2,
+.skills-section h2 {
+    color: var(--stark-black);
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
 .skills-section h3 {
     color: var(--stark-black);
+    font-weight: 900;
+}
+
+.skills-section p {
+    color: var(--stark-black);
+    font-weight: 700;
 }
 
 .journey-section {
@@ -164,20 +185,40 @@
     transform: rotate(0.2deg);
 }
 
-.approach-section h2,
+.approach-section h2 {
+    color: var(--stark-black);
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
 .approach-section h3 {
     color: var(--stark-black);
+    font-weight: 900;
+}
+
+.approach-section p {
+    color: var(--stark-black);
+    font-weight: 700;
 }
 
 .values-section {
-    background: var(--deep-purple);
+    background: var(--darker-purple, var(--deep-purple));
     transform: rotate(-0.2deg);
 }
 
-.values-section h2,
-.values-section h3,
+.values-section h2 {
+    color: var(--cyber-yellow);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.values-section h3 {
+    color: var(--pure-white);
+    font-weight: 900;
+}
+
 .values-section p {
     color: var(--pure-white);
+    font-weight: 600;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
 }
 
 .cta-section {

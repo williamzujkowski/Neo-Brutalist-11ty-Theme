@@ -31,6 +31,19 @@
     --pure-white: #FFFFFF;
     --warning-red: #FF3333;
 
+    /* High contrast text colors for accessibility */
+    --text-on-yellow: #000000;  /* Black text on yellow backgrounds */
+    --text-on-green: #000000;   /* Black text on green backgrounds */
+    --text-on-purple: #FFFFFF;  /* White text on purple backgrounds */
+    --text-on-blue: #FFFFFF;    /* White text on blue backgrounds */
+    --text-on-pink: #FFFFFF;    /* White text on pink backgrounds */
+    --text-on-red: #FFFFFF;     /* White text on red backgrounds */
+
+    /* Enhanced contrast colors */
+    --darker-purple: #5500DD;   /* Slightly darker purple for better contrast */
+    --darker-yellow: #FFD700;   /* Gold yellow for better contrast when needed */
+    --darker-green: #00CC66;    /* Darker green for better contrast */
+
     /* Mobile-specific color overrides for better readability */
     --mobile-text-dark: #1a1a1a;
     --mobile-text-medium: #2a2a2a;
