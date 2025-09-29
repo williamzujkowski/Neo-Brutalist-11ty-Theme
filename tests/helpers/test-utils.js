@@ -2,12 +2,12 @@
  * Test utilities and helpers for Neo-Brutalist theme testing
  */
 
-const { expect } = require('@playwright/test');
+const { expect: _expect } = require('@playwright/test');
 
 /**
  * Wait for page to be fully loaded including animations
  */
-async function waitForPageLoad(page, timeout = 5000) {
+async function waitForPageLoad(page, _timeout = 5000) {
   await page.waitForLoadState('networkidle');
   await page.waitForTimeout(500); // Allow for animations to settle
 }
@@ -16,7 +16,7 @@ async function waitForPageLoad(page, timeout = 5000) {
  * Check if element has Neo-Brutalist styling characteristics
  */
 async function checkNeoBrutalistStyling(element) {
-  const styles = await element.evaluate((el) => {
+  const styles = await element.evaluate(el => {
     const computed = window.getComputedStyle(el);
     return {
       border: computed.border,
@@ -24,12 +24,12 @@ async function checkNeoBrutalistStyling(element) {
       boxShadow: computed.boxShadow,
       transform: computed.transform,
       fontWeight: computed.fontWeight,
-      textTransform: computed.textTransform,
+      textTransform: computed.textTransform
     };
   });
 
   // Check for thick borders (characteristic of neo-brutalist design)
-  const borderWidth = parseInt(styles.borderWidth);
+  const borderWidth = parseInt(styles.borderWidth, 10);
   if (borderWidth >= 3) {
     console.log(`✅ Thick border detected: ${borderWidth}px`);
   }
@@ -55,7 +55,7 @@ async function testResponsiveBreakpoints(page, selector) {
     { name: 'Mobile', width: 375, height: 667 },
     { name: 'Tablet', width: 768, height: 1024 },
     { name: 'Desktop', width: 1024, height: 768 },
-    { name: 'Large Desktop', width: 1440, height: 900 },
+    { name: 'Large Desktop', width: 1440, height: 900 }
   ];
 
   const results = {};
@@ -86,15 +86,15 @@ async function testResponsiveBreakpoints(page, selector) {
  * Check color contrast for accessibility
  */
 async function checkColorContrast(element) {
-  const contrast = await element.evaluate((el) => {
+  const contrast = await element.evaluate(el => {
     const style = window.getComputedStyle(el);
-    const backgroundColor = style.backgroundColor;
-    const color = style.color;
+    const { backgroundColor } = style;
+    const { color } = style;
 
     // Simple contrast check (in real testing, you'd use a more sophisticated algorithm)
     return {
       backgroundColor,
-      color,
+      color
       // You could implement WCAG contrast ratio calculation here
     };
   });
@@ -115,14 +115,14 @@ async function testSocialIcons(page) {
     const icon = socialIcons.nth(i);
     const href = await icon.getAttribute('href');
     const isVisible = await icon.isVisible();
-    const hasIcon = await icon.locator('svg, i, [class*="icon"]').count() > 0;
+    const hasIcon = (await icon.locator('svg, i, [class*="icon"]').count()) > 0;
 
     results.push({
       index: i,
       href,
       isVisible,
       hasIcon,
-      isValidUrl: href && (href.startsWith('http') || href.startsWith('mailto:')),
+      isValidUrl: href && (href.startsWith('http') || href.startsWith('mailto:'))
     });
   }
 
@@ -179,7 +179,9 @@ async function testAnimationPerformance(page) {
     performance.mark('animation-test-start');
 
     // Trigger animations by hovering over elements
-    const animatedElements = document.querySelectorAll('[class*="animate"], [class*="glitch"], [class*="float"]');
+    const animatedElements = document.querySelectorAll(
+      '[class*="animate"], [class*="glitch"], [class*="float"]'
+    );
     animatedElements.forEach((el, index) => {
       setTimeout(() => {
         el.dispatchEvent(new Event('mouseenter'));
@@ -214,7 +216,7 @@ async function validateThemeElements(page) {
     navigation: page.locator('nav, .navigation, [class*="nav"]').first(),
     buttons: page.locator('button, .btn, [class*="button"]'),
     cards: page.locator('.card, [class*="card"]'),
-    sections: page.locator('section, [class*="section"]'),
+    sections: page.locator('section, [class*="section"]')
   };
 
   const validation = {};
@@ -224,7 +226,7 @@ async function validateThemeElements(page) {
     validation[name] = {
       exists: count > 0,
       count,
-      isVisible: count > 0 ? await locator.first().isVisible() : false,
+      isVisible: count > 0 ? await locator.first().isVisible() : false
     };
 
     if (count > 0) {
@@ -243,5 +245,5 @@ module.exports = {
   testSocialIcons,
   checkNeoBrutalistCSSProperties,
   testAnimationPerformance,
-  validateThemeElements,
+  validateThemeElements
 };

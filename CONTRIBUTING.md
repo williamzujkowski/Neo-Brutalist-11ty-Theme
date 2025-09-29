@@ -1,33 +1,38 @@
 # Contributing to Neo-Brutalist 11ty Theme
 
-First off, thank you for considering contributing to the Neo-Brutalist 11ty Theme! It's people like you that make this theme better for everyone.
+First off, thank you for considering contributing to the Neo-Brutalist 11ty
+Theme! It's people like you that make this theme better for everyone.
 
 ## Code of Conduct
 
-By participating in this project, you are expected to uphold our Code of Conduct: be respectful, inclusive, and constructive in all interactions.
+By participating in this project, you are expected to uphold our Code of
+Conduct: be respectful, inclusive, and constructive in all interactions.
 
 ## How Can I Contribute?
 
 ### Reporting Bugs
 
-Before creating bug reports, please check existing issues as you might find out that you don't need to create one. When you are creating a bug report, please include as many details as possible:
+Before creating bug reports, please check existing issues as you might find out
+that you don't need to create one. When you are creating a bug report, please
+include as many details as possible:
 
-* **Use a clear and descriptive title**
-* **Describe the exact steps to reproduce the problem**
-* **Provide specific examples**
-* **Describe the behavior you observed and what you expected**
-* **Include screenshots if relevant**
-* **Include your environment details** (OS, browser, Node version, etc.)
+- **Use a clear and descriptive title**
+- **Describe the exact steps to reproduce the problem**
+- **Provide specific examples**
+- **Describe the behavior you observed and what you expected**
+- **Include screenshots if relevant**
+- **Include your environment details** (OS, browser, Node version, etc.)
 
 ### Suggesting Enhancements
 
-Enhancement suggestions are tracked as GitHub issues. When creating an enhancement suggestion, please include:
+Enhancement suggestions are tracked as GitHub issues. When creating an
+enhancement suggestion, please include:
 
-* **Use a clear and descriptive title**
-* **Provide a detailed description of the suggested enhancement**
-* **Provide specific examples to demonstrate the enhancement**
-* **Describe the current behavior and expected behavior**
-* **Explain why this enhancement would be useful**
+- **Use a clear and descriptive title**
+- **Provide a detailed description of the suggested enhancement**
+- **Provide specific examples to demonstrate the enhancement**
+- **Describe the current behavior and expected behavior**
+- **Explain why this enhancement would be useful**
 
 ### Pull Requests
 
@@ -54,44 +59,161 @@ npm run dev
 npm run build
 ```
 
-## Style Guide
+## Code Style Requirements
+
+**IMPORTANT**: This project enforces strict code style standards. All
+contributions must follow the official [Style Guide](docs/STYLE_GUIDE.md).
+
+### Automated Style Enforcement
+
+We use ESLint and Prettier to enforce consistent code style:
+
+```bash
+# Before submitting any code, run:
+npm run style:fix      # Auto-fix all style issues
+npm run lint:fix       # Fix JavaScript linting issues
+npm run format         # Format all files with Prettier
+npm run test          # Run all tests
+```
+
+### Pre-commit Checklist
+
+Before committing any code, ensure:
+
+- ✅ `npm run lint` passes without errors
+- ✅ `npm run format:check` passes without issues
+- ✅ `npm test` passes all tests
+- ✅ Code follows security guidelines
+- ✅ All user input is properly sanitized
 
 ### Git Commit Messages
 
-* Use the present tense ("Add feature" not "Added feature")
-* Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
-* Limit the first line to 72 characters or less
-* Reference issues and pull requests liberally after the first line
+Follow conventional commit format:
 
-Examples:
+```bash
+feat: add mobile navigation toggle functionality
+fix: resolve XSS vulnerability in user input
+docs: update installation instructions
+style: format JavaScript files according to new standards
+test: add comprehensive accessibility tests
+refactor: improve component modularity
+perf: optimize image loading performance
 ```
-Add new glitch animation effect
-Fix responsive layout issue on mobile devices
-Update documentation for theme customization
+
+**Format**: `type(scope): description`
+
+**Types**: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `perf`, `chore`
+
+### JavaScript Standards
+
+**Required**:
+
+- ES6+ features (classes, arrow functions, const/let)
+- Single quotes for strings
+- Semicolons always required
+- 2-space indentation
+- Max line length: 100 characters
+- Proper error handling with try/catch
+- Input validation and sanitization
+
+**Example**:
+
+```javascript
+// ✅ CORRECT
+export class ComponentManager {
+  constructor(options = {}) {
+    this.options = { ...this.defaultOptions, ...options };
+  }
+
+  async initialize() {
+    try {
+      await this.loadResources();
+    } catch (error) {
+      console.error('Initialization failed:', error);
+      throw error;
+    }
+  }
+}
+
+// ❌ INCORRECT
+function componentManager(options) {
+  var self = this;
+  self.options = options || {};
+}
 ```
 
-### JavaScript Style Guide
+### CSS Standards
 
-* Use ES6+ features where appropriate
-* Use meaningful variable names
-* Comment complex logic
-* Keep functions small and focused
-* Use `const` and `let`, avoid `var`
+**Required**:
 
-### CSS Style Guide
+- BEM naming convention
+- CSS custom properties for theming
+- Component-based organization
+- Mobile-first responsive design
+- Logical property grouping
 
-* Use CSS custom properties for theming
-* Follow BEM naming convention for classes
-* Group related properties together
-* Use shorthand properties where possible
-* Comment complex selectors or hacks
+**Example**:
 
-### Template Style Guide
+```css
+/* ✅ CORRECT */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: var(--color-primary);
+}
 
-* Use semantic HTML elements
-* Include proper ARIA labels for accessibility
-* Keep components modular and reusable
-* Use Nunjucks macros for repeated elements
+.hero-section__title {
+  font-size: 2.5rem;
+  color: var(--color-text);
+}
+
+.hero-section__title--large {
+  font-size: 3.5rem;
+}
+```
+
+### Security Requirements
+
+**All code must follow security guidelines**:
+
+- Sanitize all user input using `| escapeHTML` filter
+- Validate SVG content with `| sanitizeIcon`
+- Never use `innerHTML` with user data
+- Implement proper error handling
+- Use HTTPS for all external resources
+
+### Template Standards
+
+**Required for Nunjucks templates**:
+
+- Semantic HTML elements
+- ARIA labels for accessibility
+- Proper escaping of dynamic content
+- Component modularity
+
+**Example**:
+
+```njk
+{# ✅ CORRECT #}
+<section class="hero-section" aria-labelledby="hero-title">
+  <h1 id="hero-title" class="hero-section__title">
+    {{ title | escapeHTML }}
+  </h1>
+  {% if subtitle %}
+    <p class="hero-section__subtitle">
+      {{ subtitle | escapeHTML }}
+    </p>
+  {% endif %}
+</section>
+```
+
+### Documentation Requirements
+
+- Update [Style Guide](docs/STYLE_GUIDE.md) for new patterns
+- Include JSDoc comments for complex functions
+- Add README sections for new features
+- Document breaking changes
 
 ## Project Structure
 
@@ -129,10 +251,10 @@ Before submitting a PR:
 
 ## Documentation
 
-* Update README.md if you change functionality
-* Comment your code where necessary
-* Update the wiki for major features
-* Include JSDoc comments for JavaScript functions
+- Update README.md if you change functionality
+- Comment your code where necessary
+- Update the wiki for major features
+- Include JSDoc comments for JavaScript functions
 
 ## Questions?
 
@@ -140,6 +262,7 @@ Feel free to open an issue with your question or reach out to the maintainers.
 
 ## Recognition
 
-Contributors who submit accepted PRs will be added to the README contributors section.
+Contributors who submit accepted PRs will be added to the README contributors
+section.
 
 Thank you for contributing to make the web more bold and beautiful! 🎨⚡

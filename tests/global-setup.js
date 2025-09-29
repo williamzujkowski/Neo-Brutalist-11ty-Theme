@@ -1,6 +1,6 @@
 const { chromium } = require('@playwright/test');
 
-async function globalSetup(config) {
+async function globalSetup(_config) {
   console.log('Starting global setup...');
 
   // Ensure the site is built and running
@@ -35,7 +35,6 @@ async function globalSetup(config) {
         console.warn(`Could not pre-warm ${pageUrl}: ${error.message}`);
       }
     }
-
   } catch (error) {
     console.warn(`Setup warning: ${error.message}`);
     // Don't fail setup if site isn't ready - let individual tests handle it

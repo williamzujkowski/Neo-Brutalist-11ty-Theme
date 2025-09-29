@@ -1,0 +1,47 @@
+# Exclude Claude-Flow automation from npm package
+.claude/
+.hive-mind/
+memory/
+coordination/
+
+# Development and testing files
+tests/
+.playwright-mcp/
+docs/ANALYSIS_REPORT.md
+docs/SAST_REPORT.md
+docs/DEPENDENCY_VULNERABILITIES.md
+docs/TEST_CONSOLIDATION_REPORT.md
+docs/SECURITY_FIXES_REPORT.md
+docs/CLEANUP-REPORT.md
+docs/mobile-responsiveness-report.md
+project_plan.md
+swarm-prompt.md
+
+# Build artifacts and cache
+_site/
+node_modules/
+.cache/
+*.log
+
+# Editor and system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Git and CI
+.git/
+.github/
+.gitignore
+
+# Documentation that's not for end users
+PROGRESS.md
+TESTING.md
+out.txt
+.repomixignore
+
+# Development configuration
+.eslintrc.js
+.prettierrc
+.eslintignore
+.prettierignore
+playwright.config.js

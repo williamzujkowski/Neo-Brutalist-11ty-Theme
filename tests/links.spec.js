@@ -14,7 +14,9 @@ test.describe('Link Validation', () => {
 
   test('should validate all internal links work correctly', async ({ page }) => {
     // Collect all internal links
-    const internalLinks = await page.locator('a[href^="/"], a[href^="#"], a[href^="./"], a[href^="../"]').all();
+    const internalLinks = await page
+      .locator('a[href^="/"], a[href^="#"], a[href^="./"], a[href^="../"]')
+      .all();
 
     const results = [];
 
@@ -22,7 +24,9 @@ test.describe('Link Validation', () => {
       const href = await link.getAttribute('href');
       const text = await link.textContent();
 
-      if (!href) continue;
+      if (!href) {
+        continue;
+      }
 
       try {
         // Skip hash-only links for now, test them separately
@@ -56,7 +60,6 @@ test.describe('Link Validation', () => {
         // Navigate back to continue testing
         await page.goBack();
         await waitForPageLoad(page);
-
       } catch (error) {
         results.push({
           href,
@@ -88,7 +91,9 @@ test.describe('Link Validation', () => {
       const href = await link.getAttribute('href');
       const targetId = href?.substring(1);
 
-      if (!targetId) continue;
+      if (!targetId) {
+        continue;
+      }
 
       // Click the hash link
       await link.click();
@@ -97,7 +102,7 @@ test.describe('Link Validation', () => {
       // Check if target element exists and is in viewport
       const targetElement = page.locator(`#${targetId}`);
 
-      if (await targetElement.count() > 0) {
+      if ((await targetElement.count()) > 0) {
         await expect(targetElement).toBeInViewport();
       } else {
         // Log missing anchor targets
@@ -129,7 +134,7 @@ test.describe('Link Validation', () => {
     }
   });
 
-  test('should test social media links functionality', async ({ page, context }) => {
+  test('should test social media links functionality', async ({ page, context: _context }) => {
     // Test social media links specifically
     const socialSelectors = [
       'a[href*="github.com"]',
@@ -139,7 +144,7 @@ test.describe('Link Validation', () => {
       'a[href*="youtube.com"]',
       'a[href*="facebook.com"]',
       'a[href*="discord"]',
-      'a[href*="medium.com"]',
+      'a[href*="medium.com"]'
     ];
 
     for (const selector of socialSelectors) {
@@ -180,7 +185,7 @@ test.describe('Link Validation', () => {
       // Test at least the home link on each page
       const homeLink = page.locator('nav a[href="/"], .navigation a[href="/"]').first();
 
-      if (await homeLink.count() > 0) {
+      if ((await homeLink.count()) > 0) {
         await expect(homeLink).toBeVisible();
         await expect(homeLink).toHaveAttribute('href', '/');
       }
@@ -212,7 +217,9 @@ test.describe('Link Validation', () => {
     await waitForPageLoad(page);
 
     // Find blog post links
-    const blogLinks = page.locator('.blog-post a, .post-link, article a[href*="/blog/"], article a[href*="/posts/"]');
+    const blogLinks = page.locator(
+      '.blog-post a, .post-link, article a[href*="/blog/"], article a[href*="/posts/"]'
+    );
     const count = await blogLinks.count();
 
     if (count > 0) {
@@ -230,14 +237,13 @@ test.describe('Link Validation', () => {
 
             // Verify we're on a blog post page
             const postContent = page.locator('article, .post-content, .blog-post-content').first();
-            if (await postContent.count() > 0) {
+            if ((await postContent.count()) > 0) {
               await expect(postContent).toBeVisible();
             }
 
             // Go back to blog listing
             await page.goBack();
             await waitForPageLoad(page);
-
           } catch (error) {
             console.error(`Failed to navigate to blog post: ${href}`, error);
           }
@@ -285,7 +291,7 @@ test.describe('Link Validation', () => {
       const img = link.locator('img').first();
 
       // Check if image loads successfully
-      const naturalWidth = await img.evaluate((img) => img.naturalWidth);
+      const naturalWidth = await img.evaluate(img => img.naturalWidth);
       expect(naturalWidth).toBeGreaterThan(0);
 
       // Check link functionality
@@ -306,13 +312,14 @@ test.describe('Link Validation', () => {
       const title = await link.getAttribute('title');
 
       // Link should have accessible text via content, aria-label, or title
-      const hasAccessibleText = (text && text.trim().length > 0) ||
-                               (ariaLabel && ariaLabel.trim().length > 0) ||
-                               (title && title.trim().length > 0);
+      const hasAccessibleText =
+        (text && text.trim().length > 0) ||
+        (ariaLabel && ariaLabel.trim().length > 0) ||
+        (title && title.trim().length > 0);
 
       if (!hasAccessibleText) {
         // Check if it's an icon link with accessible content
-        const hasIcon = await link.locator('svg, i, [class*="icon"]').count() > 0;
+        const hasIcon = (await link.locator('svg, i, [class*="icon"]').count()) > 0;
         if (hasIcon) {
           expect(ariaLabel || title).toBeTruthy();
         } else {

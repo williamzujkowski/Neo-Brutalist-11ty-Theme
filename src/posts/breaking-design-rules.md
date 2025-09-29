@@ -1,27 +1,34 @@
 ---
-title: "Breaking Design Rules: A Guide to Creative Rebellion"
+title: 'Breaking Design Rules: A Guide to Creative Rebellion'
 date: 2025-01-20
-excerpt: "Why following design conventions is overrated and how to break them effectively"
-tags: ["design", "creativity", "tutorial"]
+excerpt:
+  'Why following design conventions is overrated and how to break them
+  effectively'
+tags: ['design', 'creativity', 'tutorial']
 ---
 
 ## The Rules Were Made to Be Broken
 
-Every design school teaches the same principles: balance, harmony, consistency. But what if we told you that **breaking these rules** is exactly what your design needs?
+Every design school teaches the same principles: balance, harmony, consistency.
+But what if we told you that **breaking these rules** is exactly what your
+design needs?
 
 ### The Sacred Rules We're Breaking
 
 #### 1. "Keep It Simple"
-**Traditional**: Minimalism is king
-**Neo-Brutalist**: Maximum visual impact with layers, shadows, and bold elements
+
+**Traditional**: Minimalism is king **Neo-Brutalist**: Maximum visual impact
+with layers, shadows, and bold elements
 
 #### 2. "Use a Limited Color Palette"
-**Traditional**: 2-3 colors max
-**Neo-Brutalist**: Electric blue + hot pink + acid green + cyber yellow = PERFECTION
+
+**Traditional**: 2-3 colors max **Neo-Brutalist**: Electric blue + hot pink +
+acid green + cyber yellow = PERFECTION
 
 #### 3. "Maintain Consistent Alignment"
-**Traditional**: Everything on a rigid grid
-**Neo-Brutalist**: Slight rotations and intentional misalignment create energy
+
+**Traditional**: Everything on a rigid grid **Neo-Brutalist**: Slight rotations
+and intentional misalignment create energy
 
 ### How to Break Rules Effectively
 
@@ -29,7 +36,7 @@ Every design school teaches the same principles: balance, harmony, consistency. 
 /* Traditional */
 .card {
   border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Neo-Brutalist */
@@ -58,10 +65,13 @@ Breaking rules isn't about chaos—it's about **intentional disruption**:
 
 ### The Psychology Behind It
 
-People remember what stands out. In a sea of Bootstrap templates and Material Design clones, neo-brutalism is a **cognitive interrupt**—it forces attention and creates lasting impressions.
+People remember what stands out. In a sea of Bootstrap templates and Material
+Design clones, neo-brutalism is a **cognitive interrupt**—it forces attention
+and creates lasting impressions.
 
 ### Your Turn to Rebel
 
 Stop asking "Is this too much?" and start asking "Is this bold enough?"
 
-The web needs more personality, more attitude, more **rebellion**. Will you answer the call?
+The web needs more personality, more attitude, more **rebellion**. Will you
+answer the call?

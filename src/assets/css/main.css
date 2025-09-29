@@ -15,270 +15,270 @@
 
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* CSS Custom Properties */
 :root {
-    --electric-blue: #0066FF;
-    --hot-pink: #FF0099;
-    --acid-green: #00FF88;
-    --cyber-yellow: #FFEE00;
-    --deep-purple: #6600FF;
-    --stark-black: #000000;
-    --pure-white: #FFFFFF;
-    --warning-red: #FF3333;
+  --electric-blue: #0066ff;
+  --hot-pink: #ff0099;
+  --acid-green: #00ff88;
+  --cyber-yellow: #ffee00;
+  --deep-purple: #6600ff;
+  --stark-black: #000000;
+  --pure-white: #ffffff;
+  --warning-red: #ff3333;
 
-    /* High contrast text colors for accessibility */
-    --text-on-yellow: #000000;  /* Black text on yellow backgrounds */
-    --text-on-green: #000000;   /* Black text on green backgrounds */
-    --text-on-purple: #FFFFFF;  /* White text on purple backgrounds */
-    --text-on-blue: #FFFFFF;    /* White text on blue backgrounds */
-    --text-on-pink: #FFFFFF;    /* White text on pink backgrounds */
-    --text-on-red: #FFFFFF;     /* White text on red backgrounds */
+  /* High contrast text colors for accessibility */
+  --text-on-yellow: #000000; /* Black text on yellow backgrounds */
+  --text-on-green: #000000; /* Black text on green backgrounds */
+  --text-on-purple: #ffffff; /* White text on purple backgrounds */
+  --text-on-blue: #ffffff; /* White text on blue backgrounds */
+  --text-on-pink: #ffffff; /* White text on pink backgrounds */
+  --text-on-red: #ffffff; /* White text on red backgrounds */
 
-    /* Enhanced contrast colors */
-    --darker-purple: #5500DD;   /* Slightly darker purple for better contrast */
-    --darker-yellow: #FFD700;   /* Gold yellow for better contrast when needed */
-    --darker-green: #00CC66;    /* Darker green for better contrast */
+  /* Enhanced contrast colors */
+  --darker-purple: #5500dd; /* Slightly darker purple for better contrast */
+  --darker-yellow: #ffd700; /* Gold yellow for better contrast when needed */
+  --darker-green: #00cc66; /* Darker green for better contrast */
 
-    /* Mobile-specific color overrides for better readability */
-    --mobile-text-dark: #1a1a1a;
-    --mobile-text-medium: #2a2a2a;
-    --mobile-text-light: #3a3a3a;
+  /* Mobile-specific color overrides for better readability */
+  --mobile-text-dark: #1a1a1a;
+  --mobile-text-medium: #2a2a2a;
+  --mobile-text-light: #3a3a3a;
 }
 
 /* Base Typography & Body */
 body {
-    font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
-    background: var(--pure-white);
-    overflow-x: hidden;
-    cursor: crosshair;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
+  background: var(--pure-white);
+  overflow-x: hidden;
+  cursor: crosshair;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Selection Styling */
 ::selection {
-    background: var(--hot-pink);
-    color: var(--pure-white);
+  background: var(--hot-pink);
+  color: var(--pure-white);
 }
 
 /* Footer */
 footer {
-    background: var(--stark-black);
-    color: var(--pure-white);
-    padding: 60px 40px 40px 40px;
-    text-align: center;
+  background: var(--stark-black);
+  color: var(--pure-white);
+  padding: 60px 40px 40px 40px;
+  text-align: center;
 }
 
 footer .social-links {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 footer .social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    background: var(--pure-white);
-    border: 4px solid var(--stark-black);
-    transform: rotate(-3deg);
-    transition: all 0.3s;
-    box-shadow: 6px 6px 0px var(--hot-pink);
-    /* Set color for currentColor to inherit */
-    color: var(--stark-black);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: var(--pure-white);
+  border: 4px solid var(--stark-black);
+  transform: rotate(-3deg);
+  transition: all 0.3s;
+  box-shadow: 6px 6px 0px var(--hot-pink);
+  /* Set color for currentColor to inherit */
+  color: var(--stark-black);
 }
 
 footer .social-link:nth-child(even) {
-    transform: rotate(3deg);
-    box-shadow: 6px 6px 0px var(--acid-green);
+  transform: rotate(3deg);
+  box-shadow: 6px 6px 0px var(--acid-green);
 }
 
 footer .social-link:nth-child(3n) {
-    box-shadow: 6px 6px 0px var(--cyber-yellow);
+  box-shadow: 6px 6px 0px var(--cyber-yellow);
 }
 
 footer .social-link:hover {
-    transform: rotate(0deg) scale(1.1);
-    background: var(--hot-pink);
-    box-shadow: 8px 8px 0px var(--pure-white);
-    /* Change color for hover state */
-    color: var(--pure-white);
+  transform: rotate(0deg) scale(1.1);
+  background: var(--hot-pink);
+  box-shadow: 8px 8px 0px var(--pure-white);
+  /* Change color for hover state */
+  color: var(--pure-white);
 }
 
 footer .social-link svg {
-    width: 28px;
-    height: 28px;
-    /* Remove fill declarations - let currentColor work */
+  width: 28px;
+  height: 28px;
+  /* Remove fill declarations - let currentColor work */
 }
 
 footer .social-link:hover svg {
-    /* SVG will inherit color from parent */
+  /* SVG will inherit color from parent */
 }
 
 .footer-text {
-    font-size: 1.2rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-top: 20px;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 20px;
 }
 
 /* Mobile Footer Styles */
 @media (max-width: 768px) {
-    footer {
-        padding: 30px 20px;
-    }
+  footer {
+    padding: 30px 20px;
+  }
 
-    .footer-text {
-        font-size: 1rem;
-        letter-spacing: 2px;
-        margin-top: 25px;
-        line-height: 1.4;
-    }
+  .footer-text {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    line-height: 1.4;
+  }
 
-    footer .social-links {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        gap: 12px;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 0 10px;
-    }
+  footer .social-links {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
 
-    footer .social-link {
-        width: 48px;
-        height: 48px;
-        transform: rotate(0deg);
-        box-shadow: 2px 2px 0px var(--hot-pink);
-        /* Improved accessibility touch target */
-        min-width: 48px;
-        min-height: 48px;
-        border: 3px solid var(--stark-black);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* Ensure color is set for mobile too */
-        color: var(--stark-black);
-    }
+  footer .social-link {
+    width: 48px;
+    height: 48px;
+    transform: rotate(0deg);
+    box-shadow: 2px 2px 0px var(--hot-pink);
+    /* Improved accessibility touch target */
+    min-width: 48px;
+    min-height: 48px;
+    border: 3px solid var(--stark-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Ensure color is set for mobile too */
+    color: var(--stark-black);
+  }
 
-    footer .social-link svg {
-        width: 24px;
-        height: 24px;
-    }
+  footer .social-link svg {
+    width: 24px;
+    height: 24px;
+  }
 
-    footer .social-link:hover {
-        transform: scale(1.1);
-        box-shadow: 3px 3px 0px var(--stark-black);
-        /* Hover color for mobile */
-        color: var(--pure-white);
-    }
+  footer .social-link:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 0px var(--stark-black);
+    /* Hover color for mobile */
+    color: var(--pure-white);
+  }
 }
 
 /* Floating Elements */
 .floating-shape {
-    position: fixed;
-    pointer-events: none;
-    z-index: 1;
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .shape-1 {
-    top: 20%;
-    right: 5%;
-    width: 100px;
-    height: 100px;
-    background: var(--hot-pink);
-    border: 6px solid var(--stark-black);
-    transform: rotate(45deg);
-    animation: float 6s ease-in-out infinite;
+  top: 20%;
+  right: 5%;
+  width: 100px;
+  height: 100px;
+  background: var(--hot-pink);
+  border: 6px solid var(--stark-black);
+  transform: rotate(45deg);
+  animation: float 6s ease-in-out infinite;
 }
 
 .shape-2 {
-    bottom: 20%;
-    left: 5%;
-    width: 150px;
-    height: 150px;
-    background: var(--acid-green);
-    border: 6px solid var(--stark-black);
-    border-radius: 50%;
-    animation: float 8s ease-in-out infinite reverse;
+  bottom: 20%;
+  left: 5%;
+  width: 150px;
+  height: 150px;
+  background: var(--acid-green);
+  border: 6px solid var(--stark-black);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite reverse;
 }
 
 /* Cursor Trail Effect */
 .cursor-dot {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    background: var(--hot-pink);
-    border: 3px solid var(--stark-black);
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.1s;
-    transform: translate(-50%, -50%);
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: var(--hot-pink);
+  border: 3px solid var(--stark-black);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s;
+  transform: translate(-50%, -50%);
 }
 
 /* Global Contrast Rules - Ensure proper text colors on colored backgrounds */
 /* Yellow backgrounds MUST have black text */
-[style*="background: var(--cyber-yellow)"],
-[style*="background-color: var(--cyber-yellow)"],
-[style*="background:#FFEE00"],
-[style*="background-color:#FFEE00"],
+[style*='background: var(--cyber-yellow)'],
+[style*='background-color: var(--cyber-yellow)'],
+[style*='background:#FFEE00'],
+[style*='background-color:#FFEE00'],
 .bg-yellow,
-*[class*="yellow"] {
-    color: var(--stark-black) !important;
+*[class*='yellow'] {
+  color: var(--stark-black) !important;
 }
 
-[style*="background: var(--cyber-yellow)"] *,
-[style*="background-color: var(--cyber-yellow)"] *,
+[style*='background: var(--cyber-yellow)'] *,
+[style*='background-color: var(--cyber-yellow)'] *,
 .bg-yellow * {
-    color: var(--stark-black) !important;
+  color: var(--stark-black) !important;
 }
 
 /* Green backgrounds MUST have black text */
-[style*="background: var(--acid-green)"],
-[style*="background-color: var(--acid-green)"],
-[style*="background:#00FF88"],
-[style*="background-color:#00FF88"],
+[style*='background: var(--acid-green)'],
+[style*='background-color: var(--acid-green)'],
+[style*='background:#00FF88'],
+[style*='background-color:#00FF88'],
 .bg-green,
-*[class*="green"] {
-    color: var(--stark-black) !important;
+*[class*='green'] {
+  color: var(--stark-black) !important;
 }
 
-[style*="background: var(--acid-green)"] *,
-[style*="background-color: var(--acid-green)"] *,
+[style*='background: var(--acid-green)'] *,
+[style*='background-color: var(--acid-green)'] *,
 .bg-green * {
-    color: var(--stark-black) !important;
+  color: var(--stark-black) !important;
 }
 
 /* Buttons and Interactive Elements with proper contrast */
 button,
 .button,
 .btn {
-    background: var(--cyber-yellow);
-    color: var(--stark-black) !important;
-    border: 4px solid var(--stark-black);
-    padding: 15px 30px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-decoration: none;
-    display: inline-block;
+  background: var(--cyber-yellow);
+  color: var(--stark-black) !important;
+  border: 4px solid var(--stark-black);
+  padding: 15px 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
 }
 
 button:hover,
 .button:hover,
 .btn:hover {
-    background: var(--hot-pink);
-    color: var(--pure-white) !important;
-    transform: scale(1.05);
-    box-shadow: 5px 5px 0px var(--stark-black);
+  background: var(--hot-pink);
+  color: var(--pure-white) !important;
+  transform: scale(1.05);
+  box-shadow: 5px 5px 0px var(--stark-black);
 }

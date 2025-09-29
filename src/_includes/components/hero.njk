@@ -1,211 +1,197 @@
-{# src/_includes/components/hero.njk #}
-
-{# 
-  Hero Component
-  Usage: {% include "components/hero.njk" %}
-  
-  Can be customized by passing variables:
-  {% set heroTitle = "CUSTOM<br>TITLE" %}
-  {% set heroSubtitle = "Custom Subtitle" %}
-  {% include "components/hero.njk" %}
-#}
+{# src/_includes/components/hero.njk #} {# Hero Component Usage: {% include "components/hero.njk" %} Can be customized
+by passing variables: {% set heroTitle = "CUSTOM
+<br />
+TITLE" %} {% set heroSubtitle = "Custom Subtitle" %} {% include "components/hero.njk" %} #}
 
 <section class="hero" id="hero" style="background: {{ site.hero.background }};">
-    <div class="hero-content">
-        <h1 class="mega-title{% if site.theme.animations.glitchEnabled %} glitch-text{% endif %}" 
-            data-text="{{ heroTitle or site.hero.title | replace('<br>', ' ') }}">
-            {{ heroTitle or site.hero.title | safe }}
-        </h1>
-        <div class="hero-subtitle">
-            {{ heroSubtitle or site.hero.subtitle }}
-        </div>
-        
-        {# Optional CTA buttons #}
-        {% if heroCTA %}
-        <div class="hero-actions">
-            {% for action in heroCTA %}
-            <a href="{{ action.url }}" class="hero-cta" style="--rotation: {{ range(-2, 2) }}deg;">
-                {{ action.text }}
-            </a>
-            {% endfor %}
-        </div>
-        {% endif %}
-        
-        {# Optional scroll indicator #}
-        {% if showScrollIndicator %}
-        <div class="scroll-indicator" aria-label="Scroll down">
-            <span class="scroll-arrow">↓</span>
-        </div>
-        {% endif %}
+  <div class="hero-content">
+    <h1
+      class="mega-title{% if site.theme.animations.glitchEnabled %} glitch-text{% endif %}"
+      data-text="{{ heroTitle or site.hero.title | replace('<br>', ' ') }}"
+    >
+      {{ heroTitle or site.hero.title | safe }}
+    </h1>
+    <div class="hero-subtitle">{{ heroSubtitle or site.hero.subtitle }}</div>
+
+    {# Optional CTA buttons #} {% if heroCTA %}
+    <div class="hero-actions">
+      {% for action in heroCTA %}
+      <a href="{{ action.url }}" class="hero-cta" style="--rotation: {{ range(-2, 2) }}deg;">{{ action.text }}</a>
+      {% endfor %}
     </div>
-    
-    {# Background decorations #}
-    {% if site.theme.animations.enabled %}
-    <div class="hero-decoration hero-decoration--1" aria-hidden="true"></div>
-    <div class="hero-decoration hero-decoration--2" aria-hidden="true"></div>
+    {% endif %} {# Optional scroll indicator #} {% if showScrollIndicator %}
+    <div class="scroll-indicator" aria-label="Scroll down">
+      <span class="scroll-arrow">↓</span>
+    </div>
     {% endif %}
+  </div>
+
+  {# Background decorations #} {% if site.theme.animations.enabled %}
+  <div class="hero-decoration hero-decoration--1" aria-hidden="true"></div>
+  <div class="hero-decoration hero-decoration--2" aria-hidden="true"></div>
+  {% endif %}
 </section>
 
 <style>
-.hero {
-    margin-top: 120px;
-    padding: 60px {{ site.theme.spacing.containerPadding }};
-    position: relative;
-    border: {{ site.theme.spacing.borderWidth }} solid var(--stark-black);
-    margin: 120px 20px 40px 20px;
-    overflow: hidden;
-}
+  .hero {
+      margin-top: 120px;
+      padding: 60px {{ site.theme.spacing.containerPadding }};
+      position: relative;
+      border: {{ site.theme.spacing.borderWidth }} solid var(--stark-black);
+      margin: 120px 20px 40px 20px;
+      overflow: hidden;
+  }
 
-.hero-content {
-    max-width: {{ site.theme.layout.maxWidth }};
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-}
+  .hero-content {
+      max-width: {{ site.theme.layout.maxWidth }};
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+  }
 
-.mega-title {
-    font-size: {{ site.theme.typography.megaSize }};
-    line-height: 0.85;
-    color: var(--pure-white);
-    text-transform: uppercase;
-    letter-spacing: -8px;
-    margin-bottom: 30px;
-    text-shadow: 8px 8px 0px var(--stark-black);
-}
+  .mega-title {
+      font-size: {{ site.theme.typography.megaSize }};
+      line-height: 0.85;
+      color: var(--pure-white);
+      text-transform: uppercase;
+      letter-spacing: -8px;
+      margin-bottom: 30px;
+      text-shadow: 8px 8px 0px var(--stark-black);
+  }
 
-.mega-title.glitch-text {
-    animation: glitch {{ site.theme.animations.duration.glitch }} infinite;
-}
+  .mega-title.glitch-text {
+      animation: glitch {{ site.theme.animations.duration.glitch }} infinite;
+  }
 
-@keyframes glitch {
-    0%, 100% { transform: translate(0); }
-    20% { transform: translate(-4px, 4px); }
-    40% { transform: translate(-4px, -4px); }
-    60% { transform: translate(4px, 4px); }
-    80% { transform: translate(4px, -4px); }
-}
+  @keyframes glitch {
+      0%, 100% { transform: translate(0); }
+      20% { transform: translate(-4px, 4px); }
+      40% { transform: translate(-4px, -4px); }
+      60% { transform: translate(4px, 4px); }
+      80% { transform: translate(4px, -4px); }
+  }
 
-.hero-subtitle {
-    font-size: {{ site.theme.typography.subtitleSize }};
-    background: var(--cyber-yellow);
-    color: var(--stark-black);
-    display: inline-block;
-    padding: 20px 40px;
-    border: {{ site.theme.spacing.borderWidth }} solid var(--stark-black);
-    transform: rotate(-1deg);
-    margin: 20px 0;
-    box-shadow: {{ site.theme.spacing.shadowOffset }} {{ site.theme.spacing.shadowOffset }} 0px var(--stark-black);
-    font-weight: 900;
-}
+  .hero-subtitle {
+      font-size: {{ site.theme.typography.subtitleSize }};
+      background: var(--cyber-yellow);
+      color: var(--stark-black);
+      display: inline-block;
+      padding: 20px 40px;
+      border: {{ site.theme.spacing.borderWidth }} solid var(--stark-black);
+      transform: rotate(-1deg);
+      margin: 20px 0;
+      box-shadow: {{ site.theme.spacing.shadowOffset }} {{ site.theme.spacing.shadowOffset }} 0px var(--stark-black);
+      font-weight: 900;
+  }
 
-.hero-actions {
-    margin-top: 40px;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+  .hero-actions {
+      margin-top: 40px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+  }
 
-.hero-cta {
-    display: inline-block;
-    padding: 20px 40px;
-    background: var(--hot-pink);
-    color: var(--pure-white);
-    text-decoration: none;
-    border: 6px solid var(--stark-black);
-    font-weight: 900;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transform: rotate(var(--rotation, -1deg));
-    transition: all {{ site.theme.animations.duration.normal }};
-    box-shadow: 10px 10px 0px var(--stark-black);
-}
+  .hero-cta {
+      display: inline-block;
+      padding: 20px 40px;
+      background: var(--hot-pink);
+      color: var(--pure-white);
+      text-decoration: none;
+      border: 6px solid var(--stark-black);
+      font-weight: 900;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transform: rotate(var(--rotation, -1deg));
+      transition: all {{ site.theme.animations.duration.normal }};
+      box-shadow: 10px 10px 0px var(--stark-black);
+  }
 
-.hero-cta:hover {
-    transform: rotate(calc(var(--rotation, -1deg) * -1)) scale(1.05);
-    box-shadow: 15px 15px 0px var(--stark-black);
-    background: var(--electric-blue);
-}
+  .hero-cta:hover {
+      transform: rotate(calc(var(--rotation, -1deg) * -1)) scale(1.05);
+      box-shadow: 15px 15px 0px var(--stark-black);
+      background: var(--electric-blue);
+  }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: bounce 2s infinite;
-}
+  .scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s infinite;
+  }
 
-.scroll-arrow {
-    font-size: 2rem;
-    color: var(--pure-white);
-    text-shadow: 2px 2px 0px var(--stark-black);
-}
+  .scroll-arrow {
+      font-size: 2rem;
+      color: var(--pure-white);
+      text-shadow: 2px 2px 0px var(--stark-black);
+  }
 
-@keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(10px); }
-}
+  @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+  }
 
-.hero-decoration {
-    position: absolute;
-    pointer-events: none;
-}
+  .hero-decoration {
+      position: absolute;
+      pointer-events: none;
+  }
 
-.hero-decoration--1 {
-    top: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: var(--hot-pink);
-    border: 8px solid var(--stark-black);
-    transform: rotate(45deg);
-    animation: float-reverse {{ site.theme.animations.duration.float }} ease-in-out infinite;
-}
+  .hero-decoration--1 {
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: var(--hot-pink);
+      border: 8px solid var(--stark-black);
+      transform: rotate(45deg);
+      animation: float-reverse {{ site.theme.animations.duration.float }} ease-in-out infinite;
+  }
 
-.hero-decoration--2 {
-    bottom: -100px;
-    left: -100px;
-    width: 300px;
-    height: 300px;
-    background: var(--acid-green);
-    border: 8px solid var(--stark-black);
-    border-radius: 50%;
-    animation: float {{ site.theme.animations.duration.float }} ease-in-out infinite;
-}
+  .hero-decoration--2 {
+      bottom: -100px;
+      left: -100px;
+      width: 300px;
+      height: 300px;
+      background: var(--acid-green);
+      border: 8px solid var(--stark-black);
+      border-radius: 50%;
+      animation: float {{ site.theme.animations.duration.float }} ease-in-out infinite;
+  }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-30px); }
-}
+  @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); }
+  }
 
-@keyframes float-reverse {
-    0%, 100% { transform: translateY(0) rotate(45deg); }
-    50% { transform: translateY(30px) rotate(45deg); }
-}
+  @keyframes float-reverse {
+      0%, 100% { transform: translateY(0) rotate(45deg); }
+      50% { transform: translateY(30px) rotate(45deg); }
+  }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .hero {
-        padding: 40px 20px;
-        margin: 100px 10px 30px 10px;
-    }
-    
-    .mega-title {
-        letter-spacing: -4px;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.5rem;
-        padding: 15px 25px;
-    }
-    
-    .hero-actions {
-        justify-content: center;
-    }
-    
-    .hero-cta {
-        font-size: 1.2rem;
-        padding: 15px 30px;
-    }
-}
+  /* Responsive */
+  @media (max-width: 768px) {
+      .hero {
+          padding: 40px 20px;
+          margin: 100px 10px 30px 10px;
+      }
+
+      .mega-title {
+          letter-spacing: -4px;
+      }
+
+      .hero-subtitle {
+          font-size: 1.5rem;
+          padding: 15px 25px;
+      }
+
+      .hero-actions {
+          justify-content: center;
+      }
+
+      .hero-cta {
+          font-size: 1.2rem;
+          padding: 15px 30px;
+      }
+  }
 </style>

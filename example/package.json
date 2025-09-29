@@ -1,0 +1,15 @@
+{
+  "name": "neo-brutalist-theme-example",
+  "version": "1.0.0",
+  "description": "Example site demonstrating Neo-Brutalist 11ty Theme",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "dev": "eleventy --serve --watch"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "neo-brutalist-11ty-theme": "file:.."
+  }
+}

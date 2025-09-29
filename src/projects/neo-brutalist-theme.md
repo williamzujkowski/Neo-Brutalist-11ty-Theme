@@ -1,19 +1,20 @@
 ---
 layout: layouts/project.njk
-title: "Neo-Brutalist 11ty Theme"
-description: "A bold static site generator theme that refuses to blend in"
+title: 'Neo-Brutalist 11ty Theme'
+description: 'A bold static site generator theme that refuses to blend in'
 date: 2025-01-27
-tags: ["11ty", "CSS3", "JavaScript", "GitHub Actions"]
-image: "/assets/images/project-1.svg"
+tags: ['11ty', 'CSS3', 'JavaScript', 'GitHub Actions']
+image: '/assets/images/project-1.svg'
 order: 1
 featured: true
-github: "https://github.com/williamzujkowski/Neo-Brutalist-11ty-Theme"
-demo: "https://williamzujkowski.github.io/Neo-Brutalist-11ty-Theme/"
+github: 'https://github.com/williamzujkowski/Neo-Brutalist-11ty-Theme'
+demo: 'https://williamzujkowski.github.io/Neo-Brutalist-11ty-Theme/'
 ---
 
 ## The Mission: Break Every Design Rule
 
-Built a theme that **completely rejects** subtle design principles. No minimalism, no muted colors, no apologies for taking up space.
+Built a theme that **completely rejects** subtle design principles. No
+minimalism, no muted colors, no apologies for taking up space.
 
 ### Technical Stack
 
@@ -26,19 +27,28 @@ Built a theme that **completely rejects** subtle design principles. No minimalis
 ### Key Features
 
 #### 🎨 Aggressive Design System
-Every element screams for attention with massive typography (up to 10rem), vivid colors that clash beautifully, and shadows that could crush pixels.
+
+Every element screams for attention with massive typography (up to 10rem), vivid
+colors that clash beautifully, and shadows that could crush pixels.
 
 #### ⚡ Performance First
-Despite the visual chaos, this theme achieves perfect Lighthouse scores. Static generation means instant loads.
+
+Despite the visual chaos, this theme achieves perfect Lighthouse scores. Static
+generation means instant loads.
 
 #### 🔥 Developer Experience
-Clean component architecture, modular CSS structure, automated deployment pipeline, and comprehensive documentation.
+
+Clean component architecture, modular CSS structure, automated deployment
+pipeline, and comprehensive documentation.
 
 ### The Challenge
 
-> "Make a theme that's impossible to ignore, but still functional and accessible."
+> "Make a theme that's impossible to ignore, but still functional and
+> accessible."
 
-The goal was to prove that bold design doesn't have to sacrifice usability or performance. We delivered a theme that assaults the senses while maintaining WCAG 2.1 AA compliance.
+The goal was to prove that bold design doesn't have to sacrifice usability or
+performance. We delivered a theme that assaults the senses while maintaining
+WCAG 2.1 AA compliance.
 
 ### Results
 
@@ -72,7 +82,9 @@ const themeFeatures = {
 
 ### The Impact
 
-This theme proves that the web needs more personality. In a sea of identical Bootstrap sites, neo-brutalism creates **memorable experiences** that users can't ignore.
+This theme proves that the web needs more personality. In a sea of identical
+Bootstrap sites, neo-brutalism creates **memorable experiences** that users
+can't ignore.
 
 ### View the Rebellion
 

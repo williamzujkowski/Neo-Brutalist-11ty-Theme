@@ -1,6 +1,7 @@
 # Testing Guide for Neo-Brutalist 11ty Theme
 
-This guide covers the comprehensive Playwright test suite for the Neo-Brutalist theme.
+This guide covers the comprehensive Playwright test suite for the Neo-Brutalist
+theme.
 
 ## 🚀 Quick Start
 
@@ -49,6 +50,7 @@ tests/
 ## 🧪 Test Categories
 
 ### 1. Navigation Testing (`navigation.spec.js`)
+
 - ✅ Main navigation menu display and functionality
 - ✅ Mobile navigation behavior and hamburger menus
 - ✅ Smooth scrolling to anchor sections
@@ -57,6 +59,7 @@ tests/
 - ✅ Neo-Brutalist styling validation
 
 ### 2. Link Validation (`links.spec.js`)
+
 - ✅ Internal link functionality and routing
 - ✅ External link security attributes (`target="_blank"`, `rel="noopener"`)
 - ✅ Hash anchor navigation and smooth scrolling
@@ -66,6 +69,7 @@ tests/
 - ✅ Accessibility compliance for all links
 
 ### 3. Social Icons Testing (`social-icons.spec.js`)
+
 - ✅ Social icon visibility and rendering
 - ✅ Platform-specific URL validation
 - ✅ Accessibility attributes (aria-label, title)
@@ -75,6 +79,7 @@ tests/
 - ✅ Neo-Brutalist styling characteristics
 
 ### 4. Responsive Design (`responsive.spec.js`)
+
 - ✅ Cross-viewport compatibility (320px to 1920px)
 - ✅ Typography scaling and readability
 - ✅ Image responsiveness and optimization
@@ -84,6 +89,7 @@ tests/
 - ✅ Neo-Brutalist elements maintain style across devices
 
 ### 5. Accessibility (`accessibility.spec.js`)
+
 - ✅ Semantic HTML structure and landmarks
 - ✅ ARIA attributes and proper labeling
 - ✅ Keyboard navigation support
@@ -94,6 +100,7 @@ tests/
 - ✅ Form accessibility and error handling
 
 ### 6. Performance (`performance.spec.js`)
+
 - ✅ Page load times (< 3 seconds target)
 - ✅ Core Web Vitals monitoring (LCP, FID, CLS)
 - ✅ Image loading optimization
@@ -105,7 +112,8 @@ tests/
 
 ## 🎨 Neo-Brutalist Specific Tests
 
-The test suite includes specialized validations for Neo-Brutalist design elements:
+The test suite includes specialized validations for Neo-Brutalist design
+elements:
 
 - **Bold Typography**: Large font sizes and proper scaling
 - **Thick Borders**: Border width >= 3px on key elements
@@ -118,15 +126,15 @@ The test suite includes specialized validations for Neo-Brutalist design element
 
 Current targets for optimal user experience:
 
-| Metric | Target | Test Location |
-|--------|--------|---------------|
-| Page Load Time | < 3 seconds | performance.spec.js |
+| Metric                         | Target        | Test Location       |
+| ------------------------------ | ------------- | ------------------- |
+| Page Load Time                 | < 3 seconds   | performance.spec.js |
 | Largest Contentful Paint (LCP) | < 2.5 seconds | performance.spec.js |
-| First Contentful Paint (FCP) | < 1.8 seconds | performance.spec.js |
-| Cumulative Layout Shift (CLS) | < 0.1 | performance.spec.js |
-| CSS Bundle Size | < 100KB | performance.spec.js |
-| JavaScript Bundle Size | < 200KB | performance.spec.js |
-| Font Bundle Size | < 150KB | performance.spec.js |
+| First Contentful Paint (FCP)   | < 1.8 seconds | performance.spec.js |
+| Cumulative Layout Shift (CLS)  | < 0.1         | performance.spec.js |
+| CSS Bundle Size                | < 100KB       | performance.spec.js |
+| JavaScript Bundle Size         | < 200KB       | performance.spec.js |
+| Font Bundle Size               | < 150KB       | performance.spec.js |
 
 ## 🌐 Browser Support
 
@@ -270,4 +278,6 @@ Reports include:
 - Network activity logs
 - Browser console outputs
 
-This comprehensive test suite ensures the Neo-Brutalist theme maintains high quality, performance, and accessibility standards across all browsers and devices.
+This comprehensive test suite ensures the Neo-Brutalist theme maintains high
+quality, performance, and accessibility standards across all browsers and
+devices.

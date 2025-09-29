@@ -1,103 +1,110 @@
 ---
 # base.njk
 ---
+
 <!DOCTYPE html>
 <html lang="{{ site.language | default('en') }}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Eleventy">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Eleventy" />
+
+    {# Security Headers #}
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+                   script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
+                   style-src 'self' 'unsafe-inline';
+                   img-src 'self' data: https:;
+                   font-src 'self' data:;
+                   connect-src 'self' https://www.google-analytics.com;"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
     {# SEO Meta Tags #}
     <title>{{ title or site.title }} | {{ site.name }}</title>
-    <meta name="description" content="{{ description or site.description }}">
-    <meta name="author" content="{{ site.author.name }}">
-    <meta name="keywords" content="{{ keywords or site.keywords | join(', ') }}">
-    
+    <meta name="description" content="{{ description or site.description }}" />
+    <meta name="author" content="{{ site.author.name }}" />
+    <meta name="keywords" content="{{ keywords or site.keywords | join(', ') }}" />
+
     {# Open Graph #}
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:title" content="{{ title or site.title }}">
-    <meta property="og:description" content="{{ description or site.description }}">
-    <meta property="og:image" content="{{ site.url }}/assets/images/og-image.png">
-    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:title" content="{{ title or site.title }}" />
+    <meta property="og:description" content="{{ description or site.description }}" />
+    <meta property="og:image" content="{{ site.url }}/assets/images/og-image.png" />
+
     {# Twitter Card #}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-    <meta name="twitter:title" content="{{ title or site.title }}">
-    <meta name="twitter:description" content="{{ description or site.description }}">
-    <meta name="twitter:image" content="{{ site.url }}/assets/images/og-image.png">
-    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+    <meta name="twitter:title" content="{{ title or site.title }}" />
+    <meta name="twitter:description" content="{{ description or site.description }}" />
+    <meta name="twitter:image" content="{{ site.url }}/assets/images/og-image.png" />
+
     {# Favicon - Neo-Brutalist Bold Design #}
-    <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | url }}">
-    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | url }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | url }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon.svg' | url }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.svg' | url }}">
-    
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | url }}" />
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | url }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | url }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon.svg' | url }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.svg' | url }}" />
+
     {# CSS #}
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" />
+
     {% block styles %}{% endblock %}
-    
+
     {# Preload fonts - commented out as we use system fonts #}
-    {# <link rel="preload" href="{{ '/assets/fonts/arial-black.woff2' | url }}" as="font" type="font/woff2" crossorigin> #}
-    
+    {#
+    <link rel="preload" href="{{ '/assets/fonts/arial-black.woff2' | url }}" as="font" type="font/woff2" crossorigin />
+    #}
+
     {# Theme Color for mobile browsers #}
-    <meta name="theme-color" content="{{ theme.colors.primary }}">
-    
+    <meta name="theme-color" content="{{ site.theme.colors.primary }}" />
+
     {# No JS fallback #}
     <noscript>
-        <style>
-            .cursor-dot { display: none; }
-            .floating-shape { animation: none; }
-        </style>
+      <style>
+        .cursor-dot {
+          display: none;
+        }
+        .floating-shape {
+          animation: none;
+        }
+      </style>
     </noscript>
-</head>
-<body class="{{ bodyClass }}" data-theme="{{ theme.mode | default('neo-brutalist') }}">
-    
+  </head>
+  <body class="{{ bodyClass | default('') }}" data-theme="{{ site.theme.mode | default('neo-brutalist') }}">
     {# Skip to content for accessibility #}
     <a href="#main" class="skip-link">Skip to main content</a>
-    
-    {# Custom cursor #}
-    {% if theme.animations.cursorTrail %}
+
+    {# Custom cursor #} {% if site.theme.animations.cursorTrail %}
     <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-    {% endif %}
-    
-    {# Floating shapes #}
-    {% if theme.animations.floatingShapes %}
+    {% endif %} {# Floating shapes #} {% if site.theme.animations.floatingShapes %}
     <div class="floating-shape shape-1" aria-hidden="true"></div>
     <div class="floating-shape shape-2" aria-hidden="true"></div>
-    {% endif %}
-    
-    {# Navigation #}
-    {% include "components/nav.njk" %}
-    
-    {# Main content #}
-    <main id="main" class="main-content">
-        {% block content %}
-            {{ content | safe }}
-        {% endblock %}
-    </main>
-    
-    {# Footer #}
-    {% include "components/footer.njk" %}
-    
-    {# JavaScript - Using standalone version to avoid module issues #}
+    {% endif %} {# Navigation #} {% include "components/nav.njk" %} {# Main content #}
+    <main id="main" class="main-content">{% block content %} {{ content }} {% endblock %}</main>
+
+    {# Footer #} {% include "components/footer.njk" %} {# JavaScript - Using standalone version to avoid module issues
+    #}
     <script src="{{ '/assets/js/main-standalone.js' | url }}" defer></script>
     <script src="{{ '/assets/js/navigation.js' | url }}" defer></script>
-    
-    {% block scripts %}{% endblock %}
-    
-    {# Analytics (if configured) #}
-    {% if site.analytics.ga %}
+
+    {% block scripts %}{% endblock %} {# Analytics (if configured) - Security Validated #} {% set validGAId =
+    site.analytics.ga | validateGAId %} {% if validGAId %}
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.ga }}"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ validGAId }}"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ site.analytics.ga }}');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', '{{ validGAId }}');
     </script>
     {% endif %}
-</body>
+  </body>
 </html>

@@ -1,39 +1,38 @@
 const fs = require('fs');
 
-module.exports = function(eleventyConfig) {
-  
+module.exports = function (eleventyConfig) {
   // Add plugins
-  const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-  const navigation = require("@11ty/eleventy-navigation");
-  
+  const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+  const navigation = require('@11ty/eleventy-navigation');
+
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(navigation);
 
   // Pass through copy for static assets
-  eleventyConfig.addPassthroughCopy("src/assets/css");
-  eleventyConfig.addPassthroughCopy("src/assets/js");
-  eleventyConfig.addPassthroughCopy("src/assets/images");
-  eleventyConfig.addPassthroughCopy("src/assets/fonts");
-  eleventyConfig.addPassthroughCopy({ "src/robots.txt": "/robots.txt" });
-  eleventyConfig.addPassthroughCopy({ "src/CNAME": "/CNAME" }); // For custom domain
+  eleventyConfig.addPassthroughCopy('src/assets/css');
+  eleventyConfig.addPassthroughCopy('src/assets/js');
+  eleventyConfig.addPassthroughCopy('src/assets/images');
+  eleventyConfig.addPassthroughCopy('src/assets/fonts');
+  eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
+  eleventyConfig.addPassthroughCopy({ 'src/CNAME': '/CNAME' }); // For custom domain
 
   // Watch targets
-  eleventyConfig.addWatchTarget("src/assets/css/");
-  eleventyConfig.addWatchTarget("src/assets/js/");
+  eleventyConfig.addWatchTarget('src/assets/css/');
+  eleventyConfig.addWatchTarget('src/assets/js/');
 
   // Collections
-  eleventyConfig.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/posts/*.md")
-      .sort((a, b) => b.date - a.date);
+  eleventyConfig.addCollection('posts', function (collectionApi) {
+    return collectionApi.getFilteredByGlob('src/posts/*.md').sort((a, b) => b.date - a.date);
   });
 
-  eleventyConfig.addCollection("projects", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/projects/*.md")
+  eleventyConfig.addCollection('projects', function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob('src/projects/*.md')
       .sort((a, b) => b.data.order - a.data.order);
   });
 
   // Filters
-  eleventyConfig.addFilter("dateReadable", date => {
+  eleventyConfig.addFilter('dateReadable', date => {
     return new Date(date).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -41,23 +40,63 @@ module.exports = function(eleventyConfig) {
     });
   });
 
-  eleventyConfig.addFilter("randomColor", () => {
-    const colors = ['var(--electric-blue)', 'var(--hot-pink)', 'var(--acid-green)', 'var(--cyber-yellow)', 'var(--deep-purple)'];
+  eleventyConfig.addFilter('randomColor', () => {
+    const colors = [
+      'var(--electric-blue)',
+      'var(--hot-pink)',
+      'var(--acid-green)',
+      'var(--cyber-yellow)',
+      'var(--deep-purple)'
+    ];
     return colors[Math.floor(Math.random() * colors.length)];
   });
 
-  eleventyConfig.addFilter("limit", (array, limit) => {
+  eleventyConfig.addFilter('limit', (array, limit) => {
     return array.slice(0, limit);
   });
 
-  eleventyConfig.addFilter("randomRotation", () => {
+  eleventyConfig.addFilter('randomRotation', () => {
     return Math.floor(Math.random() * 5) - 2; // Returns -2 to 2
   });
 
+  // Security Filters for Input Validation
+  eleventyConfig.addFilter('validateGAId', id => {
+    // Validate Google Analytics tracking ID format
+    if (!id || typeof id !== 'string') return false;
+    return /^G-[A-Z0-9]{10}$|^UA-\d{4,9}-\d{1,4}$/.test(id) ? id : false;
+  });
+
+  eleventyConfig.addFilter('sanitizeIcon', icon => {
+    // Validate SVG icon content - only allow safe SVG patterns
+    if (!icon || typeof icon !== 'string') return '';
+
+    // Check if it's a valid SVG with viewBox and path elements only
+    const svgPattern =
+      /^<svg[^>]*viewBox=['"][^'"]*['"][^>]*><path[^>]*d=['"][^'"]*['"][^>]*\/?>(<\/path>)?<\/svg>$/;
+
+    if (svgPattern.test(icon.trim())) {
+      return icon;
+    }
+
+    // Return empty string for invalid/unsafe icons
+    return '';
+  });
+
+  eleventyConfig.addFilter('escapeHTML', text => {
+    if (!text) return '';
+    return text
+      .toString()
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#x27;');
+  });
+
   // Shortcodes
-  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-  
-  eleventyConfig.addShortcode("serviceCard", function(icon, title, description) {
+  eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
+
+  eleventyConfig.addShortcode('serviceCard', function (icon, title, description) {
     return `
       <div class="service-card">
         <span class="service-icon">${icon}</span>
@@ -67,43 +106,45 @@ module.exports = function(eleventyConfig) {
     `;
   });
 
-  eleventyConfig.addPairedShortcode("glitchText", function(content) {
+  eleventyConfig.addPairedShortcode('glitchText', function (content) {
     return `<span class="glitch" data-text="${content}">${content}</span>`;
   });
 
-  // Nunjucks Configuration
+  // Nunjucks Configuration - Security Hardened
   eleventyConfig.setNunjucksEnvironmentOptions({
-    throwOnUndefined: false,
-    autoescape: false
+    throwOnUndefined: true, // Enable strict variable checking
+    autoescape: true, // Enable HTML escaping for XSS prevention
+    trimBlocks: true,
+    lstripBlocks: true
   });
 
   // Global data
-  eleventyConfig.addGlobalData("generated", () => {
+  eleventyConfig.addGlobalData('generated', () => {
     let now = new Date();
     return now.toISOString();
   });
 
-  // Markdown configuration
-  const markdownIt = require("markdown-it");
-  const markdownItAttrs = require("markdown-it-attrs");
-  
+  // Markdown configuration - Security Hardened
+  const markdownIt = require('markdown-it');
+  const markdownItAttrs = require('markdown-it-attrs');
+
   const markdownOptions = {
-    html: true,
+    html: false, // Disable raw HTML for security
     breaks: true,
     linkify: true
   };
-  
+
   const markdownLib = markdownIt(markdownOptions).use(markdownItAttrs);
-  eleventyConfig.setLibrary("md", markdownLib);
+  eleventyConfig.setLibrary('md', markdownLib);
 
   // BrowserSync configuration
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
-      ready: function(err, browserSync) {
+      ready: function (err, browserSync) {
         const content_404 = fs.readFileSync('_site/404.html');
-        
-        browserSync.addMiddleware("*", (req, res) => {
-          res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
+
+        browserSync.addMiddleware('*', (req, res) => {
+          res.writeHead(404, { 'Content-Type': 'text/html; charset=UTF-8' });
           res.write(content_404);
           res.end();
         });
@@ -115,25 +156,20 @@ module.exports = function(eleventyConfig) {
 
   // Return configuration
   return {
-    templateFormats: [
-      "md",
-      "njk",
-      "html",
-      "liquid"
-    ],
-    
-    markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk",
-    
+    templateFormats: ['md', 'njk', 'html', 'liquid'],
+
+    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
+    dataTemplateEngine: 'njk',
+
     dir: {
-      input: "src",
-      includes: "_includes",
-      data: "_data",
-      output: "_site"
+      input: 'src',
+      includes: '_includes',
+      data: '_data',
+      output: '_site'
     },
-    
+
     // GitHub Pages URL structure
-    pathPrefix: process.env.PATHPREFIX || "/"
+    pathPrefix: process.env.PATHPREFIX || '/'
   };
 };

@@ -2,8 +2,7 @@
 layout: layouts/base.njk
 ---
 
-{# Blog Post Navigation Bar #}
-{% include "components/post-nav.njk" %}
+{# Blog Post Navigation Bar #} {% include "components/post-nav.njk" %}
 
 <article class="post">
   <header class="post-header">
@@ -12,19 +11,15 @@ layout: layouts/base.njk
       <time class="post-date" datetime="{{ date | dateReadable }}">{{ date | dateReadable }}</time>
       {% if tags %}
       <div class="post-tags">
-        {% for tag in tags %}
-          {% if tag !== "posts" %}
-          <span class="tag">{{ tag }}</span>
-          {% endif %}
-        {% endfor %}
+        {% for tag in tags %} {% if tag !== "posts" %}
+        <span class="tag">{{ tag }}</span>
+        {% endif %} {% endfor %}
       </div>
       {% endif %}
     </div>
   </header>
 
-  <div class="post-content">
-    {{ content | safe }}
-  </div>
+  <div class="post-content">{{ content | safe }}</div>
 
   <footer class="post-footer">
     <nav class="post-nav">

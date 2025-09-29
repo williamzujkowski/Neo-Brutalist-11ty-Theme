@@ -4,7 +4,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Deploy to GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-green)](https://pages.github.com/)
 
-A **bold and vibrant** Neo-Brutalist theme for 11ty. Features massive typography, vivid colors, hard shadows, and unconventional web design patterns that demand attention.
+A **bold and vibrant** Neo-Brutalist theme for 11ty. Features massive
+typography, vivid colors, hard shadows, and unconventional web design patterns
+that demand attention.
 
 ![Neo-Brutalist Theme Preview](preview.png)
 
@@ -28,6 +30,7 @@ A **bold and vibrant** Neo-Brutalist theme for 11ty. Features massive typography
 1. Click the "Use this template" button above
 2. Create a new repository
 3. Clone your new repository:
+
 ```bash
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
@@ -64,7 +67,7 @@ Edit `src/_data/site.json` to customize:
   "title": "Your Title",
   "description": "Your description",
   "url": "https://example.com",
-  
+
   "theme": {
     "colors": {
       "primary": "#0066FF",
@@ -78,6 +81,7 @@ Edit `src/_data/site.json` to customize:
 ### Color Palette
 
 The theme includes 5 vibrant colors by default:
+
 - **Electric Blue** (#0066FF)
 - **Hot Pink** (#FF0099)
 - **Acid Green** (#00FF88)
@@ -87,6 +91,7 @@ The theme includes 5 vibrant colors by default:
 ### Typography
 
 Customize fonts and sizes in `site.json`:
+
 ```json
 "typography": {
   "headingFont": "'Arial Black', sans-serif",
@@ -132,12 +137,13 @@ Customize fonts and sizes in `site.json`:
 ### Add a Blog Post
 
 Create a new file in `src/posts/`:
+
 ```markdown
 ---
-title: "Your Post Title"
+title: 'Your Post Title'
 date: 2025-01-01
-excerpt: "Brief description"
-tags: ["design", "web"]
+excerpt: 'Brief description'
+tags: ['design', 'web']
 ---
 
 Your content here...
@@ -146,12 +152,13 @@ Your content here...
 ### Add a Project
 
 Create a new file in `src/projects/`:
+
 ```markdown
 ---
-title: "Project Name"
-description: "What you built"
-image: "/assets/images/project.jpg"
-tags: ["React", "Design"]
+title: 'Project Name'
+description: 'What you built'
+image: '/assets/images/project.jpg'
+tags: ['React', 'Design']
 order: 1
 ---
 
@@ -160,17 +167,18 @@ Project details...
 
 ## 🛠 Commands
 
-| Command | Description |
-|---------|------------|
-| `npm run dev` | Start development server with hot reload |
-| `npm run build` | Build for production |
-| `npm run build:gh-pages` | Build with GitHub Pages path prefix |
-| `npm run serve` | Serve production build locally |
-| `npm run clean` | Clean build directory |
+| Command                  | Description                              |
+| ------------------------ | ---------------------------------------- |
+| `npm run dev`            | Start development server with hot reload |
+| `npm run build`          | Build for production                     |
+| `npm run build:gh-pages` | Build with GitHub Pages path prefix      |
+| `npm run serve`          | Serve production build locally           |
+| `npm run clean`          | Clean build directory                    |
 
 ## 🎯 Design Philosophy
 
 This theme embodies Neo-Brutalist principles:
+
 - **Maximum Impact**: Typography that demands attention
 - **Bold Colors**: Vivid, clashing color combinations
 - **Hard Shadows**: Deep, dramatic shadow effects
@@ -188,7 +196,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
+for details.
 
 ## 🙏 Acknowledgments
 
@@ -198,7 +207,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🐛 Known Issues
 
-- Glitch animations may cause performance issues on older devices (can be disabled in config)
+- Glitch animations may cause performance issues on older devices (can be
+  disabled in config)
 - Custom cursor doesn't work on mobile (hidden by default)
 
 ## 📮 Support
@@ -209,9 +219,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🚧 Theme Status
 
-✅ **Fully Functional**: All features implemented and tested
-✅ **Theme Status**: Feature-complete Neo-Brutalist theme for 11ty
-✅ **Actively Maintained**: Regular updates and improvements
+✅ **Fully Functional**: All features implemented and tested ✅ **Theme
+Status**: Feature-complete Neo-Brutalist theme for 11ty ✅ **Actively
+Maintained**: Regular updates and improvements
 
 ---
 

@@ -13,7 +13,20 @@
     "test": "playwright test",
     "test:ui": "playwright test --ui",
     "test:headed": "playwright test --headed",
-    "test:debug": "playwright test --debug"
+    "test:debug": "playwright test --debug",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:js": "eslint '**/*.js'",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "format:js": "prettier --write '**/*.js'",
+    "format:json": "prettier --write '**/*.json'",
+    "format:md": "prettier --write '**/*.md'",
+    "style": "npm run lint && npm run format:check",
+    "style:fix": "npm run lint:fix && npm run format",
+    "lint:ci": "npm run lint && npm run format:check",
+    "precommit": "npm run style:fix",
+    "postinstall": "echo '\n🎨 Neo-Brutalist 11ty Theme installed!\n\nQuick start:\n  npm run dev    # Start development server\n  npm run build  # Build for production\n\nSee example/ directory for demo site.\nDocumentation: README.md\n'"
   },
   "repository": {
     "type": "git",
@@ -35,13 +48,15 @@
   },
   "homepage": "https://github.com/williamzujkowski/Neo-Brutalist-11ty-Theme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-navigation": "^1.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@playwright/test": "^1.55.1",
-    "cross-env": "^7.0.3",
-    "markdown-it": "^13.0.1",
-    "markdown-it-attrs": "^4.1.6"
+    "cross-env": "^10.0.0",
+    "eslint": "^8.57.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-attrs": "^4.1.6",
+    "prettier": "^3.1.1"
   },
   "browserslist": [
     "last 2 versions",
@@ -51,5 +66,13 @@
   "engines": {
     "node": ">=14.0.0",
     "npm": ">=6.0.0"
-  }
+  },
+  "files": [
+    "src/**",
+    ".eleventy.js",
+    "example/**",
+    "README.md",
+    "LICENSE",
+    "docs/advanced/**"
+  ]
 }

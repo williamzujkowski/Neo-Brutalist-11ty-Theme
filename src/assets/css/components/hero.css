@@ -2,38 +2,38 @@
 
 /* Hero Section */
 .hero {
-    margin-top: 120px;
-    padding: 60px 40px;
-    position: relative;
-    background: linear-gradient(45deg, var(--electric-blue) 0%, var(--acid-green) 100%);
-    border: 8px solid var(--stark-black);
-    margin: 120px 20px 40px 20px;
+  margin-top: 120px;
+  padding: 60px 40px;
+  position: relative;
+  background: linear-gradient(45deg, var(--electric-blue) 0%, var(--acid-green) 100%);
+  border: 8px solid var(--stark-black);
+  margin: 120px 20px 40px 20px;
 }
 
 .hero-content {
-    max-width: 1400px;
-    margin: 0 auto;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .mega-title {
-    font-size: clamp(4rem, 12vw, 10rem);
-    line-height: 0.85;
-    color: var(--pure-white);
-    text-transform: uppercase;
-    letter-spacing: -8px;
-    margin-bottom: 30px;
-    text-shadow: 8px 8px 0px var(--stark-black);
-    animation: glitch 3s infinite;
+  font-size: clamp(4rem, 12vw, 10rem);
+  line-height: 0.85;
+  color: var(--pure-white);
+  text-transform: uppercase;
+  letter-spacing: -8px;
+  margin-bottom: 30px;
+  text-shadow: 8px 8px 0px var(--stark-black);
+  animation: glitch 3s infinite;
 }
 
 .hero-subtitle {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    background: var(--cyber-yellow);
-    color: var(--stark-black);
-    display: inline-block;
-    padding: 20px 40px;
-    border: 6px solid var(--stark-black);
-    transform: rotate(-1deg);
-    margin: 20px 0;
-    box-shadow: 10px 10px 0px var(--stark-black);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  background: var(--cyber-yellow);
+  color: var(--stark-black);
+  display: inline-block;
+  padding: 20px 40px;
+  border: 6px solid var(--stark-black);
+  transform: rotate(-1deg);
+  margin: 20px 0;
+  box-shadow: 10px 10px 0px var(--stark-black);
 }

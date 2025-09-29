@@ -1,19 +1,25 @@
 ---
-title: "Building a Neo-Brutalist Theme with 11ty"
+title: 'Building a Neo-Brutalist Theme with 11ty'
 date: 2025-01-25
-excerpt: "How we built this theme using Eleventy, pure CSS, and a complete disregard for subtlety"
-tags: ["11ty", "development", "tutorial", "featured"]
+excerpt:
+  'How we built this theme using Eleventy, pure CSS, and a complete disregard
+  for subtlety'
+tags: ['11ty', 'development', 'tutorial', 'featured']
 ---
 
 ## The Stack That Powers Rebellion
 
-When we set out to build a theme that **breaks every design rule**, we needed a stack that could keep up with our chaos. Enter **Eleventy (11ty)** – the static site generator that's fast enough to handle our madness.
+When we set out to build a theme that **breaks every design rule**, we needed a
+stack that could keep up with our chaos. Enter **Eleventy (11ty)** – the static
+site generator that's fast enough to handle our madness.
 
 ### Why 11ty?
 
-While everyone else is drowning in React complexity and Next.js overhead, we chose **simplicity with attitude**:
+While everyone else is drowning in React complexity and Next.js overhead, we
+chose **simplicity with attitude**:
 
-- **Zero Client JS by Default**: Our chaos is CSS-powered, not JavaScript-bloated
+- **Zero Client JS by Default**: Our chaos is CSS-powered, not
+  JavaScript-bloated
 - **Lightning Fast Builds**: < 1 second to generate the entire site
 - **Template Freedom**: Mix and match Nunjucks, Markdown, and more
 - **Data Cascade**: Powerful data management without the headaches
@@ -36,18 +42,19 @@ While everyone else is drowning in React complexity and Next.js overhead, we cho
 
 ### Component-Based CSS Architecture
 
-Instead of a monolithic stylesheet, we broke our chaos into **manageable pieces**:
+Instead of a monolithic stylesheet, we broke our chaos into **manageable
+pieces**:
 
 ```css
 /* main.css - The Orchestrator */
-@import 'variables.css';      /* Design tokens */
-@import 'base.css';           /* Reset & foundations */
-@import 'components/nav.css';  /* Component styles */
+@import 'variables.css'; /* Design tokens */
+@import 'base.css'; /* Reset & foundations */
+@import 'components/nav.css'; /* Component styles */
 @import 'components/hero.css';
 @import 'components/about.css';
 /* ... more components */
-@import 'utilities.css';      /* Helper classes */
-@import 'animations.css';     /* Motion & chaos */
+@import 'utilities.css'; /* Helper classes */
+@import 'animations.css'; /* Motion & chaos */
 ```
 
 ### The Nunjucks Advantage
@@ -101,24 +108,24 @@ Simple yet powerful:
 
 ```javascript
 // .eleventy.js
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // Copy assets directly
-  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy('src/assets');
 
   // Add custom filters
-  eleventyConfig.addFilter("random", () => {
+  eleventyConfig.addFilter('random', () => {
     return Math.floor(Math.random() * 5) - 2;
   });
 
   // Custom collections
-  eleventyConfig.addCollection("featured", (collection) => {
-    return collection.getFilteredByTag("featured");
+  eleventyConfig.addCollection('featured', collection => {
+    return collection.getFilteredByTag('featured');
   });
 
   return {
     dir: {
-      input: "src",
-      output: "_site"
+      input: 'src',
+      output: '_site'
     }
   };
 };
@@ -148,18 +155,18 @@ The entire color scheme can be changed with **CSS custom properties**:
 
 ```css
 :root {
-  --electric-blue: #0066FF;
-  --hot-pink: #FF0099;
-  --acid-green: #00FF88;
+  --electric-blue: #0066ff;
+  --hot-pink: #ff0099;
+  --acid-green: #00ff88;
   --border-width: 6px;
   --shadow-offset: 12px;
 }
 
 /* Dark mode? Psychedelic mode? Your choice */
-[data-theme="psychedelic"] {
-  --electric-blue: #FF00FF;
-  --hot-pink: #00FFFF;
-  --acid-green: #FFFF00;
+[data-theme='psychedelic'] {
+  --electric-blue: #ff00ff;
+  --hot-pink: #00ffff;
+  --acid-green: #ffff00;
 }
 ```
 

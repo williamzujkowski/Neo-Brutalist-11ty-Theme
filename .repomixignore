@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+_site/
+dist/
+build/
+
+# Test artifacts
+playwright-report/
+test-results/
+tests/screenshots/
+tests/test-results/
+coverage/
+*.webm
+
+# Project specific
+memory/
+coordination/
+claude-flow
+
+# Images and media
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.svg
+*.webp
+
+# Minified files
+*.min.js
+*.min.css
+*.map
+
+# Version control
+.git/
+.github/
+
+# Cache and temp files
+.cache/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Output files
+repomix-output.*
+out.txt

@@ -5,7 +5,7 @@
   "url": "https://williamzujkowski.github.io/Neo-Brutalist-11ty-Theme",
   "language": "en",
   "locale": "en_US",
-  
+
   "author": {
     "name": "Your Name",
     "email": "hello@williamzujkowski.com",
@@ -174,7 +174,7 @@
       }
     }
   },
-  
+
   "keywords": [
     "developer",
     "designer",
@@ -184,11 +184,11 @@
     "portfolio",
     "digital creator"
   ],
-  
+
   "analytics": {
     "ga": ""
   },
-  
+
   "theme": {
     "mode": "neo-brutalist",
     "colors": {
@@ -244,13 +244,13 @@
       }
     }
   },
-  
+
   "hero": {
     "title": "BREAK<br>THE MOLD",
     "subtitle": "INNOVATE → CREATE → DOMINATE",
     "background": "linear-gradient(45deg, var(--electric-blue) 0%, var(--acid-green) 100%)"
   },
-  
+
   "stats": [
     {
       "number": "127",
@@ -269,7 +269,7 @@
       "label": "Boring Days"
     }
   ],
-  
+
   "skills": [
     {
       "icon": "⚡",
@@ -302,13 +302,13 @@
       "description": "Good enough isn't in our vocabulary. Every detail matters, every pixel has purpose."
     }
   ],
-  
+
   "contact": {
     "title": "START<br>SOMETHING",
     "buttonText": "GET IN TOUCH →",
     "email": "hello@williamzujkowski.com"
   },
-  
+
   "footer": {
     "copyright": "© 2025 Neo-Brutalist Theme",
     "tagline": "BREAK THE RULES"

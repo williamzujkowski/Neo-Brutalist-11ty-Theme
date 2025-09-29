@@ -1,9 +1,16 @@
 {# Contact Section Component - extracted from demo.html lines 515-520 #}
 <section class="contact" id="contact">
-    <div class="contact-container">
-        <h2 class="contact-title">{{ site.contact.title | safe | default('START<br>SOMETHING') }}</h2>
-        <a href="mailto:{{ site.contact.email | default(site.author.email) | default('hello@williamzujkowski.com') }}" class="contact-cta">
-            {{ site.contact.buttonText | default('GET IN TOUCH →') }}
-        </a>
-    </div>
+  <div class="contact-container">
+    <h2 class="contact-title">
+      {{ site.contact.title | safe | default('START
+      <br />
+      SOMETHING') }}
+    </h2>
+    <a
+      href="mailto:{{ site.contact.email | default(site.author.email) | default('hello@williamzujkowski.com') }}"
+      class="contact-cta"
+    >
+      {{ site.contact.buttonText | default('GET IN TOUCH →') }}
+    </a>
+  </div>
 </section>

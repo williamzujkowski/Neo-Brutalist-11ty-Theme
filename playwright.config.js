@@ -28,7 +28,7 @@ module.exports = defineConfig({
     /* Take screenshot on failure */
     screenshot: 'only-on-failure',
     /* Record video on failure */
-    video: 'retain-on-failure',
+    video: 'retain-on-failure'
   },
 
   /* Configure projects for major browsers and devices */
@@ -39,62 +39,62 @@ module.exports = defineConfig({
       use: {
         ...devices['Desktop Chrome'],
         viewport: { width: 1920, height: 1080 }
-      },
+      }
     },
     {
       name: 'Desktop Firefox 1440x900',
       use: {
         ...devices['Desktop Firefox'],
         viewport: { width: 1440, height: 900 }
-      },
+      }
     },
     {
       name: 'Desktop Safari 1366x768',
       use: {
         ...devices['Desktop Safari'],
         viewport: { width: 1366, height: 768 }
-      },
+      }
     },
 
     // Mobile Testing - Specific Critical Devices
     {
       name: 'iPhone 14 Pro',
-      use: { ...devices['iPhone 14 Pro'] },
+      use: { ...devices['iPhone 14 Pro'] }
     },
     {
       name: 'iPhone 15 Pro Max',
       use: {
         ...devices['iPhone 14 Pro Max'], // Using closest available
         viewport: { width: 430, height: 932 }
-      },
+      }
     },
     {
       name: 'Google Pixel 7',
       use: {
         ...devices['Pixel 5'],
         viewport: { width: 412, height: 915 }
-      },
+      }
     },
     {
       name: 'Google Pixel 8 Pro',
       use: {
         ...devices['Pixel 5'],
         viewport: { width: 448, height: 992 }
-      },
+      }
     },
     {
       name: 'Samsung Galaxy S23',
       use: {
         ...devices['Galaxy S5'],
         viewport: { width: 360, height: 780 }
-      },
+      }
     },
 
     // Tablet Testing
     {
       name: 'iPad Pro',
-      use: { ...devices['iPad Pro'] },
-    },
+      use: { ...devices['iPad Pro'] }
+    }
   ],
 
   /* Run your local dev server before starting the tests */
@@ -103,14 +103,18 @@ module.exports = defineConfig({
       command: 'npm run serve',
       url: 'http://localhost:8085',
       reuseExistingServer: !process.env.CI,
-      timeout: 120 * 1000,
+      timeout: 120 * 1000
     },
     // Support for GitHub Pages testing
-    ...(process.env.GITHUB_PAGES_URL ? [{
-      command: 'echo "Using GitHub Pages URL"',
-      url: process.env.GITHUB_PAGES_URL,
-      reuseExistingServer: true,
-    }] : []),
+    ...(process.env.GITHUB_PAGES_URL
+      ? [
+          {
+            command: 'echo "Using GitHub Pages URL"',
+            url: process.env.GITHUB_PAGES_URL,
+            reuseExistingServer: true
+          }
+        ]
+      : [])
   ],
 
   /* Global test timeout */
@@ -120,10 +124,12 @@ module.exports = defineConfig({
   // globalSetup: require.resolve('./tests/global-setup.js'),
 
   /* Test configuration for different environments */
-  ...(process.env.GITHUB_PAGES_URL ? {
-    use: {
-      baseURL: process.env.GITHUB_PAGES_URL,
-    },
-    webServer: undefined, // Don't start local server for GitHub Pages
-  } : {}),
+  ...(process.env.GITHUB_PAGES_URL
+    ? {
+        use: {
+          baseURL: process.env.GITHUB_PAGES_URL
+        },
+        webServer: undefined // Don't start local server for GitHub Pages
+      }
+    : {})
 });

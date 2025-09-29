@@ -1,289 +1,289 @@
-{# Social Icons Component with Neo-Brutalist Styling #}
-{%- if site.social.enabled -%}
+{# Social Icons Component with Neo-Brutalist Styling #} {%- if site.social.enabled -%}
 <div class="social-icons">
-  {# Sort platforms by order field and filter enabled ones #}
-  {%- set enabledPlatforms = [] -%}
-  {%- for platformKey, platform in site.social.platforms -%}
-    {%- if platform.enabled -%}
-      {%- set enabledPlatforms = (enabledPlatforms.push({
-        key: platformKey,
-        data: platform
-      }), enabledPlatforms) -%}
-    {%- endif -%}
-  {%- endfor -%}
+  {# Sort platforms by order field and filter enabled ones #} {%- set enabledPlatforms = [] -%} {%- for platformKey,
+  platform in site.social.platforms -%} {%- if platform.enabled -%} {%- set enabledPlatforms = (enabledPlatforms.push({
+  key: platformKey, data: platform }), enabledPlatforms) -%} {%- endif -%} {%- endfor -%} {# Sort by order field #} {%-
+  set sortedPlatforms = enabledPlatforms | sort(false, false, 'data.order') -%} {%- for item in sortedPlatforms -%} {%-
+  set platform = item.data -%} {%- set platformKey = item.key -%}
 
-  {# Sort by order field #}
-  {%- set sortedPlatforms = enabledPlatforms | sort(false, false, 'data.order') -%}
+  <a
+    href="{{ platform.url }}"
+    class="social-icon social-icon--{{ platformKey }} social-icon--{{ site.social.iconStyle | default('filled') }} social-icon--{{ site.social.iconSize | default('default') }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="{{ platform.label }} - Opens in new tab"
+    title="{{ platform.label }}"
+    data-platform="{{ platformKey }}"
+    style="--icon-rotation: {{ '' | randomRotation }}deg;"
+  >
+    {# Icon container with Neo-Brutalist effects - Security Hardened #}
+    <span class="social-icon__wrapper">
+      <span class="social-icon__icon" aria-hidden="true">{{ platform.icon | sanitizeIcon | safe }}</span>
 
-  {%- for item in sortedPlatforms -%}
-    {%- set platform = item.data -%}
-    {%- set platformKey = item.key -%}
+      {# Optional label #} {%- if site.social.showLabels -%}
+      <span class="social-icon__label">{{ platform.label }}</span>
+      {%- endif -%}
+    </span>
 
-    <a
-      href="{{ platform.url }}"
-      class="social-icon social-icon--{{ platformKey }} social-icon--{{ site.social.iconStyle | default('filled') }} social-icon--{{ site.social.iconSize | default('default') }}"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="{{ platform.label }} - Opens in new tab"
-      title="{{ platform.label }}"
-      data-platform="{{ platformKey }}"
-      style="--icon-rotation: {{ '' | randomRotation }}deg;">
-
-      {# Icon container with Neo-Brutalist effects #}
-      <span class="social-icon__wrapper">
-        <span class="social-icon__icon" aria-hidden="true">
-          {{ platform.icon | safe }}
-        </span>
-
-        {# Optional label #}
-        {%- if site.social.showLabels -%}
-          <span class="social-icon__label">{{ platform.label }}</span>
-        {%- endif -%}
-      </span>
-
-      {# Neo-Brutalist shadow element #}
-      <span class="social-icon__shadow" aria-hidden="true"></span>
-    </a>
+    {# Neo-Brutalist shadow element #}
+    <span class="social-icon__shadow" aria-hidden="true"></span>
+  </a>
   {%- endfor -%}
 </div>
 
 {# Neo-Brutalist CSS Styles #}
 <style>
-.social-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem 0;
-}
-
-.social-icon {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: all var(--duration-normal, 0.3s) cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transform: rotate(var(--icon-rotation, 0deg));
-  user-select: none;
-}
-
-/* Icon wrapper with Neo-Brutalist styling */
-.social-icon__wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--light, #ffffff);
-  border: var(--border-width, 6px) solid var(--dark, #000000);
-  color: var(--dark, #000000);
-  z-index: 2;
-  transition: all var(--duration-normal, 0.3s) ease;
-}
-
-/* Icon sizes */
-.social-icon--small .social-icon__wrapper {
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0.5rem;
-}
-
-.social-icon--default .social-icon__wrapper {
-  width: 3.5rem;
-  height: 3.5rem;
-  padding: 0.75rem;
-}
-
-.social-icon--large .social-icon__wrapper {
-  width: 4.5rem;
-  height: 4.5rem;
-  padding: 1rem;
-}
-
-.social-icon--xl .social-icon__wrapper {
-  width: 5.5rem;
-  height: 5.5rem;
-  padding: 1.25rem;
-}
-
-/* Icon styling */
-.social-icon__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-.social-icon__icon svg {
-  width: 100%;
-  height: 100%;
-  fill: currentColor;
-}
-
-/* Neo-Brutalist shadow */
-.social-icon__shadow {
-  position: absolute;
-  top: var(--shadow-offset, 12px);
-  left: var(--shadow-offset, 12px);
-  width: 100%;
-  height: 100%;
-  background: var(--dark, #000000);
-  border: var(--border-width, 6px) solid var(--dark, #000000);
-  z-index: 1;
-  transition: all var(--duration-normal, 0.3s) ease;
-}
-
-/* Icon styles */
-.social-icon--filled .social-icon__wrapper {
-  background: var(--electric-blue, #0066FF);
-  color: var(--light, #ffffff);
-}
-
-.social-icon--outlined .social-icon__wrapper {
-  background: transparent;
-  color: var(--dark, #000000);
-}
-
-/* Platform-specific colors (filled style only) */
-.social-icon--filled.social-icon--github .social-icon__wrapper {
-  background: #333333;
-}
-
-.social-icon--filled.social-icon--linkedin .social-icon__wrapper {
-  background: #0077B5;
-}
-
-.social-icon--filled.social-icon--twitter .social-icon__wrapper {
-  background: #1DA1F2;
-}
-
-.social-icon--filled.social-icon--instagram .social-icon__wrapper {
-  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
-}
-
-.social-icon--filled.social-icon--youtube .social-icon__wrapper {
-  background: #FF0000;
-}
-
-.social-icon--filled.social-icon--facebook .social-icon__wrapper {
-  background: #1877F2;
-}
-
-.social-icon--filled.social-icon--discord .social-icon__wrapper {
-  background: #5865F2;
-}
-
-.social-icon--filled.social-icon--medium .social-icon__wrapper {
-  background: #00AB6C;
-}
-
-/* Hover effects */
-.social-icon:hover {
-  transform: rotate(var(--icon-rotation, 0deg)) scale(1.1) translateY(-5px);
-}
-
-.social-icon:hover .social-icon__wrapper {
-  transform: translateX(-6px) translateY(-6px);
-  box-shadow: 0 0 0 var(--border-width, 6px) var(--hot-pink, #FF0099);
-}
-
-.social-icon:hover .social-icon__shadow {
-  background: var(--hot-pink, #FF0099);
-  border-color: var(--hot-pink, #FF0099);
-}
-
-/* Focus accessibility */
-.social-icon:focus {
-  outline: 3px solid var(--electric-blue, #0066FF);
-  outline-offset: 3px;
-}
-
-.social-icon:focus .social-icon__wrapper {
-  box-shadow: 0 0 0 3px var(--acid-green, #00FF88);
-}
-
-/* Label styling */
-.social-icon__label {
-  margin-left: 0.5rem;
-  font-weight: bold;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: inherit;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
   .social-icons {
-    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  .social-icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all var(--duration-normal, 0.3s) cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: rotate(var(--icon-rotation, 0deg));
+    user-select: none;
+  }
+
+  /* Icon wrapper with Neo-Brutalist styling */
+  .social-icon__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light, #ffffff);
+    border: var(--border-width, 6px) solid var(--dark, #000000);
+    color: var(--dark, #000000);
+    z-index: 2;
+    transition: all var(--duration-normal, 0.3s) ease;
+  }
+
+  /* Icon sizes */
+  .social-icon--small .social-icon__wrapper {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
   }
 
   .social-icon--default .social-icon__wrapper {
-    width: 3rem;
-    height: 3rem;
-    padding: 0.625rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0.75rem;
   }
 
-  .social-icon__label {
-    display: none;
-  }
-}
-
-/* Animation for dynamic entrance */
-.social-icon {
-  animation: brutalistFadeIn 0.6s ease-out backwards;
-}
-
-.social-icon:nth-child(1) { animation-delay: 0.1s; }
-.social-icon:nth-child(2) { animation-delay: 0.2s; }
-.social-icon:nth-child(3) { animation-delay: 0.3s; }
-.social-icon:nth-child(4) { animation-delay: 0.4s; }
-.social-icon:nth-child(5) { animation-delay: 0.5s; }
-.social-icon:nth-child(6) { animation-delay: 0.6s; }
-.social-icon:nth-child(7) { animation-delay: 0.7s; }
-.social-icon:nth-child(8) { animation-delay: 0.8s; }
-
-@keyframes brutalistFadeIn {
-  0% {
-    opacity: 0;
-    transform: rotate(var(--icon-rotation, 0deg)) translateY(20px) scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(var(--icon-rotation, 0deg)) translateY(0) scale(1);
-  }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .social-icon__wrapper {
-    border-width: 8px;
+  .social-icon--large .social-icon__wrapper {
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 1rem;
   }
 
+  .social-icon--xl .social-icon__wrapper {
+    width: 5.5rem;
+    height: 5.5rem;
+    padding: 1.25rem;
+  }
+
+  /* Icon styling */
+  .social-icon__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .social-icon__icon svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
+
+  /* Neo-Brutalist shadow */
   .social-icon__shadow {
-    border-width: 8px;
+    position: absolute;
+    top: var(--shadow-offset, 12px);
+    left: var(--shadow-offset, 12px);
+    width: 100%;
+    height: 100%;
+    background: var(--dark, #000000);
+    border: var(--border-width, 6px) solid var(--dark, #000000);
+    z-index: 1;
+    transition: all var(--duration-normal, 0.3s) ease;
   }
-}
 
-/* Reduced motion accessibility */
-@media (prefers-reduced-motion: reduce) {
-  .social-icon {
-    animation: none;
-    transition: none;
+  /* Icon styles */
+  .social-icon--filled .social-icon__wrapper {
+    background: var(--electric-blue, #0066ff);
+    color: var(--light, #ffffff);
   }
 
+  .social-icon--outlined .social-icon__wrapper {
+    background: transparent;
+    color: var(--dark, #000000);
+  }
+
+  /* Platform-specific colors (filled style only) */
+  .social-icon--filled.social-icon--github .social-icon__wrapper {
+    background: #333333;
+  }
+
+  .social-icon--filled.social-icon--linkedin .social-icon__wrapper {
+    background: #0077b5;
+  }
+
+  .social-icon--filled.social-icon--twitter .social-icon__wrapper {
+    background: #1da1f2;
+  }
+
+  .social-icon--filled.social-icon--instagram .social-icon__wrapper {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  }
+
+  .social-icon--filled.social-icon--youtube .social-icon__wrapper {
+    background: #ff0000;
+  }
+
+  .social-icon--filled.social-icon--facebook .social-icon__wrapper {
+    background: #1877f2;
+  }
+
+  .social-icon--filled.social-icon--discord .social-icon__wrapper {
+    background: #5865f2;
+  }
+
+  .social-icon--filled.social-icon--medium .social-icon__wrapper {
+    background: #00ab6c;
+  }
+
+  /* Hover effects */
   .social-icon:hover {
-    transform: rotate(var(--icon-rotation, 0deg)) scale(1.05);
+    transform: rotate(var(--icon-rotation, 0deg)) scale(1.1) translateY(-5px);
   }
-}
 
-/* Print styles */
-@media print {
-  .social-icons {
-    display: none;
+  .social-icon:hover .social-icon__wrapper {
+    transform: translateX(-6px) translateY(-6px);
+    box-shadow: 0 0 0 var(--border-width, 6px) var(--hot-pink, #ff0099);
   }
-}
+
+  .social-icon:hover .social-icon__shadow {
+    background: var(--hot-pink, #ff0099);
+    border-color: var(--hot-pink, #ff0099);
+  }
+
+  /* Focus accessibility */
+  .social-icon:focus {
+    outline: 3px solid var(--electric-blue, #0066ff);
+    outline-offset: 3px;
+  }
+
+  .social-icon:focus .social-icon__wrapper {
+    box-shadow: 0 0 0 3px var(--acid-green, #00ff88);
+  }
+
+  /* Label styling */
+  .social-icon__label {
+    margin-left: 0.5rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: inherit;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .social-icons {
+      gap: 1rem;
+    }
+
+    .social-icon--default .social-icon__wrapper {
+      width: 3rem;
+      height: 3rem;
+      padding: 0.625rem;
+    }
+
+    .social-icon__label {
+      display: none;
+    }
+  }
+
+  /* Animation for dynamic entrance */
+  .social-icon {
+    animation: brutalistFadeIn 0.6s ease-out backwards;
+  }
+
+  .social-icon:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .social-icon:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .social-icon:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .social-icon:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .social-icon:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .social-icon:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  .social-icon:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+  .social-icon:nth-child(8) {
+    animation-delay: 0.8s;
+  }
+
+  @keyframes brutalistFadeIn {
+    0% {
+      opacity: 0;
+      transform: rotate(var(--icon-rotation, 0deg)) translateY(20px) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(var(--icon-rotation, 0deg)) translateY(0) scale(1);
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .social-icon__wrapper {
+      border-width: 8px;
+    }
+
+    .social-icon__shadow {
+      border-width: 8px;
+    }
+  }
+
+  /* Reduced motion accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .social-icon {
+      animation: none;
+      transition: none;
+    }
+
+    .social-icon:hover {
+      transform: rotate(var(--icon-rotation, 0deg)) scale(1.05);
+    }
+  }
+
+  /* Print styles */
+  @media print {
+    .social-icons {
+      display: none;
+    }
+  }
 </style>
 {%- endif -%}

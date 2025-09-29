@@ -12,65 +12,64 @@ import { SmoothScroll } from './smooth-scroll.js';
  * Main application class that initializes all modules
  */
 class NeoBrutalistApp {
-    constructor() {
-        this.modules = {};
-        this.init();
+  constructor() {
+    this.modules = {};
+    this.init();
+  }
+
+  init() {
+    // Wait for DOM to be ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        this.initializeModules();
+      });
+    } else {
+      this.initializeModules();
     }
+  }
 
-    init() {
-        // Wait for DOM to be ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => {
-                this.initializeModules();
-            });
-        } else {
-            this.initializeModules();
-        }
+  initializeModules() {
+    try {
+      // Initialize cursor trail
+      this.modules.cursorTrail = new CursorTrail();
+
+      // Initialize animations
+      this.modules.animations = new Animations();
+
+      // Initialize interactions
+      this.modules.interactions = new Interactions();
+
+      // Initialize smooth scroll
+      this.modules.smoothScroll = new SmoothScroll();
+
+      // Dispatch custom event for theme ready
+      this.dispatchThemeReady();
+    } catch (error) {
+      // Silently handle initialization errors in production
     }
+  }
 
-    initializeModules() {
-        try {
-            // Initialize cursor trail
-            this.modules.cursorTrail = new CursorTrail();
+  dispatchThemeReady() {
+    const event = new CustomEvent('neoBrutalistReady', {
+      detail: {
+        modules: Object.keys(this.modules),
+        timestamp: new Date().toISOString()
+      }
+    });
+    document.dispatchEvent(event);
+  }
 
-            // Initialize animations
-            this.modules.animations = new Animations();
+  // Public API methods
+  getModule(moduleName) {
+    return this.modules[moduleName] || null;
+  }
 
-            // Initialize interactions
-            this.modules.interactions = new Interactions();
-
-            // Initialize smooth scroll
-            this.modules.smoothScroll = new SmoothScroll();
-
-
-            // Dispatch custom event for theme ready
-            this.dispatchThemeReady();
-        } catch (error) {
-            // Silently handle initialization errors in production
-        }
+  // Utility method to scroll to any element
+  scrollTo(selector, options = {}) {
+    if (this.modules.smoothScroll) {
+      this.modules.smoothScroll.scrollTo(selector, options);
     }
-
-    dispatchThemeReady() {
-        const event = new CustomEvent('neoBrutalistReady', {
-            detail: {
-                modules: Object.keys(this.modules),
-                timestamp: new Date().toISOString()
-            }
-        });
-        document.dispatchEvent(event);
-    }
-
-    // Public API methods
-    getModule(moduleName) {
-        return this.modules[moduleName] || null;
-    }
-
-    // Utility method to scroll to any element
-    scrollTo(selector, options = {}) {
-        if (this.modules.smoothScroll) {
-            this.modules.smoothScroll.scrollTo(selector, options);
-        }
-    }
+  }
 }
 
 // Create global instance
@@ -81,5 +80,5 @@ export default neoBrutalistApp;
 
 // Make available globally for legacy compatibility
 if (typeof window !== 'undefined') {
-    window.NeoBrutalistApp = neoBrutalistApp;
+  window.NeoBrutalistApp = neoBrutalistApp;
 }

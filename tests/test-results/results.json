@@ -173,63 +173,79 @@
   "suites": [],
   "errors": [
     {
-      "message": "Cannot use({ defaultBrowserType }) in a describe group, because it forces a new worker.\nMake it top-level in the test file or put in the configuration file.",
+      "message": "Error: Cannot find module './helpers/test-utils'\nRequire stack:\n- /home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/accessibility.spec.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/transform/transform.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/common/configLoader.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/program.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/@playwright/test/cli.js",
+      "stack": "Error: Cannot find module './helpers/test-utils'\nRequire stack:\n- /home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/accessibility.spec.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/transform/transform.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/common/configLoader.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/program.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/@playwright/test/cli.js\n    at Object.<anonymous> (/home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/accessibility.spec.js:7:49)",
       "location": {
-        "file": "/home/william/git/Neo-Brutalist-11ty-Theme/tests/final-verification.spec.js",
-        "line": 27,
-        "column": 12
+        "file": "/home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/accessibility.spec.js",
+        "column": 49,
+        "line": 7
       },
-      "snippet": "\u001b[90m   at \u001b[39mfinal-verification.spec.js:27\n\n  25 |   mobileDevices.forEach(device => {\n  26 |     test.describe(`${device.name}`, () => {\n> 27 |       test.use(device);\n     |            ^\n  28 |\n  29 |       test('Navigation and typography on all pages', async ({ page }) => {\n  30 |         for (const url of pages) {"
+      "snippet": "\u001b[90m   at \u001b[39mbackup/accessibility.spec.js:7\n\n   5 |\n   6 | const { test, expect } = require('@playwright/test');\n>  7 | const { waitForPageLoad, checkColorContrast } = require('./helpers/test-utils');\n     |                                                 ^\n   8 |\n   9 | test.describe('Accessibility Testing', () => {\n  10 |   test.beforeEach(async ({ page }) => {"
     },
     {
-      "message": "Cannot use({ defaultBrowserType }) in a describe group, because it forces a new worker.\nMake it top-level in the test file or put in the configuration file.",
+      "message": "Error: Cannot find module './helpers/test-utils'\nRequire stack:\n- /home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/comprehensive-links.spec.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/transform/transform.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/common/configLoader.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/program.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/@playwright/test/cli.js",
+      "stack": "Error: Cannot find module './helpers/test-utils'\nRequire stack:\n- /home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/comprehensive-links.spec.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/transform/transform.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/common/configLoader.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/program.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/@playwright/test/cli.js\n    at Object.<anonymous> (/home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/comprehensive-links.spec.js:8:29)",
       "location": {
-        "file": "/home/william/git/Neo-Brutalist-11ty-Theme/tests/final-verification.spec.js",
-        "line": 27,
-        "column": 12
+        "file": "/home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/comprehensive-links.spec.js",
+        "column": 29,
+        "line": 8
       },
-      "snippet": "\u001b[90m   at \u001b[39mfinal-verification.spec.js:27\n\n  25 |   mobileDevices.forEach(device => {\n  26 |     test.describe(`${device.name}`, () => {\n> 27 |       test.use(device);\n     |            ^\n  28 |\n  29 |       test('Navigation and typography on all pages', async ({ page }) => {\n  30 |         for (const url of pages) {"
+      "snippet": "\u001b[90m   at \u001b[39mbackup/comprehensive-links.spec.js:8\n\n   6 |\n   7 | const { test, expect } = require('@playwright/test');\n>  8 | const { waitForPageLoad } = require('./helpers/test-utils');\n     |                             ^\n   9 |\n  10 | // All pages to test comprehensively\n  11 | const ALL_PAGES = ["
     },
     {
-      "message": "Cannot use({ defaultBrowserType }) in a describe group, because it forces a new worker.\nMake it top-level in the test file or put in the configuration file.",
+      "message": "Error: Cannot find module './helpers/test-utils'\nRequire stack:\n- /home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/links.spec.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/transform/transform.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/common/configLoader.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/program.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/@playwright/test/cli.js",
+      "stack": "Error: Cannot find module './helpers/test-utils'\nRequire stack:\n- /home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/links.spec.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/transform/transform.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/common/configLoader.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/program.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/@playwright/test/cli.js\n    at Object.<anonymous> (/home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/links.spec.js:7:29)",
       "location": {
-        "file": "/home/william/git/Neo-Brutalist-11ty-Theme/tests/final-verification.spec.js",
-        "line": 27,
-        "column": 12
+        "file": "/home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/links.spec.js",
+        "column": 29,
+        "line": 7
       },
-      "snippet": "\u001b[90m   at \u001b[39mfinal-verification.spec.js:27\n\n  25 |   mobileDevices.forEach(device => {\n  26 |     test.describe(`${device.name}`, () => {\n> 27 |       test.use(device);\n     |            ^\n  28 |\n  29 |       test('Navigation and typography on all pages', async ({ page }) => {\n  30 |         for (const url of pages) {"
+      "snippet": "\u001b[90m   at \u001b[39mbackup/links.spec.js:7\n\n   5 |\n   6 | const { test, expect } = require('@playwright/test');\n>  7 | const { waitForPageLoad } = require('./helpers/test-utils');\n     |                             ^\n   8 |\n   9 | test.describe('Link Validation', () => {\n  10 |   test.beforeEach(async ({ page }) => {"
     },
     {
-      "message": "Cannot use({ defaultBrowserType }) in a describe group, because it forces a new worker.\nMake it top-level in the test file or put in the configuration file.",
+      "message": "Error: Cannot find module './helpers/test-utils'\nRequire stack:\n- /home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/navigation.spec.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/transform/transform.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/common/configLoader.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/program.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/@playwright/test/cli.js",
+      "stack": "Error: Cannot find module './helpers/test-utils'\nRequire stack:\n- /home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/navigation.spec.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/transform/transform.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/common/configLoader.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/program.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/@playwright/test/cli.js\n    at Object.<anonymous> (/home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/navigation.spec.js:7:52)",
       "location": {
-        "file": "/home/william/git/Neo-Brutalist-11ty-Theme/tests/final-verification.spec.js",
-        "line": 27,
-        "column": 12
+        "file": "/home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/navigation.spec.js",
+        "column": 52,
+        "line": 7
       },
-      "snippet": "\u001b[90m   at \u001b[39mfinal-verification.spec.js:27\n\n  25 |   mobileDevices.forEach(device => {\n  26 |     test.describe(`${device.name}`, () => {\n> 27 |       test.use(device);\n     |            ^\n  28 |\n  29 |       test('Navigation and typography on all pages', async ({ page }) => {\n  30 |         for (const url of pages) {"
+      "snippet": "\u001b[90m   at \u001b[39mbackup/navigation.spec.js:7\n\n   5 |\n   6 | const { test, expect } = require('@playwright/test');\n>  7 | const { waitForPageLoad, validateThemeElements } = require('./helpers/test-utils');\n     |                                                    ^\n   8 |\n   9 | test.describe('Navigation Testing', () => {\n  10 |   test.beforeEach(async ({ page }) => {"
     },
     {
-      "message": "Cannot use({ defaultBrowserType }) in a describe group, because it forces a new worker.\nMake it top-level in the test file or put in the configuration file.",
+      "message": "Error: Cannot find module './helpers/test-utils'\nRequire stack:\n- /home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/performance.spec.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/transform/transform.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/common/configLoader.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/program.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/@playwright/test/cli.js",
+      "stack": "Error: Cannot find module './helpers/test-utils'\nRequire stack:\n- /home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/performance.spec.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/transform/transform.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/common/configLoader.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/program.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/@playwright/test/cli.js\n    at Object.<anonymous> (/home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/performance.spec.js:7:55)",
       "location": {
-        "file": "/home/william/git/Neo-Brutalist-11ty-Theme/tests/final-verification.spec.js",
-        "line": 27,
-        "column": 12
+        "file": "/home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/performance.spec.js",
+        "column": 55,
+        "line": 7
       },
-      "snippet": "\u001b[90m   at \u001b[39mfinal-verification.spec.js:27\n\n  25 |   mobileDevices.forEach(device => {\n  26 |     test.describe(`${device.name}`, () => {\n> 27 |       test.use(device);\n     |            ^\n  28 |\n  29 |       test('Navigation and typography on all pages', async ({ page }) => {\n  30 |         for (const url of pages) {"
+      "snippet": "\u001b[90m   at \u001b[39mbackup/performance.spec.js:7\n\n   5 |\n   6 | const { test, expect } = require('@playwright/test');\n>  7 | const { waitForPageLoad, testAnimationPerformance } = require('./helpers/test-utils');\n     |                                                       ^\n   8 |\n   9 | test.describe('Performance Testing', () => {\n  10 |   test.beforeEach(async ({ page }) => {"
     },
     {
-      "message": "Cannot use({ defaultBrowserType }) in a describe group, because it forces a new worker.\nMake it top-level in the test file or put in the configuration file.",
+      "message": "Error: Cannot find module './helpers/test-utils'\nRequire stack:\n- /home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/responsive.spec.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/transform/transform.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/common/configLoader.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/program.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/@playwright/test/cli.js",
+      "stack": "Error: Cannot find module './helpers/test-utils'\nRequire stack:\n- /home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/responsive.spec.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/transform/transform.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/common/configLoader.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/program.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/@playwright/test/cli.js\n    at Object.<anonymous> (/home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/responsive.spec.js:7:56)",
       "location": {
-        "file": "/home/william/git/Neo-Brutalist-11ty-Theme/tests/final-verification.spec.js",
-        "line": 27,
-        "column": 12
+        "file": "/home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/responsive.spec.js",
+        "column": 56,
+        "line": 7
       },
-      "snippet": "\u001b[90m   at \u001b[39mfinal-verification.spec.js:27\n\n  25 |   mobileDevices.forEach(device => {\n  26 |     test.describe(`${device.name}`, () => {\n> 27 |       test.use(device);\n     |            ^\n  28 |\n  29 |       test('Navigation and typography on all pages', async ({ page }) => {\n  30 |         for (const url of pages) {"
+      "snippet": "\u001b[90m   at \u001b[39mbackup/responsive.spec.js:7\n\n   5 |\n   6 | const { test, expect } = require('@playwright/test');\n>  7 | const { waitForPageLoad, testResponsiveBreakpoints } = require('./helpers/test-utils');\n     |                                                        ^\n   8 |\n   9 | test.describe('Responsive Design Testing', () => {\n  10 |   const breakpoints = ["
+    },
+    {
+      "message": "Error: Cannot find module './helpers/test-utils'\nRequire stack:\n- /home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/social-icons.spec.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/transform/transform.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/common/configLoader.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/program.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/@playwright/test/cli.js",
+      "stack": "Error: Cannot find module './helpers/test-utils'\nRequire stack:\n- /home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/social-icons.spec.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/transform/transform.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/common/configLoader.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/playwright/lib/program.js\n- /home/william/git/Neo-Brutalist-11ty-Theme/node_modules/@playwright/test/cli.js\n    at Object.<anonymous> (/home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/social-icons.spec.js:7:46)",
+      "location": {
+        "file": "/home/william/git/Neo-Brutalist-11ty-Theme/tests/backup/social-icons.spec.js",
+        "column": 46,
+        "line": 7
+      },
+      "snippet": "\u001b[90m   at \u001b[39mbackup/social-icons.spec.js:7\n\n   5 |\n   6 | const { test, expect } = require('@playwright/test');\n>  7 | const { waitForPageLoad, testSocialIcons } = require('./helpers/test-utils');\n     |                                              ^\n   8 |\n   9 | test.describe('Social Icons Testing', () => {\n  10 |   test.beforeEach(async ({ page }) => {"
     }
   ],
   "stats": {
-    "startTime": "2025-09-29T04:04:12.415Z",
-    "duration": 400.111,
+    "startTime": "2025-09-29T05:39:15.121Z",
+    "duration": 321.8689999999999,
     "expected": 0,
     "skipped": 0,
     "unexpected": 0,

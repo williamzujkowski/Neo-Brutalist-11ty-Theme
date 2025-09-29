@@ -1,0 +1,29 @@
+# Exclude Claude-Flow automation from linting
+.claude/
+.hive-mind/
+memory/
+coordination/
+
+# Build outputs
+_site/
+node_modules/
+.cache/
+
+# Test backup files (old redundant tests)
+test-backup/
+
+# Test outputs and reports
+.playwright-mcp/
+tests/test-results/
+tests/playwright-report/
+
+# Documentation with potential code examples that shouldn't be linted
+docs/ANALYSIS_REPORT.md
+docs/SAST_REPORT.md
+docs/TEST_CONSOLIDATION_REPORT.md
+docs/SECURITY_FIXES_REPORT.md
+project_plan.md
+
+# Generated files
+*.min.js
+*.bundle.js

@@ -10,7 +10,7 @@ layout: layouts/base.njk
       {% if tags %}
       <div class="project-tags">
         {% for tag in tags %}
-          <span class="tag">{{ tag }}</span>
+        <span class="tag">{{ tag }}</span>
         {% endfor %}
       </div>
       {% endif %}
@@ -20,21 +20,14 @@ layout: layouts/base.njk
     {% endif %}
   </header>
 
-  <div class="project-content">
-    {{ content | safe }}
-  </div>
+  <div class="project-content">{{ content | safe }}</div>
 
   {% if github or demo %}
   <div class="project-links">
     {% if github %}
-    <a href="{{ github }}" class="btn btn-primary" target="_blank" rel="noopener">
-      View on GitHub →
-    </a>
-    {% endif %}
-    {% if demo %}
-    <a href="{{ demo }}" class="btn btn-secondary" target="_blank" rel="noopener">
-      See it Live →
-    </a>
+    <a href="{{ github }}" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub →</a>
+    {% endif %} {% if demo %}
+    <a href="{{ demo }}" class="btn btn-secondary" target="_blank" rel="noopener">See it Live →</a>
     {% endif %}
   </div>
   {% endif %}

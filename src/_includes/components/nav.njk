@@ -1,18 +1,18 @@
 {# Navigation Component with Mobile Menu #}
 <nav>
-    <a href="{{ '/' | url }}" class="logo">{{ site.name | default('REBEL') }}</a>
+  <a href="{{ '/' | url }}" class="logo">{{ site.name | default('REBEL') }}</a>
 
-    {# Hamburger Menu Button for Mobile #}
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-    </button>
+  {# Hamburger Menu Button for Mobile #}
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
 
-    <ul class="nav-links">
-        <li><a href="{{ '/pages/about/' | url }}">ABOUT</a></li>
-        <li><a href="{{ '/pages/services/' | url }}">SERVICES</a></li>
-        <li><a href="{{ '/blog/' | url }}">BLOG</a></li>
-        <li><a href="{{ '/pages/contact/' | url }}">CONTACT</a></li>
-    </ul>
+  <ul class="nav-links">
+    <li><a href="{{ '/pages/about/' | url }}">ABOUT</a></li>
+    <li><a href="{{ '/pages/services/' | url }}">SERVICES</a></li>
+    <li><a href="{{ '/blog/' | url }}">BLOG</a></li>
+    <li><a href="{{ '/pages/contact/' | url }}">CONTACT</a></li>
+  </ul>
 </nav>
