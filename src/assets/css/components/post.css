@@ -203,6 +203,54 @@
     box-shadow: 11px 11px 0px var(--hot-pink);
 }
 
+/* Post Navigation Bar */
+.post-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--cyber-yellow);
+    border-bottom: 4px solid var(--stark-black);
+    z-index: 999;
+    padding: 15px 20px;
+    box-shadow: 0 4px 0px var(--stark-black);
+}
+
+.post-nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.post-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--pure-white);
+    color: var(--stark-black);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid var(--stark-black);
+    transition: all 0.3s;
+    font-size: 1rem;
+    box-shadow: 3px 3px 0px var(--stark-black);
+}
+
+.post-back-btn:hover {
+    background: var(--hot-pink);
+    color: var(--pure-white);
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px var(--stark-black);
+}
+
+.post-back-btn .arrow {
+    font-size: 1.2rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .post {
@@ -214,10 +262,22 @@
 
     .post-title {
         letter-spacing: -2px;
-        margin-top: 60px;
-        margin-bottom: 30px;
-        padding-top: 20px;
+        margin-top: 80px;
+        margin-bottom: 35px;
+        padding-top: 30px;
         color: var(--stark-black);
+        font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    .post-navigation {
+        padding: 12px 15px;
+    }
+
+    .post-back-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        box-shadow: 2px 2px 0px var(--stark-black);
+        border: 2px solid var(--stark-black);
     }
 
     .post-meta {
@@ -231,23 +291,34 @@
 
     .post-content p {
         font-size: 1.1rem;
-        color: #333333;
-        line-height: 1.6;
-        margin-bottom: 20px;
+        color: #1a1a1a;
+        line-height: 1.8;
+        margin-bottom: 24px;
+        letter-spacing: 0.01em;
+    }
+
+    .post-content li {
+        color: #1a1a1a;
+        line-height: 1.7;
+    }
+
+    .post-content strong {
+        color: #000000;
     }
 
     .post-content h2 {
         transform: rotate(0deg);
         color: var(--stark-black);
-        margin-top: 30px;
-        margin-bottom: 15px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-size: clamp(1.5rem, 3.5vw, 2rem);
     }
 
     .post-content h3,
     .post-content h4 {
         color: var(--stark-black);
-        margin-top: 30px;
-        margin-bottom: 15px;
+        margin-top: 35px;
+        margin-bottom: 18px;
     }
 
     .post-content blockquote {

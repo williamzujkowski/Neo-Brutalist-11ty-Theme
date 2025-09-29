@@ -64,13 +64,15 @@
 
     /* Improved mobile typography with better contrast */
     body {
-        color: #1a1a1a;
+        color: #0a0a0a;
+        font-weight: 500;
     }
 
     p {
-        color: #2a2a2a;
-        line-height: 1.7;
+        color: #1a1a1a;
+        line-height: 1.75;
         font-size: 1.05rem;
+        font-weight: 400;
     }
 
     .service-card p,

@@ -14,11 +14,15 @@ module.exports = defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: process.env.CI ? 'github' : 'html',
+  reporter: [
+    ['html', { outputFolder: 'tests/test-results/html-report' }],
+    ['json', { outputFile: 'tests/test-results/results.json' }],
+    ['list']
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: process.env.BASE_URL || 'http://localhost:8080',
+    baseURL: process.env.BASE_URL || 'http://localhost:8085',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     /* Take screenshot on failure */
@@ -27,49 +31,77 @@ module.exports = defineConfig({
     video: 'retain-on-failure',
   },
 
-  /* Configure projects for major browsers */
+  /* Configure projects for major browsers and devices */
   projects: [
+    // Desktop Testing - Multiple Resolutions
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'Desktop Chrome 1920x1080',
+      use: {
+        ...devices['Desktop Chrome'],
+        viewport: { width: 1920, height: 1080 }
+      },
+    },
+    {
+      name: 'Desktop Firefox 1440x900',
+      use: {
+        ...devices['Desktop Firefox'],
+        viewport: { width: 1440, height: 900 }
+      },
+    },
+    {
+      name: 'Desktop Safari 1366x768',
+      use: {
+        ...devices['Desktop Safari'],
+        viewport: { width: 1366, height: 768 }
+      },
     },
 
+    // Mobile Testing - Specific Critical Devices
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      name: 'iPhone 14 Pro',
+      use: { ...devices['iPhone 14 Pro'] },
+    },
+    {
+      name: 'iPhone 15 Pro Max',
+      use: {
+        ...devices['iPhone 14 Pro Max'], // Using closest available
+        viewport: { width: 430, height: 932 }
+      },
+    },
+    {
+      name: 'Google Pixel 7',
+      use: {
+        ...devices['Pixel 5'],
+        viewport: { width: 412, height: 915 }
+      },
+    },
+    {
+      name: 'Google Pixel 8 Pro',
+      use: {
+        ...devices['Pixel 5'],
+        viewport: { width: 448, height: 992 }
+      },
+    },
+    {
+      name: 'Samsung Galaxy S23',
+      use: {
+        ...devices['Galaxy S5'],
+        viewport: { width: 360, height: 780 }
+      },
     },
 
+    // Tablet Testing
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      name: 'iPad Pro',
+      use: { ...devices['iPad Pro'] },
     },
-
-    /* Test against mobile viewports. */
-    {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] },
-    },
-    {
-      name: 'Mobile Safari',
-      use: { ...devices['iPhone 12'] },
-    },
-
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
   ],
 
   /* Run your local dev server before starting the tests */
   webServer: [
     {
       command: 'npm run serve',
-      url: 'http://localhost:8080',
+      url: 'http://localhost:8085',
       reuseExistingServer: !process.env.CI,
       timeout: 120 * 1000,
     },
@@ -85,7 +117,7 @@ module.exports = defineConfig({
   timeout: 30000,
 
   /* Global setup and teardown */
-  globalSetup: require.resolve('./tests/global-setup.js'),
+  // globalSetup: require.resolve('./tests/global-setup.js'),
 
   /* Test configuration for different environments */
   ...(process.env.GITHUB_PAGES_URL ? {
