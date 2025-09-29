@@ -101,10 +101,16 @@ footer .social-link svg {
     width: 28px;
     height: 28px;
     fill: var(--stark-black);
+    color: var(--stark-black);
+}
+
+footer .social-link svg path {
+    fill: currentColor;
 }
 
 footer .social-link:hover svg {
     fill: var(--pure-white);
+    color: var(--pure-white);
 }
 
 .footer-text {
@@ -150,7 +156,7 @@ footer .social-link:hover svg {
         justify-content: center;
     }
 
-    footer .social-icon {
+    footer .social-link svg {
         width: 24px;
         height: 24px;
     }
