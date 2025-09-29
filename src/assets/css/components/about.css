@@ -72,3 +72,214 @@
     letter-spacing: 2px;
     margin-top: 5px;
 }
+
+/* About Page Styles */
+.about-page {
+    padding: 40px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-section {
+    margin-bottom: 60px;
+}
+
+.page-title {
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 900;
+    letter-spacing: -4px;
+    line-height: 0.9;
+    color: var(--stark-black);
+    margin-bottom: 30px;
+}
+
+.hero-statement {
+    max-width: 800px;
+}
+
+.hero-lead {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--stark-black);
+    margin-bottom: 20px;
+}
+
+.hero-sub {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--stark-black);
+}
+
+/* Section Styling */
+.philosophy-section,
+.skills-section,
+.journey-section,
+.approach-section,
+.values-section,
+.cta-section {
+    margin-bottom: 80px;
+    padding: 40px;
+    border: 6px solid var(--stark-black);
+    box-shadow: 10px 10px 0px var(--stark-black);
+}
+
+.philosophy-section {
+    background: var(--electric-blue);
+    transform: rotate(-0.5deg);
+}
+
+.philosophy-section h2 {
+    color: var(--pure-white);
+}
+
+.skills-section {
+    background: var(--cyber-yellow);
+    transform: rotate(0.3deg);
+}
+
+.skills-section h2,
+.skills-section h3 {
+    color: var(--stark-black);
+}
+
+.journey-section {
+    background: var(--hot-pink);
+    transform: rotate(-0.3deg);
+}
+
+.journey-section h2,
+.journey-section h3,
+.journey-section p {
+    color: var(--pure-white);
+}
+
+.approach-section {
+    background: var(--acid-green);
+    transform: rotate(0.2deg);
+}
+
+.approach-section h2,
+.approach-section h3 {
+    color: var(--stark-black);
+}
+
+.values-section {
+    background: var(--deep-purple);
+    transform: rotate(-0.2deg);
+}
+
+.values-section h2,
+.values-section h3,
+.values-section p {
+    color: var(--pure-white);
+}
+
+.cta-section {
+    background: var(--warning-red);
+    transform: rotate(0.4deg);
+}
+
+.cta-section h2,
+.cta-section p,
+.cta-section strong {
+    color: var(--pure-white);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .about-page {
+        padding: 20px;
+    }
+
+    /* Prevent horizontal scroll */
+    .philosophy-section,
+    .skills-section,
+    .journey-section,
+    .approach-section,
+    .values-section,
+    .cta-section {
+        padding: 25px;
+        margin-left: -5px;
+        margin-right: -5px;
+        box-shadow: 6px 6px 0px var(--stark-black);
+        transform: none !important;
+        max-width: 100%;
+    }
+
+    .page-title {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+        letter-spacing: -2px;
+    }
+
+    .hero-lead {
+        font-size: 1.2rem;
+    }
+
+    .hero-sub {
+        font-size: 1rem;
+        color: var(--mobile-text-dark, #1a1a1a);
+    }
+
+    /* Improve text contrast on mobile */
+    .philosophy-section h3 {
+        color: var(--cyber-yellow);
+    }
+
+    .philosophy-section p,
+    .philosophy-section li {
+        color: var(--pure-white);
+    }
+
+    .journey-section .timeline-year {
+        color: var(--cyber-yellow);
+        font-weight: 900;
+    }
+
+    .approach-section p {
+        color: var(--stark-black);
+    }
+
+    .values-section .value-item h3 {
+        color: var(--cyber-yellow);
+    }
+
+    /* Fix skill items on mobile */
+    .skill-items {
+        display: block;
+    }
+
+    .skill-item {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid var(--stark-black);
+    }
+
+    /* Fix timeline on mobile */
+    .timeline-item {
+        margin-bottom: 30px;
+    }
+
+    /* CTA buttons on mobile */
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cta-buttons a {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        background: var(--stark-black);
+        color: var(--pure-white);
+        text-decoration: none;
+        font-weight: 900;
+        border: 3px solid var(--pure-white);
+    }
+}

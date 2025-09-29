@@ -80,6 +80,8 @@ footer .social-link {
     transform: rotate(-3deg);
     transition: all 0.3s;
     box-shadow: 6px 6px 0px var(--hot-pink);
+    /* Set color for currentColor to inherit */
+    color: var(--stark-black);
 }
 
 footer .social-link:nth-child(even) {
@@ -95,22 +97,18 @@ footer .social-link:hover {
     transform: rotate(0deg) scale(1.1);
     background: var(--hot-pink);
     box-shadow: 8px 8px 0px var(--pure-white);
+    /* Change color for hover state */
+    color: var(--pure-white);
 }
 
 footer .social-link svg {
     width: 28px;
     height: 28px;
-    fill: var(--stark-black);
-    color: var(--stark-black);
-}
-
-footer .social-link svg path {
-    fill: currentColor;
+    /* Remove fill declarations - let currentColor work */
 }
 
 footer .social-link:hover svg {
-    fill: var(--pure-white);
-    color: var(--pure-white);
+    /* SVG will inherit color from parent */
 }
 
 .footer-text {
@@ -154,6 +152,8 @@ footer .social-link:hover svg {
         display: flex;
         align-items: center;
         justify-content: center;
+        /* Ensure color is set for mobile too */
+        color: var(--stark-black);
     }
 
     footer .social-link svg {
@@ -164,6 +164,8 @@ footer .social-link:hover svg {
     footer .social-link:hover {
         transform: scale(1.1);
         box-shadow: 3px 3px 0px var(--stark-black);
+        /* Hover color for mobile */
+        color: var(--pure-white);
     }
 }
 
