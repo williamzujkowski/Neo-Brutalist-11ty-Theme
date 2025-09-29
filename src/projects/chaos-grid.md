@@ -2,7 +2,7 @@
 layout: layouts/project.njk
 title: "CHAOS GRID"
 description: "A revolutionary CSS Grid-based layout system that embraces disorder and breaks traditional design constraints"
-image: "/images/projects/chaos-grid.jpg"
+image: "/assets/images/projects/chaos-grid.svg"
 tags: ["CSS", "Grid", "Layout", "Framework", "Experimental"]
 date: 2025-01-25
 order: 3

@@ -2,7 +2,7 @@
 layout: layouts/project.njk
 title: "TYPE DESTROYER"
 description: "An experimental typography tool that shatters conventional type rules and creates rebellious, expressive letterforms"
-image: "/images/projects/type-destroyer.jpg"
+image: "/assets/images/projects/type-destroyer.svg"
 tags: ["Typography", "WebGL", "Interactive", "Tool", "Experimental", "Creative"]
 date: 2025-01-24
 order: 4

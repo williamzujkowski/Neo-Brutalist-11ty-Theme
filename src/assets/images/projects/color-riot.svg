@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Neo-Brutalist Color Riot Design -->
+  <rect width="800" height="600" fill="#000000"/>
+
+  <!-- Background chaos -->
+  <rect x="0" y="0" width="400" height="300" fill="#FF0099" transform="rotate(3)"/>
+  <rect x="400" y="0" width="400" height="300" fill="#00FF88" transform="rotate(-2)"/>
+  <rect x="0" y="300" width="400" height="300" fill="#FFEE00" transform="rotate(-3)"/>
+  <rect x="400" y="300" width="400" height="300" fill="#0066FF" transform="rotate(2)"/>
+
+  <!-- Overlapping color blocks -->
+  <rect x="50" y="50" width="200" height="200" fill="#6600FF" stroke="#000" stroke-width="8" transform="rotate(15 150 150)"/>
+  <rect x="250" y="100" width="200" height="200" fill="#FF3333" stroke="#000" stroke-width="8" transform="rotate(-10 350 200)"/>
+  <rect x="450" y="150" width="200" height="200" fill="#00FFFF" stroke="#000" stroke-width="8" transform="rotate(8 550 250)"/>
+  <rect x="150" y="350" width="200" height="200" fill="#FF00FF" stroke="#000" stroke-width="8" transform="rotate(-12 250 450)"/>
+  <rect x="500" y="380" width="200" height="200" fill="#FFFF00" stroke="#000" stroke-width="8" transform="rotate(5 600 480)"/>
+
+  <!-- Central explosion -->
+  <circle cx="400" cy="300" r="120" fill="#FFFFFF" stroke="#000" stroke-width="10"/>
+  <circle cx="400" cy="300" r="80" fill="#FF0099" stroke="#000" stroke-width="8"/>
+  <circle cx="400" cy="300" r="40" fill="#00FF88" stroke="#000" stroke-width="6"/>
+
+  <!-- Title -->
+  <rect x="200" y="250" width="400" height="100" fill="#000000" stroke="#FFEE00" stroke-width="6"/>
+  <text x="400" y="310" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" text-anchor="middle" fill="#FFEE00">COLOR RIOT</text>
+
+  <!-- Chaos elements -->
+  <rect x="680" y="50" width="80" height="80" fill="#FF0099" stroke="#000" stroke-width="4" transform="rotate(45 720 90)"/>
+  <rect x="40" y="480" width="80" height="80" fill="#00FF88" stroke="#000" stroke-width="4" transform="rotate(45 80 520)"/>
+  <circle cx="100" cy="100" r="30" fill="#FFEE00" stroke="#000" stroke-width="4"/>
+  <circle cx="700" cy="500" r="30" fill="#0066FF" stroke="#000" stroke-width="4"/>
+</svg>

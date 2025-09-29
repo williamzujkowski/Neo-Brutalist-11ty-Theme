@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Neo-Brutalist Type Destroyer Design -->
+  <rect width="800" height="600" fill="#000000"/>
+
+  <!-- Background gradient blocks -->
+  <rect x="0" y="0" width="800" height="200" fill="#6600FF"/>
+  <rect x="0" y="200" width="800" height="200" fill="#0066FF"/>
+  <rect x="0" y="400" width="800" height="200" fill="#000000"/>
+
+  <!-- Destroyed typography -->
+  <g transform="translate(400, 300)">
+    <!-- T -->
+    <rect x="-380" y="-180" width="120" height="40" fill="#FF0099" stroke="#000" stroke-width="6" transform="rotate(-5)"/>
+    <rect x="-340" y="-180" width="40" height="200" fill="#FF0099" stroke="#000" stroke-width="6" transform="rotate(-5)"/>
+
+    <!-- Y -->
+    <rect x="-220" y="-180" width="40" height="120" fill="#00FF88" stroke="#000" stroke-width="6" transform="rotate(8)"/>
+    <rect x="-180" y="-180" width="40" height="120" fill="#00FF88" stroke="#000" stroke-width="6" transform="rotate(-8)"/>
+    <rect x="-200" y="-60" width="40" height="100" fill="#00FF88" stroke="#000" stroke-width="6"/>
+
+    <!-- P -->
+    <rect x="-80" y="-180" width="40" height="200" fill="#FFEE00" stroke="#000" stroke-width="6" transform="rotate(3)"/>
+    <rect x="-80" y="-180" width="100" height="40" fill="#FFEE00" stroke="#000" stroke-width="6" transform="rotate(3)"/>
+    <rect x="-80" y="-100" width="100" height="40" fill="#FFEE00" stroke="#000" stroke-width="6" transform="rotate(3)"/>
+    <rect x="20" y="-180" width="40" height="80" fill="#FFEE00" stroke="#000" stroke-width="6" transform="rotate(3)"/>
+
+    <!-- E -->
+    <rect x="80" y="-180" width="40" height="200" fill="#FF3333" stroke="#000" stroke-width="6" transform="rotate(-4)"/>
+    <rect x="80" y="-180" width="100" height="40" fill="#FF3333" stroke="#000" stroke-width="6" transform="rotate(-4)"/>
+    <rect x="80" y="-80" width="80" height="40" fill="#FF3333" stroke="#000" stroke-width="6" transform="rotate(-4)"/>
+    <rect x="80" y="20" width="100" height="40" fill="#FF3333" stroke="#000" stroke-width="6" transform="rotate(-4)"/>
+  </g>
+
+  <!-- DESTROYER text (broken) -->
+  <g transform="translate(400, 450)">
+    <text x="-150" y="0" font-family="Arial Black, sans-serif" font-size="36" font-weight="900" fill="#FFFFFF" transform="rotate(-3)">DES</text>
+    <rect x="-50" y="-30" width="80" height="50" fill="#FF0099" stroke="#000" stroke-width="4" transform="rotate(12)"/>
+    <text x="40" y="0" font-family="Arial Black, sans-serif" font-size="36" font-weight="900" fill="#FFFFFF" transform="rotate(5)">ROYER</text>
+  </g>
+
+  <!-- Glitch effects -->
+  <rect x="100" y="100" width="600" height="5" fill="#00FFFF" opacity="0.8"/>
+  <rect x="150" y="250" width="500" height="3" fill="#FF00FF" opacity="0.8"/>
+  <rect x="200" y="380" width="400" height="5" fill="#00FF88" opacity="0.8"/>
+
+  <!-- Chaos elements -->
+  <circle cx="100" cy="500" r="40" fill="none" stroke="#FFEE00" stroke-width="6"/>
+  <rect x="650" y="80" width="60" height="60" fill="none" stroke="#00FF88" stroke-width="6" transform="rotate(45 680 110)"/>
+</svg>
