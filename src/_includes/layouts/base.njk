@@ -54,14 +54,9 @@
     {# CSS #}
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" />
 
-    {% block styles %}{% endblock %}
-
-    {# Preload fonts - commented out as we use system fonts #}
-    {#
+    {% block styles %}{% endblock %} {# Preload fonts - commented out as we use system fonts #} {#
     <link rel="preload" href="{{ '/assets/fonts/arial-black.woff2' | url }}" as="font" type="font/woff2" crossorigin />
-    #}
-
-    {# Theme Color for mobile browsers #}
+    #} {# Theme Color for mobile browsers #}
     <meta name="theme-color" content="{{ site.theme.colors.primary }}" />
 
     {# No JS fallback #}
