@@ -34,7 +34,7 @@ jobs:
         run: npm run lint:ci
 
       - name: Run tests
-        run: npm run test:ui
+        run: npm test
 
       - name: Build site
         run: npm run build:gh-pages
