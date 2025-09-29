@@ -223,3 +223,62 @@ footer .social-link:hover svg {
     transition: transform 0.1s;
     transform: translate(-50%, -50%);
 }
+
+/* Global Contrast Rules - Ensure proper text colors on colored backgrounds */
+/* Yellow backgrounds MUST have black text */
+[style*="background: var(--cyber-yellow)"],
+[style*="background-color: var(--cyber-yellow)"],
+[style*="background:#FFEE00"],
+[style*="background-color:#FFEE00"],
+.bg-yellow,
+*[class*="yellow"] {
+    color: var(--stark-black) !important;
+}
+
+[style*="background: var(--cyber-yellow)"] *,
+[style*="background-color: var(--cyber-yellow)"] *,
+.bg-yellow * {
+    color: var(--stark-black) !important;
+}
+
+/* Green backgrounds MUST have black text */
+[style*="background: var(--acid-green)"],
+[style*="background-color: var(--acid-green)"],
+[style*="background:#00FF88"],
+[style*="background-color:#00FF88"],
+.bg-green,
+*[class*="green"] {
+    color: var(--stark-black) !important;
+}
+
+[style*="background: var(--acid-green)"] *,
+[style*="background-color: var(--acid-green)"] *,
+.bg-green * {
+    color: var(--stark-black) !important;
+}
+
+/* Buttons and Interactive Elements with proper contrast */
+button,
+.button,
+.btn {
+    background: var(--cyber-yellow);
+    color: var(--stark-black) !important;
+    border: 4px solid var(--stark-black);
+    padding: 15px 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover,
+.button:hover,
+.btn:hover {
+    background: var(--hot-pink);
+    color: var(--pure-white) !important;
+    transform: scale(1.05);
+    box-shadow: 5px 5px 0px var(--stark-black);
+}

@@ -46,6 +46,11 @@
     background: var(--cyber-yellow);
 }
 
+.blog-card:hover .blog-excerpt,
+.blog-card:hover .blog-post-title a {
+    color: var(--stark-black) !important;
+}
+
 .blog-date {
     display: inline-block;
     background: var(--hot-pink);
