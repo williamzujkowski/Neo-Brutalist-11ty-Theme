@@ -32,9 +32,9 @@
     --warning-red: #FF3333;
 
     /* Mobile-specific color overrides for better readability */
-    --mobile-text-dark: #222222;
-    --mobile-text-medium: #333333;
-    --mobile-text-light: #555555;
+    --mobile-text-dark: #1a1a1a;
+    --mobile-text-medium: #2a2a2a;
+    --mobile-text-light: #3a3a3a;
 }
 
 /* Base Typography & Body */

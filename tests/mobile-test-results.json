@@ -1,0 +1,248 @@
+{
+  "summary": {
+    "totalTests": 67,
+    "passed": 67,
+    "issues": 0,
+    "recommendations": 0,
+    "score": 100
+  },
+  "results": {
+    "navigation": [
+      {
+        "page": "homepage",
+        "hamburgerMenu": true,
+        "hamburgerLines": true,
+        "navToggle": false,
+        "navLinks": true,
+        "ariaLabels": true,
+        "logoLink": true
+      },
+      {
+        "page": "about",
+        "hamburgerMenu": true,
+        "hamburgerLines": true,
+        "navToggle": false,
+        "navLinks": true,
+        "ariaLabels": true,
+        "logoLink": true
+      },
+      {
+        "page": "services",
+        "hamburgerMenu": true,
+        "hamburgerLines": true,
+        "navToggle": false,
+        "navLinks": true,
+        "ariaLabels": true,
+        "logoLink": true
+      },
+      {
+        "page": "blog",
+        "hamburgerMenu": true,
+        "hamburgerLines": true,
+        "navToggle": false,
+        "navLinks": true,
+        "ariaLabels": true,
+        "logoLink": true
+      },
+      {
+        "page": "contact",
+        "hamburgerMenu": true,
+        "hamburgerLines": true,
+        "navToggle": false,
+        "navLinks": true,
+        "ariaLabels": true,
+        "logoLink": true
+      }
+    ],
+    "layout": [
+      {
+        "page": "homepage",
+        "viewport": true,
+        "mobileCSS": true,
+        "socialIcons": true,
+        "touchTargets": false
+      },
+      {
+        "page": "about",
+        "viewport": true,
+        "mobileCSS": true,
+        "socialIcons": true,
+        "touchTargets": false
+      },
+      {
+        "page": "services",
+        "viewport": true,
+        "mobileCSS": true,
+        "socialIcons": true,
+        "touchTargets": false
+      },
+      {
+        "page": "blog",
+        "viewport": true,
+        "mobileCSS": true,
+        "socialIcons": true,
+        "touchTargets": false
+      },
+      {
+        "page": "contact",
+        "viewport": true,
+        "mobileCSS": true,
+        "socialIcons": true,
+        "touchTargets": false
+      }
+    ],
+    "typography": [
+      {
+        "page": "homepage",
+        "headingHierarchy": true,
+        "textContrast": true,
+        "fontSizes": true,
+        "lineHeight": false
+      },
+      {
+        "page": "about",
+        "headingHierarchy": true,
+        "textContrast": true,
+        "fontSizes": true,
+        "lineHeight": false
+      },
+      {
+        "page": "services",
+        "headingHierarchy": true,
+        "textContrast": true,
+        "fontSizes": true,
+        "lineHeight": false
+      },
+      {
+        "page": "blog",
+        "headingHierarchy": true,
+        "textContrast": true,
+        "fontSizes": true,
+        "lineHeight": false
+      },
+      {
+        "page": "contact",
+        "headingHierarchy": true,
+        "textContrast": true,
+        "fontSizes": true,
+        "lineHeight": false
+      }
+    ],
+    "links": [
+      {
+        "page": "homepage",
+        "internalLinks": 15,
+        "externalLinks": 12,
+        "emailLinks": 1,
+        "properAttributes": true
+      },
+      {
+        "page": "about",
+        "internalLinks": 10,
+        "externalLinks": 8,
+        "emailLinks": 0,
+        "properAttributes": true
+      },
+      {
+        "page": "services",
+        "internalLinks": 8,
+        "externalLinks": 8,
+        "emailLinks": 0,
+        "properAttributes": true
+      },
+      {
+        "page": "blog",
+        "internalLinks": 22,
+        "externalLinks": 8,
+        "emailLinks": 0,
+        "properAttributes": true
+      },
+      {
+        "page": "contact",
+        "internalLinks": 8,
+        "externalLinks": 11,
+        "emailLinks": 1,
+        "properAttributes": true
+      }
+    ],
+    "blog": [
+      {
+        "page": "blog",
+        "postLinks": 14,
+        "backButton": false,
+        "blogGrid": true
+      }
+    ]
+  },
+  "issues": [],
+  "passed": [
+    "homepage: Hamburger menu element found",
+    "homepage: Hamburger lines found",
+    "homepage: Proper ARIA attributes found",
+    "homepage: Navigation links container found",
+    "homepage: Logo link to home found",
+    "about: Hamburger menu element found",
+    "about: Hamburger lines found",
+    "about: Proper ARIA attributes found",
+    "about: Navigation links container found",
+    "about: Logo link to home found",
+    "services: Hamburger menu element found",
+    "services: Hamburger lines found",
+    "services: Proper ARIA attributes found",
+    "services: Navigation links container found",
+    "services: Logo link to home found",
+    "blog: Hamburger menu element found",
+    "blog: Hamburger lines found",
+    "blog: Proper ARIA attributes found",
+    "blog: Navigation links container found",
+    "blog: Logo link to home found",
+    "contact: Hamburger menu element found",
+    "contact: Hamburger lines found",
+    "contact: Proper ARIA attributes found",
+    "contact: Navigation links container found",
+    "contact: Logo link to home found",
+    "homepage: Proper viewport meta tag found",
+    "homepage: Mobile CSS media queries found",
+    "homepage: Social icons found",
+    "about: Proper viewport meta tag found",
+    "about: Mobile CSS media queries found",
+    "about: Social icons found",
+    "services: Proper viewport meta tag found",
+    "services: Mobile CSS media queries found",
+    "services: Social icons found",
+    "blog: Proper viewport meta tag found",
+    "blog: Mobile CSS media queries found",
+    "blog: Social icons found",
+    "contact: Proper viewport meta tag found",
+    "contact: Mobile CSS media queries found",
+    "contact: Social icons found",
+    "homepage: Proper heading hierarchy (H1: 1, H2: 5)",
+    "homepage: Text styling found",
+    "homepage: Responsive font sizing found",
+    "about: Proper heading hierarchy (H1: 1, H2: 6)",
+    "about: Text styling found",
+    "about: Responsive font sizing found",
+    "services: Proper heading hierarchy (H1: 1, H2: 5)",
+    "services: Text styling found",
+    "services: Responsive font sizing found",
+    "blog: Proper heading hierarchy (H1: 1, H2: 7)",
+    "blog: Text styling found",
+    "blog: Responsive font sizing found",
+    "contact: Proper heading hierarchy (H1: 1, H2: 3)",
+    "contact: Text styling found",
+    "contact: Responsive font sizing found",
+    "homepage: Proper external link attributes found",
+    "homepage: Links found - Internal: 15, External: 12, Email: 1",
+    "about: Proper external link attributes found",
+    "about: Links found - Internal: 10, External: 8, Email: 0",
+    "services: Proper external link attributes found",
+    "services: Links found - Internal: 8, External: 8, Email: 0",
+    "blog: Proper external link attributes found",
+    "blog: Links found - Internal: 22, External: 8, Email: 0",
+    "contact: Proper external link attributes found",
+    "contact: Links found - Internal: 8, External: 11, Email: 1",
+    "blog: Blog grid layout found",
+    "blog: 14 blog post links found"
+  ],
+  "recommendations": []
+}

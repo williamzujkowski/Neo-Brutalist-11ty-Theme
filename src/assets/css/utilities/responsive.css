@@ -2,9 +2,7 @@
 
 /* Mobile & Tablet Breakpoints */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
+    /* Navigation handled in navigation.css */
 
     .about-grid {
         grid-template-columns: 1fr;
@@ -64,14 +62,15 @@
         color: var(--stark-black);
     }
 
-    /* Improved mobile typography */
+    /* Improved mobile typography with better contrast */
     body {
-        color: var(--mobile-text-dark);
+        color: #1a1a1a;
     }
 
     p {
-        color: var(--mobile-text-medium);
-        line-height: 1.6;
+        color: #2a2a2a;
+        line-height: 1.7;
+        font-size: 1.05rem;
     }
 
     .service-card p,

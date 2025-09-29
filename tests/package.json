@@ -1,0 +1,16 @@
+{
+  "name": "neo-brutalist-theme-tests",
+  "version": "1.0.0",
+  "description": "Comprehensive Playwright tests for Neo-Brutalist 11ty Theme mobile functionality",
+  "scripts": {
+    "test": "playwright test",
+    "test:debug": "playwright test --debug",
+    "test:headed": "playwright test --headed",
+    "test:mobile": "playwright test --grep mobile",
+    "test:report": "playwright show-report",
+    "install-browsers": "playwright install"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0"
+  }
+}
