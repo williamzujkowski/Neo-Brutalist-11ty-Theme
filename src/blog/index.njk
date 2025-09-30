@@ -18,7 +18,9 @@ permalink: /blog/
     </header>
 
     <div class="blog-grid">
-      {% set posts = collections.posts | reverse %} {% for post in posts %}
+      {# Sort posts by date in reverse chronological order (newest first) #}
+      {% set posts = collections.posts | sort(attribute="date") | reverse %}
+      {% for post in posts %}
       <article class="blog-post-card" data-index="{{ loop.index }}">
         <div class="post-card-header">
           <div class="post-date">{{ post.date | dateReadable }}</div>
@@ -116,7 +118,7 @@ permalink: /blog/
     box-shadow: 10px 10px 0px var(--stark-black);
     letter-spacing: -4px;
     transform: rotate(1deg);
-    margin-top: -20px;
+    margin-top: 10px;
   }
 
   .blog-subtitle-box {
