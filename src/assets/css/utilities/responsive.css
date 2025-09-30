@@ -17,9 +17,18 @@
     color: var(--stark-black);
   }
 
+  .contact-title {
+    font-size: clamp(3.5rem, 10vw, 5rem);
+    letter-spacing: -4px;
+    text-shadow: 4px 4px 0px var(--stark-black);
+    word-break: break-word;
+    hyphens: auto;
+  }
+
   .contact-cta {
     font-size: 1.5rem;
     padding: 20px 40px;
+    box-shadow: 4px 4px 0px var(--stark-black) !important;
   }
 
   /* Mobile-specific adjustments */
