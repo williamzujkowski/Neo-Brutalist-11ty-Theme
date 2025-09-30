@@ -1,3 +1,11 @@
+# Claude automation tools (CRITICAL - must be ignored)
+.claude/
+.hive-mind/
+.claude-flow/
+.swarm/
+memory/
+coordination/
+
 # Build outputs
 _site/
 dist/
