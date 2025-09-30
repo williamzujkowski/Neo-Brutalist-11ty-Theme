@@ -81,7 +81,7 @@
     <div class="floating-shape shape-1" aria-hidden="true"></div>
     <div class="floating-shape shape-2" aria-hidden="true"></div>
     {% endif %} {# Navigation #} {% include "components/nav.njk" %} {# Main content #}
-    <main id="main" class="main-content">{% block content %} {{ content }} {% endblock %}</main>
+    <main id="main" class="main-content">{% block content %} {{ content | safe }} {% endblock %}</main>
 
     {# Footer #} {% include "components/footer.njk" %} {# JavaScript - Using standalone version to avoid module issues
     #}
