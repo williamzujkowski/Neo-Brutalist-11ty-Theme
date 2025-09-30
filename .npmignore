@@ -1,12 +1,19 @@
 # Exclude Claude-Flow automation from npm package
 .claude/
+.claude-flow/
 .hive-mind/
+.swarm/
 memory/
 coordination/
+scripts/verify-package.sh
 
 # Development and testing files
 tests/
+test-backup/
 .playwright-mcp/
+docs/phase*.md
+docs/PHASE*.md
+docs/archive/
 docs/ANALYSIS_REPORT.md
 docs/SAST_REPORT.md
 docs/DEPENDENCY_VULNERABILITIES.md
@@ -16,6 +23,8 @@ docs/CLEANUP-REPORT.md
 docs/mobile-responsiveness-report.md
 project_plan.md
 swarm-prompt.md
+cleanup.md
+NOTICE.md
 
 # Build artifacts and cache
 _site/
