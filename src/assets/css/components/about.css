@@ -652,41 +652,78 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
   .about-page {
-    padding: 100px 20px 60px;
+    padding: 100px 15px 60px;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .about-container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .about-content {
+    gap: 40px;
   }
 
   .page-title {
     letter-spacing: -4px;
     font-size: clamp(2.5rem, 12vw, 4rem);
+    text-shadow: 3px 3px 0px var(--hot-pink);
+  }
+
+  /* Hero section mobile fixes */
+  .hero-section {
+    margin-bottom: 40px;
+  }
+
+  .hero-statement {
+    padding: 25px;
+    margin: 0;
+    box-shadow: 6px 6px 0px var(--stark-black);
+    transform: none !important;
+    max-width: 100%;
+  }
+
+  .hero-lead {
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
   }
 
   .skills-grid {
     grid-template-columns: 1fr;
+    gap: 25px;
   }
 
   .timeline-item {
-    grid-template-columns: 80px 1fr;
-    gap: 20px;
+    grid-template-columns: 70px 1fr;
+    gap: 15px;
   }
 
   .timeline-marker,
   .timeline-year {
-    padding: 10px;
-    font-size: 1rem;
+    padding: 8px;
+    font-size: 0.95rem;
   }
 
   .values-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .value-item,
-  .skill-category {
+  .skill-category,
+  .method {
     transform: rotate(0deg) !important;
   }
 
   .cta-actions {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
 
   .cta-button {
@@ -694,29 +731,33 @@
     width: 100%;
     max-width: 300px;
     text-align: center;
+    padding: 18px 30px;
   }
 
-  /* Prevent horizontal scroll */
+  /* CRITICAL: Prevent horizontal scroll on all sections */
   .philosophy-section,
   .skills-section,
   .journey-section,
   .approach-section,
   .values-section,
   .cta-section {
-    padding: 25px;
-    margin-left: -5px;
-    margin-right: -5px;
-    box-shadow: 6px 6px 0px var(--stark-black);
+    padding: 25px 20px;
+    margin-left: 0;
+    margin-right: 0;
+    box-shadow: 4px 4px 0px var(--stark-black) !important;
     transform: none !important;
     max-width: 100%;
+    width: 100%;
   }
 
-  .hero-lead {
-    font-size: 1.2rem;
+  /* Specific section adjustments */
+  .cta-section {
+    padding: 35px 20px;
+    box-shadow: 6px 6px 0px var(--hot-pink) !important;
   }
 
-  .hero-sub {
-    font-size: 1rem;
+  .journey-section {
+    box-shadow: 6px 6px 0px var(--hot-pink) !important;
   }
 
   /* Fix skill items on mobile */
@@ -725,22 +766,42 @@
   }
 
   .skill-item {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 15px;
+    padding: 15px;
     border-bottom: 3px solid var(--stark-black);
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .skill-item:last-child {
+    border-bottom: none;
   }
 
   /* Fix timeline on mobile */
   .timeline-item {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+  }
+
+  /* Ensure all text content wraps properly */
+  h1, h2, h3, h4, h5, h6, p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 
 @media (max-width: 480px) {
   .about-page {
-    padding: 100px 15px 60px;
+    padding: 90px 12px 50px;
+  }
+
+  .about-container {
+    padding: 0;
+  }
+
+  .page-title {
+    font-size: clamp(2rem, 10vw, 3rem);
+    text-shadow: 2px 2px 0px var(--hot-pink);
   }
 
   .hero-statement,
@@ -750,11 +811,51 @@
   .approach-section,
   .values-section,
   .cta-section {
-    padding: 30px 25px;
+    padding: 20px 15px;
+    box-shadow: 3px 3px 0px var(--stark-black) !important;
+  }
+
+  .cta-section,
+  .journey-section {
+    box-shadow: 4px 4px 0px var(--hot-pink) !important;
   }
 
   .skill-item {
     flex-direction: column;
     text-align: center;
+    padding: 12px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 60px 1fr;
+    gap: 12px;
+  }
+
+  .timeline-marker {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+
+  .cta-button {
+    padding: 15px 25px;
+    font-size: 1.1rem;
+  }
+
+  /* Extra small screen text adjustments */
+  .hero-lead {
+    font-size: 1rem;
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+  }
+
+  .philosophy-section h2,
+  .skills-section h2,
+  .journey-section h2,
+  .approach-section h2,
+  .values-section h2,
+  .cta-section h2 {
+    font-size: clamp(2rem, 8vw, 3rem);
   }
 }
